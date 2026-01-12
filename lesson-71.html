@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 71 – Pattern Psychology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 71 – Pattern Psychology</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Patterns Are Human Behavior</h2>
+  <p>
+    Patterns form because humans behave the same way under pressure. Buyers get excited, sellers
+    get scared, traders chase, traders hesitate — and the chart records all of it.
+  </p>
+  <p>
+    Patterns are the visual result of:
+  </p>
+  <ul>
+    <li>Fear</li>
+    <li>Greed</li>
+    <li>Hesitation</li>
+    <li>Exhaustion</li>
+    <li>Accumulation</li>
+    <li>Distribution</li>
+  </ul>
+  <p>
+    Understanding psychology makes patterns predictable — not the shape, but the behavior.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Psychology Behind Each Pattern Type</h2>
+  <ul>
+    <li><strong>Flags:</strong> Trend resting</li>
+    <li><strong>Pennants:</strong> Pressure tightening</li>
+    <li><strong>Wedges:</strong> One side weakening</li>
+    <li><strong>Triangles:</strong> Energy building</li>
+    <li><strong>Double tops/bottoms:</strong> Failure at key levels</li>
+    <li><strong>H&S:</strong> Exhaustion + takeover</li>
+    <li><strong>Traps:</strong> Emotional traders getting baited</li>
+  </ul>
+  <p>
+    Patterns are psychology made visible.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Psychology</h2>
+  <form id="lesson71-quiz" class="form">
+
+    <label class="form-label">
+      What creates patterns?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Human behavior.</option>
+        <option value="b">Magic shapes.</option>
+        <option value="c">Randomness.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does a double top show?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyer failure.</option>
+        <option value="b">Guaranteed continuation.</option>
+        <option value="c">Noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does a pennant show?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pressure tightening.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <div id="lesson71-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Psychology Read</h2>
+  <p>
+    Imagine price forms a triangle with shrinking candles and rising tension.
+  </p>
+
+  <form id="lesson71-sim" class="form">
+
+    <label class="form-label">
+      What does this show?
+      <select name="psych" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Energy building.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the idea?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakout + strong candle.</option>
+        <option value="b">The wick.</option>
+        <option value="c">The triangle shape alone.</option>
+      </select>
+    </label>
+
+    <div id="lesson71-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 71</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson71();
+  });
+</script>
+
+</body>
+</html>
