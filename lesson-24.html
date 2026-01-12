@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 24 – Candle Confirmation & Trend Integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 24 – Candle Confirmation</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Candles + Trend + MAs = Clarity</h2>
+  <p>
+    This stage brings everything together: candles, moving averages, trend structure, and your
+    discipline. A candle pattern inside a trend, supported by moving averages, is far more
+    powerful than a candle pattern alone.
+  </p>
+  <p>
+    This is how you avoid emotional trades. This is how you stay consistent. This is how you
+    build the discipline that separates gamblers from traders.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Confirmation vs. Guessing</h2>
+  <p>
+    A candle pattern confirms your idea — it does not create it. You start with trend. You start
+    with structure. You start with moving averages. Then you use candles to confirm or deny your
+    plan.
+  </p>
+  <p>
+    This is the same process you used in the mock enter/exit simulator. You build the idea first,
+    then you confirm it with real evidence.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Candle Confirmation</h2>
+  <form id="lesson24-quiz" class="form">
+
+    <label class="form-label">
+      What comes first in this academy?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend, structure, and moving averages.</option>
+        <option value="b">Candle patterns alone.</option>
+        <option value="c">Random entries.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the role of candle patterns?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Confirmation of your idea.</option>
+        <option value="b">Magic signals.</option>
+        <option value="c">Guaranteed wins.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and following your plan.</option>
+        <option value="b">Predicting every candle.</option>
+        <option value="c">Trading emotionally.</option>
+      </select>
+    </label>
+
+    <div id="lesson24-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Full Candle Confirmation</h2>
+  <p>
+    Imagine an uptrend above rising moving averages. Price pulls back, forms an inside bar, then
+    prints a bullish engulfing candle.
+  </p>
+
+  <form id="lesson24-sim" class="form">
+
+    <label class="form-label">
+      What does this sequence suggest?
+      <select name="sequence" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers defended and regained control.</option>
+        <option value="b">Sellers are dominating.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">
+          Consider a call only if your full plan aligns: trend, structure, MAs, and risk.
+        </option>
+        <option value="b">Enter instantly with no plan.</option>
+        <option value="c">Double size because it “looks good.”</option>
+      </select>
+    </label>
+
+    <div id="lesson24-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 24</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson24();
+  });
+</script>
+
+</body>
+</html>
