@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="theme-dark">
-  <div id="blur-overlay" class="blur-overlay hidden"></div>
-
   <!-- Sidebar -->
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-header">
@@ -20,7 +18,7 @@
       <div class="sidebar-section">
         <button class="sidebar-section-toggle">Getting Started</button>
         <div class="sidebar-section-content">
-          <p><strong>What this academy is:</strong> A discipline-first training system for options traders.</p>
+          <p><strong>What this academy is:</strong> A discipline-first training system for options trading behavior.</p>
           <p><strong>Why discipline:</strong> Without timing and control, no strategy will save you.</p>
           <p><strong>9:00 AM check-in:</strong> Your daily ritual to prove you are prepared.</p>
           <p><strong>Mock options form:</strong> Required simulation before lessons unlock.</p>
@@ -34,11 +32,10 @@
           <p><strong>9:00 AM Check-In:</strong> Press the button before the market opens.</p>
           <p><strong>Streak:</strong> Tracks how many days you showed up on time.</p>
           <p><strong>Discipline Score:</strong> Measures your consistency over time.</p>
-          <p><strong>Violations:</strong> Repeated capture/switch attempts can revoke access.</p>
         </div>
       </div>
 
-      <div class6="sidebar-section">
+      <div class="sidebar-section">
         <button class="sidebar-section-toggle">Simulations</button>
         <div class="sidebar-section-content">
           <p>Practice in a safe, simulated environment before touching real markets.</p>
@@ -56,12 +53,12 @@
         <div class="sidebar-section-content">
           <p>Structured, locked stages that unlock only when you complete the one before.</p>
           <ul>
-            <li>Stage 1: Discipline</li>
-            <li>Stage 2: Up vs Down</li>
-            <li>Stage 3: Calls vs Puts</li>
+            <li>Stage 1: Discipline & Direction</li>
+            <li>Stage 2: What the Market Really Is</li>
+            <li>Stage 3: Calls & Puts</li>
             <li>Stage 4: Options Page Breakdown</li>
             <li>Stage 5: Execution Mechanics</li>
-            <li>Stage 6: Emotional Control</li>
+            <li>Stage 6: Full Mock & Emotional Control</li>
           </ul>
           <a href="lessons.html" class="sidebar-link">Go to Lessons</a>
         </div>
@@ -128,10 +125,6 @@
           <span class="metric-label">Discipline Score</span>
           <span id="discipline-score" class="metric-value">0</span>
         </div>
-        <div class="metric">
-          <span class="metric-label">Violations</span>
-          <span id="violation-count" class="metric-value">0 / 3</span>
-        </div>
       </div>
     </section>
 
@@ -157,55 +150,36 @@
         </li>
         <li>
           <strong>Locked Lesson Stages:</strong>
-          Lessons are broken into stages. Each stage unlocks only when you complete the one
-          before it. You cannot skip ahead. Discipline and completion are required.
+          Lessons are broken into stages. Each stage has a detailed lesson, an interactive quiz,
+          and a mock simulation that builds toward a complete practice trade.
         </li>
         <li>
-          <strong>Simulated Execution:</strong>
-          You will practice entering and exiting trades in a fully simulated environment. You
-          will see how quantity, bid price, and timing affect your outcomes.
+          <strong>Progressive Simulation:</strong>
+          Each lesson adds more pieces to your mock practice—until you can fully enter and exit
+          calls and puts with confidence in the final module.
         </li>
         <li>
-          <strong>Emotional Control Training:</strong>
-          As you progress, you will work on managing fear, greed, and impatience—because
-          undisciplined emotions are the fastest way to lose in the market.
+          <strong>Chapter Unlocks:</strong>
+          Once you complete all core lessons in Chapter 1, Chapter 2 unlocks and teaches you what
+          the market really is, who is on the other side of your contracts, and what you are
+          actually trading.
         </li>
       </ol>
-      <p>
-        This is not a get-rich-quick platform. This is an academy for people who are willing to
-        show up, follow instructions, and build real habits.
-      </p>
 
       <div class="button-row">
         <a href="mock-options.html" class="primary-button">Start Mock Options Application</a>
         <a href="lessons.html" class="secondary-button">Go to Lessons</a>
       </div>
     </section>
-
-    <!-- Subscription / access note -->
-    <section class="card">
-      <h2 class="section-title">Access & Safety</h2>
-      <p>
-        Access to this academy is time-limited and device-bound. Repeated attempts to capture or
-        misuse content can result in immediate access revocation and a required re-subscription.
-        This protects the integrity of the training and the safety of all members.
-      </p>
-      <p>
-        Treat this environment like a real market preparation room: show up on time, stay
-        focused, and respect the process.
-      </p>
-    </section>
   </main>
 
   <script src="app.js"></script>
   <script>
-    // Page-specific initialization
     document.addEventListener("DOMContentLoaded", function () {
       initTheme();
       initSidebar();
       initCautionModal();
       initDisciplineModule();
-      initBlurAndViolationSystem();
       updateSubscriptionStatus();
     });
   </script>
