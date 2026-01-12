@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 19 – Green & White Bars: Candle Foundations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 19 – Candle Foundations</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Green & White Bars Really Mean</h2>
+  <p>
+    In this chapter, we break down the most basic but most powerful visual in trading:
+    <strong>the green and white bars</strong> — your candles. These bars tell the story of buyers
+    and sellers in real time. They show aggression, hesitation, momentum, and exhaustion.
+  </p>
+  <p>
+    A green bar means buyers stepped up. A white (or hollow) bar means buyers pushed price up
+    from the open. A red bar means sellers took control. These bars are not random — they are
+    the heartbeat of the auction you learned about in earlier chapters.
+  </p>
+  <p>
+    When I turned $400 into $40,000 in five days, candles were one of the main things I watched.
+    Not because they predict the future, but because they show the <strong>truth of the moment</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Candles Tell a Story</h2>
+  <p>
+    Every candle has a body and wicks. The body shows where price opened and closed. The wicks
+    show where price tried to go but couldn’t stay. This is the story of pressure — who is winning,
+    who is losing, and where the fight is happening.
+  </p>
+  <p>
+    Candles connect directly to your moving averages, your patterns, and your trend structure.
+    They confirm or deny your trade ideas. They help you avoid emotional entries and guide your
+    discipline.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Candle Basics</h2>
+  <form id="lesson19-quiz" class="form">
+
+    <label class="form-label">
+      What does a green candle represent?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers pushed price up during that period.</option>
+        <option value="b">Sellers dominated the entire time.</option>
+        <option value="c">The market was closed.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What do wicks represent?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Areas where price tried to go but couldn’t stay.</option>
+        <option value="b">Guaranteed reversal points.</option>
+        <option value="c">Noise with no meaning.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most when reading candles?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and context, not guessing.</option>
+        <option value="b">Predicting every move perfectly.</option>
+        <option value="c">Trading every candle you see.</option>
+      </select>
+    </label>
+
+    <div id="lesson19-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Candle Story</h2>
+  <p>
+    Imagine three strong green candles in a row, followed by a small white candle with long lower
+    wick.
+  </p>
+
+  <form id="lesson19-sim" class="form">
+
+    <label class="form-label">
+      What does this sequence suggest?
+      <select name="story" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers are strong, but sellers tried to push down and failed.</option>
+        <option value="b">Sellers are fully in control.</option>
+        <option value="c">Nothing can be learned.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pause, check your plan, and avoid chasing.</option>
+        <option value="b">Enter immediately with no plan.</option>
+        <option value="c">Double size because it “looks good.”</option>
+      </select>
+    </label>
+
+    <div id="lesson19-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 19</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson19();
+  });
+</script>
+
+</body>
+</html>
