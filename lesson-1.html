@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 1 – Discipline & Direction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 1 – Discipline & Direction</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Why Discipline Comes Before Everything</h2>
+      <p>
+        Before you learn any terms, strategies, or chart patterns, you must learn how to show up.
+        Markets reward people who are prepared, calm, and on time. They punish people who are
+        late, impulsive, or emotional.
+      </p>
+      <p>
+        Discipline is not optional. It is the foundation that supports every decision you make.
+        If you cannot commit to being prepared and on time, no amount of technical knowledge will
+        protect you.
+      </p>
+      <p>
+        In this academy, your discipline is measured through routines like the 9:00 AM check-in
+        and your willingness to complete each stage fully before moving on.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">The Simplest Possible Market Model</h2>
+      <p>
+        For now, forget all the noise. Imagine the market as a simple line that can move in one
+        of two directions from where you enter:
+      </p>
+      <ul>
+        <li><strong>Up</strong> from your entry</li>
+        <li><strong>Down</strong> from your entry</li>
+      </ul>
+      <p>
+        You put money in, you choose a direction, you wait, and then you take your money out.
+        That is the core idea. Everything else is detail and language layered on top of this.
+      </p>
+      <p>
+        Later, when we talk about calls and puts, order types, and charts, we will always come
+        back to this simple model: money in, movement, money out.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Discipline & Direction</h2>
+      <form id="lesson1-quiz" class="form">
+        <label class="form-label">
+          Why does this academy start with discipline instead of strategies?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Because discipline is optional but helpful.</option>
+            <option value="b">
+              Because without discipline, even good strategies are executed poorly and emotionally.
+            </option>
+            <option value="c">Because markets are random and nothing matters.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          In our simple model, how many directions can the market move relative to your entry?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">One direction</option>
+            <option value="b">Two directions: up or down</option>
+            <option value="c">Unlimited directions</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          In this stage, what is your focus?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Predicting exact prices</option>
+            <option value="b">Memorizing complex option strategies</option>
+            <option value="c">Understanding discipline and the basic up/down model</option>
+          </select>
+        </label>
+
+        <div id="lesson1-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Simple simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Money In, Direction, Money Out</h2>
+      <p>
+        Imagine you place a simple directional trade. You put in $100. You must choose whether
+        you believe the price will move <strong>up</strong> or <strong>down</strong> from here.
+      </p>
+      <form id="lesson1-sim" class="form">
+        <label class="form-label">
+          Choose a direction for this simulation:
+          <select name="direction" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          The market moves slightly up from your entry. What should your mindset be?
+          <select name="mindset" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Get greedy and hold forever.</option>
+            <option value="b">Stay calm, remember your plan, and decide based on your rules.</option>
+            <option value="c">Panic and close immediately without thinking.</option>
+          </select>
+        </label>
+
+        <div id="lesson1-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 1</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson1();
+    });
+  </script>
+</body>
+</html>
