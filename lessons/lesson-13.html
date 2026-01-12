@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <title>Stage 13 – Combining Chart Elements into a Setup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body class="theme-dark">
   <header class="top-bar">
     <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
@@ -34,9 +35,7 @@
 
     <section class="card">
       <h2 class="section-title">Example: A Simple Long Setup</h2>
-      <p>
-        Imagine this sequence:
-      </p>
+      <p>Imagine this sequence:</p>
       <ul>
         <li><strong>Trend:</strong> Price is above a rising moving average.</li>
         <li><strong>Pattern:</strong> A small flag forms after an upward push.</li>
@@ -74,9 +73,7 @@
           <select name="q1" class="form-input" required>
             <option value="">Select an answer</option>
             <option value="a">A random trade idea without structure.</option>
-            <option value="b">
-              A repeatable combination of signals and context that fits your rules.
-            </option>
+            <option value="b">A repeatable combination of signals and context that fits your rules.</option>
             <option value="c">Any trade you feel excited about.</option>
           </select>
         </label>
@@ -86,9 +83,7 @@
           <select name="q2" class="form-input" required>
             <option value="">Select an answer</option>
             <option value="a">Only one candle.</option>
-            <option value="b">
-              Trend direction, a pattern (flag), candles, and timeframe alignment.
-            </option>
+            <option value="b">Trend direction, a pattern (flag), candles, and timeframe alignment.</option>
             <option value="c">News only.</option>
           </select>
         </label>
@@ -98,9 +93,7 @@
           <select name="q3" class="form-input" required>
             <option value="">Select an answer</option>
             <option value="a">Perfectly predicting every trade.</option>
-            <option value="b">
-              Applying a structured process with discipline across many trades.
-            </option>
+            <option value="b">Applying a structured process with discipline across many trades.</option>
             <option value="c">Finding one pattern that never loses.</option>
           </select>
         </label>
@@ -118,20 +111,17 @@
       <h2 class="section-title">Mini Simulation: Evaluating Setup Strength</h2>
       <p>
         Imagine two situations:
-        <br />
-        A) You see a random single green candle and feel excited.
-        <br />
-        B) You see an uptrend above a moving average, a pullback flag, and a clear area for a stop.
+        <br />A) You see a random single green candle and feel excited.
+        <br />B) You see an uptrend above a moving average, a pullback flag, and a clear area for a stop.
       </p>
+
       <form id="lesson13-sim" class="form">
         <label class="form-label">
           Which one better fits the idea of a structured setup?
           <select name="choice" class="form-input" required>
             <option value="">Select one</option>
             <option value="a">A: One candle plus excitement.</option>
-            <option value="b">
-              B: Trend, pattern, candles, and a defined risk area working together.
-            </option>
+            <option value="b">B: Trend, pattern, candles, and a defined risk area working together.</option>
             <option value="c">Neither; both are identical.</option>
           </select>
         </label>
@@ -141,9 +131,7 @@
           <select name="requirement" class="form-input" required>
             <option value="">Select one</option>
             <option value="a">Nothing; you can skip risk and rules.</option>
-            <option value="b">
-              A clear plan for position size, risk, and exit—and the discipline to follow it.
-            </option>
+            <option value="b">A clear plan for position size, risk, and exit—and the discipline to follow it.</option>
             <option value="c">Only confirmation from a stranger online.</option>
           </select>
         </label>
@@ -157,12 +145,6 @@
     </section>
   </main>
 
-  <script src="app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initTheme();
-      initLesson13();
-    });
-  </script>
+  <script src="../app.js"></script>
 </body>
 </html>
