@@ -8,30 +8,28 @@
 </head>
 
 <body class="theme-dark">
-<header class="top-bar">
+<header class="top-bar glass-bar">
   <a href="index.html" class="icon-button">←</a>
-  <h1 class="app-title">Discipline Academy – Lessons</h1>
-  <button id="theme-toggle" class="icon-button">🌓</button>
-  <button id="secure-toggle" class="icon-button" title="Toggle Secure Mode">🔒</button>
+  <h1 class="app-title glow-text">Discipline Academy – Lessons</h1>
+  <div class="top-bar-right">
+    <button id="secure-toggle" class="icon-button" title="Toggle Secure Mode">🔒</button>
+    <button id="theme-toggle" class="icon-button">🌓</button>
+  </div>
 </header>
 
 <div class="layout">
 
   <!-- SIDEBAR -->
-  <aside class="sidebar">
+  <aside class="sidebar glass-card">
     <section class="sidebar-section">
-      <h2 class="sidebar-title">Academy Overview</h2>
+      <h2 class="sidebar-title glow-text-small">Academy Flow</h2>
       <p class="sidebar-text">
-        This academy is built to change how you think about trading:
-        <strong>discipline over excitement, process over impulse</strong>.
-      </p>
-      <p class="sidebar-text">
-        Move through each stage in order. Don’t skip. Each lesson builds on the last.
+        Move step by step. Each stage builds on the last. No skipping. No rushing.
       </p>
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-subtitle">Chapters</h3>
+      <h3 class="sidebar-subtitle glow-text-small">Chapters</h3>
       <ul class="sidebar-nav">
         <li><button class="sidebar-link" data-target="intro">Orientation</button></li>
         <li><button class="sidebar-link" data-target="patterns">Chart Pattern Mastery</button></li>
@@ -40,25 +38,20 @@
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-subtitle">Certification Path</h3>
-      <p class="sidebar-text">
-        To earn your <strong>Discipline Academy – Chart Pattern Mastery</strong> certificate:
-      </p>
+      <h3 class="sidebar-subtitle glow-text-small">Certification Path</h3>
       <ul class="sidebar-bullets">
-        <li>Complete all pattern lessons and simulations.</li>
+        <li>Complete all 87 stages in order.</li>
         <li>Pass the final pattern exam (Stage 84).</li>
-        <li>Submit your name/details (Stage 85).</li>
-        <li>Generate and save/print your certificate (Stage 86).</li>
+        <li>Enter your details (Stage 85).</li>
+        <li>Generate your certificate (Stage 86).</li>
+        <li>View your mastery badge (Stage 87).</li>
       </ul>
-      <p class="sidebar-text">
-        You’ll also unlock a Chart Pattern Mastery badge on completion.
-      </p>
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-subtitle">Discipline Check‑In</h3>
+      <h3 class="sidebar-subtitle glow-text-small">Discipline Check‑In</h3>
       <p class="sidebar-text">
-        Once a week, you’ll see a discipline reminder. This is serious work, not gambling.
+        Once a week, you’ll see a discipline reminder. This is where you recommit to the process.
       </p>
       <button id="discipline-button" class="sidebar-button">
         9 o'clock Discipline Check
@@ -68,49 +61,59 @@
 
   <!-- MAIN CONTENT (SECURE AREA) -->
   <main class="main-content secure-area" id="lesson-container">
-    <section class="card" id="intro-section">
-      <h2 class="section-title">Start Here – Orientation</h2>
+
+    <section class="glass-card" id="intro-section">
+      <h2 class="section-title glow-text">Start Here – Orientation</h2>
       <p>
-        Welcome to the Chart Pattern Mastery track of Discipline Academy. You’ll learn to
-        read trends, levels, moving averages, candles, and patterns as one disciplined system.
+        Welcome to the core of <strong>Discipline Academy</strong>. This is your structured system
+        for mastering chart patterns – not as drawings, but as a language of trend, location,
+        moving averages, candles, and volume.
       </p>
       <p>
-        When you're ready, start with the first pattern lesson:
+        You’ll move through <strong>87 stages</strong>. Early stages focus on foundations. Later
+        stages integrate entries, stops, targets, management, journaling, and certification.
       </p>
       <div class="button-row">
-        <a href="lessons/lesson-49.html" class="primary-button">Start Chart Pattern Mastery</a>
+        <a href="lessons/lesson-1.html" class="primary-button primary-glow">
+          Begin Stage 1
+        </a>
       </div>
     </section>
 
-    <section class="card" id="patterns-section">
-      <h2 class="section-title">Chart Pattern Mastery – Lessons</h2>
-      <p>Select a lesson to continue:</p>
-      <ul class="sidebar-bullets">
-        <li><a href="lessons/lesson-49.html">Stage 49 – What Chart Patterns Are</a></li>
-        <li><a href="lessons/lesson-50.html">Stage 50 – Flag Patterns</a></li>
-        <li><a href="lessons/lesson-51.html">Stage 51 – Pennant Patterns</a></li>
-        <!-- ... continue listing key lessons or link to a full lesson map page ... -->
+    <section class="glass-card" id="patterns-section">
+      <h2 class="section-title glow-text">Chart Pattern Mastery – Lesson Map</h2>
+      <p class="muted-text">
+        Move in order. Don’t jump ahead. The unlock logic can enforce progression if you choose
+        to tie each stage to completion flags.
+      </p>
+      <ul class="lesson-map">
+        <li><a href="lessons/lesson-1.html">Stage 1</a></li>
+        <li><a href="lessons/lesson-2.html">Stage 2</a></li>
+        <li><a href="lessons/lesson-3.html">Stage 3</a></li>
+        <!-- ... continue this pattern up to ... -->
         <li><a href="lessons/lesson-84.html">Stage 84 – Final Pattern Exam</a></li>
-        <li><a href="lessons/lesson-85.html">Stage 85 – Pattern Certification Info</a></li>
+        <li><a href="lessons/lesson-85.html">Stage 85 – Certification Info</a></li>
         <li><a href="lessons/lesson-86.html">Stage 86 – Certificate Preview</a></li>
-        <li><a href="lessons/lesson-87.html">Stage 87 – Mastery Badge & Completion</a></li>
+        <li><a href="lessons/lesson-87.html">Stage 87 – Mastery Badge</a></li>
       </ul>
     </section>
 
-    <section class="card" id="certification-section">
-      <h2 class="section-title">Certification & Badge</h2>
+    <section class="glass-card" id="certification-section">
+      <h2 class="section-title glow-text">Certification & Badge</h2>
       <p>
-        After you pass the exam and enter your details, you’ll unlock:
+        After passing the final exam and entering your details, you’ll unlock a printable
+        certificate with your name and completion date, plus a mastery badge inside the academy.
       </p>
-      <ul class="sidebar-bullets">
-        <li>A printable certificate with your name and completion date.</li>
-        <li>A Chart Pattern Mastery badge inside the academy.</li>
-      </ul>
       <div class="button-row">
-        <a href="lessons/lesson-85.html" class="primary-button">Go to Certification Info</a>
-        <a href="lessons/lesson-86.html" class="secondary-button">View Certificate Preview</a>
+        <a href="lessons/lesson-85.html" class="primary-button primary-glow">
+          Go to Certification Info
+        </a>
+        <a href="lessons/lesson-86.html" class="secondary-button">
+          Preview Certificate
+        </a>
       </div>
     </section>
+
   </main>
 
 </div>
@@ -118,36 +121,37 @@
 <!-- Discipline Popup -->
 <div id="discipline-popup" class="modal hidden">
   <div class="modal-backdrop"></div>
-  <div class="modal-content">
-    <h2 class="section-title">This Is Not a Game</h2>
+  <div class="modal-content glass-card">
+    <h2 class="section-title glow-text">This Is Not a Game</h2>
     <p>
-      Discipline Academy is designed to change the way you trade. This is not for gambling, not
-      for chasing, not for “get rich tomorrow”.
+      Discipline Academy is not for gambling, not for chasing, not for “I feel like it” trades.
     </p>
     <p>
-      You are learning to:
+      You are here to:
     </p>
-    <ul>
-      <li>Respect risk.</li>
-      <li>Follow your process over your emotions.</li>
-      <li>Use structure, not impulses.</li>
-      <li>Treat trading like serious work.</li>
+    <ul class="hero-list">
+      <li>Respect risk like it’s your business.</li>
+      <li>Follow structure over emotion.</li>
+      <li>Trade patterns inside a system, not in isolation.</li>
+      <li>Build habits that don’t disappear when the market moves against you.</li>
     </ul>
     <p>
-      If you are not ready to treat this like real work, stop now. If you are, commit fully.
+      If you’re not ready to treat this seriously, stop. If you are, commit – fully.
     </p>
     <div class="button-row">
-      <button id="discipline-close" class="primary-button">I Understand – Continue</button>
+      <button id="discipline-close" class="primary-button primary-glow">
+        I Understand – Continue
+      </button>
     </div>
   </div>
 </div>
 
-<script src="scripts/app.js"></script>
+<script src="app.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    enforceGlobalAccessGate();   // lock everything until payment
+    enforceGlobalAccessGate();
     initTheme();
-    initLessonsShell();          // sidebar, popup, secure mode
+    initLessonsShell();
   });
 </script>
 
