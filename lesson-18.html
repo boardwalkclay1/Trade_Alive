@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 18 – Full Moving Averages Mock Trade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 18 – Moving Averages Mock Trade</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Bringing Moving Averages into a Full Trade Idea</h2>
+      <p>
+        This stage is where you bring everything together: moving averages (your main tool),
+        candles, patterns, timeframes, and the mock enter/exit flow you’ve practiced before.
+      </p>
+      <p>
+        You are not trying to be perfect. You are proving that you can think in a structured way:
+        read the trend, choose a direction, pick a contract, and define your entry and exit using
+        moving averages and discipline.
+      </p>
+      <p>
+        This is a rehearsal for how you will later use these tools in the real world—with real
+        money and real emotions—while remembering that discipline and self-control matter more
+        than any indicator.
+      </p>
+    </section>
+
+    <!-- Quiz: concept reinforcement -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Moving Averages Chapter Review</h2>
+      <form id="lesson18-quiz" class="form">
+        <label class="form-label">
+          What is the primary role of moving averages in this academy?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              To provide structure and trend context that supports disciplined trade ideas.
+            </option>
+            <option value="b">To guarantee that trades will win.</option>
+            <option value="c">To replace all other tools.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How do moving averages connect to your mock enter/exit simulations?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              They help you define where a pullback entry might make sense and where losing
+              structure might trigger an exit.
+            </option>
+            <option value="b">They make simulation practice unnecessary.</option>
+            <option value="c">They are purely cosmetic.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          After ten years of trading, what remains more important than any moving average setting?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Discipline and control over yourself while trading.</option>
+            <option value="b">Having the fanciest chart setup.</option>
+            <option value="c">Never taking a loss.</option>
+          </select>
+        </label>
+
+        <div id="lesson18-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Full mock trade simulation with MA focus -->
+    <section class="card">
+      <h2 class="section-title">Full Mock: Moving Averages Driven Trade Plan</h2>
+      <p>
+        Imagine this scenario:
+        <br />
+        • The daily chart shows an uptrend above a rising 20 and 50-period moving average.
+        <br />
+        • The intraday chart shows a pullback flag into the 20-period moving average.
+        <br />
+        • Candles near the moving average show buyers defending the area with higher lows.
+      </p>
+      <form id="lesson18-sim" class="form">
+        <label class="form-label">
+          Step 1 – Direction: Based on the moving averages and structure, what is your bias?
+          <select name="direction" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="up">Upward (bullish) bias.</option>
+            <option value="down">Downward (bearish) bias.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 2 – Contract Type: Which options contract matches this bias?
+          <select name="contractType" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="call">Call option.</option>
+            <option value="put">Put option.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 3 – Entry Idea: Where would a disciplined entry idea come from?
+          <select name="entryPlan" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Near the pullback area into the moving average, if candles and pattern confirm and
+              risk is defined.
+            </option>
+            <option value="b">At any random point because the trend is up.</option>
+            <option value="c">Only after a huge spike with no pullback.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 4 – Exit Plan: How would you connect moving averages to your exit rules?
+          <select name="exitPlan" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Use a pre-defined stop and profit target, and treat a clean break below the moving
+              average with strong selling as a possible exit or warning.
+            </option>
+            <option value="b">Hold no matter what moving averages or candles do.</option>
+            <option value="c">Exit randomly when emotions spike.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 5 – Emotional Control: During this mock trade, what is your real job?
+          <select name="emotionControl" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Follow your plan, respect your moving average structure, and avoid emotional
+              decisions—even if the trade wins or loses.
+            </option>
+            <option value="b">Chase every candle that moves.</option>
+            <option value="c">Revenge trade if anything goes against you.</option>
+          </select>
+        </label>
+
+        <div id="lesson18-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">
+            Complete Stage 18 and Finish Moving Averages Chapter
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson18();
+    });
+  </script>
+</body>
+</html>
