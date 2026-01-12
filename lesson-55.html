@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 55 – Double Tops</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 55 – Double Tops</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What a Double Top Is</h2>
+  <p>
+    A double top is a bearish reversal pattern. Price pushes into a resistance level, rejects,
+    pulls back, then tries again — and fails at the same level.
+  </p>
+  <p>
+    This shows <strong>buyer exhaustion</strong> and <strong>seller strength</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Double Top Requirements</h2>
+  <ul>
+    <li>Strong uptrend into resistance</li>
+    <li>First rejection</li>
+    <li>Pullback</li>
+    <li>Second rejection at the same level</li>
+    <li>Break of neckline (confirmation)</li>
+  </ul>
+  <p>
+    The neckline break is the real signal — not the two tops.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Double Tops</h2>
+  <form id="lesson55-quiz" class="form">
+
+    <label class="form-label">
+      What does a double top show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers failing at the same level twice.</option>
+        <option value="b">Guaranteed continuation.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the pattern?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Neckline break.</option>
+        <option value="b">The first top.</option>
+        <option value="c">The pullback.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + confirmation.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson55-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Double Top Read</h2>
+  <p>
+    Imagine price hits resistance, rejects, pulls back, then rejects again at the same level.
+  </p>
+
+  <form id="lesson55-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="dt" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyer exhaustion.</option>
+        <option value="b">Strong continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the reversal?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Neckline break.</option>
+        <option value="b">The second top.</option>
+        <option value="c">The wick.</option>
+      </select>
+    </label>
+
+    <div id="lesson55-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 55</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson55();
+  });
+</script>
+
+</body>
+</html>
