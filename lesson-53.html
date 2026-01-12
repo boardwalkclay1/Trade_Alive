@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 53 – Channels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 53 – Channels</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What a Channel Is</h2>
+  <p>
+    A channel is a clean, structured trend. Price moves between two parallel trendlines — either
+    rising, falling, or sideways.
+  </p>
+  <p>
+    Channels show <strong>organized auction flow</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Types of Channels</h2>
+  <ul>
+    <li><strong>Ascending Channel</strong> – bullish trend</li>
+    <li><strong>Descending Channel</strong> – bearish trend</li>
+    <li><strong>Horizontal Channel</strong> – consolidation</li>
+  </ul>
+  <p>
+    Channels are the cleanest way to see trend structure.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Channels</h2>
+  <form id="lesson53-quiz" class="form">
+
+    <label class="form-label">
+      What defines a channel?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Two parallel trendlines.</option>
+        <option value="b">Two converging lines.</option>
+        <option value="c">Random spikes.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does an ascending channel show?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Bullish trend structure.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most in channels?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + disciplined entries.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson53-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Channel Read</h2>
+  <p>
+    Imagine price trending up inside a clean ascending channel with higher highs and higher lows.
+  </p>
+
+  <form id="lesson53-sim" class="form">
+
+    <label class="form-label">
+      What does this show?
+      <select name="chan" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Healthy bullish structure.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trade pullbacks to channel support.</option>
+        <option value="b">Chase highs.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson53-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 53</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson53();
+  });
+</script>
+
+</body>
+</html>
