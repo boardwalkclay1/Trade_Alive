@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 40 – Candle Behavior in Consolidation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 40 – Consolidation Candles</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Consolidation Really Is</h2>
+  <p>
+    Consolidation is when the market moves sideways — neither buyers nor sellers have control.
+    Candles become small, wicks appear on both sides, and price stays inside a tight range.
+  </p>
+  <p>
+    This is where emotional traders get chopped up. But disciplined traders wait.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Candle Behavior in Consolidation</h2>
+  <ul>
+    <li>Small bodies</li>
+    <li>Wicks on both ends</li>
+    <li>Inside bars</li>
+    <li>Repeated rejection at the same levels</li>
+  </ul>
+  <p>
+    These candles show balance — not opportunity.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Consolidation</h2>
+  <form id="lesson40-quiz" class="form">
+
+    <label class="form-label">
+      What does consolidation show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Balance between buyers and sellers.</option>
+        <option value="b">Strong trend.</option>
+        <option value="c">Guaranteed breakout.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What do candles look like in consolidation?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Small bodies with wicks.</option>
+        <option value="b">Huge momentum candles.</option>
+        <option value="c">Random spikes.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trading emotionally inside the chop.</option>
+        <option value="b">Waiting for confirmation.</option>
+        <option value="c">Following your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson40-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Consolidation Read</h2>
+  <p>
+    Imagine price moving sideways with small candles and wicks on both ends.
+  </p>
+
+  <form id="lesson40-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="consolidate" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Balance — no clear direction.</option>
+        <option value="b">Strong trend.</option>
+        <option value="c">Guaranteed breakout.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for a breakout + confirmation.</option>
+        <option value="b">Chase every candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson40-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 40</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson40();
+  });
+</script>
+
+</body>
+</html>
