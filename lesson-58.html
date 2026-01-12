@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 58 – Inverse Head & Shoulders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 58 – Inverse H&S</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Inverse H&S Is</h2>
+  <p>
+    Inverse Head & Shoulders is the bullish version of the classic H&S pattern. It forms when
+    sellers push down, fail, push lower, fail again, then push higher than before.
+  </p>
+  <p>
+    It shows <strong>seller exhaustion</strong> and <strong>buyer takeover</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Pattern Structure</h2>
+  <ul>
+    <li>Left shoulder (higher low)</li>
+    <li>Head (lower low)</li>
+    <li>Right shoulder (higher low)</li>
+    <li>Neckline</li>
+    <li>Breakout (confirmation)</li>
+  </ul>
+  <p>
+    The neckline break is the real signal — not the shoulders.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Inverse H&S</h2>
+  <form id="lesson58-quiz" class="form">
+
+    <label class="form-label">
+      What does inverse H&S show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Seller exhaustion + buyer strength.</option>
+        <option value="b">Guaranteed continuation down.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the pattern?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Neckline breakout.</option>
+        <option value="b">The head.</option>
+        <option value="c">The wick.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + confirmation.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson58-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Inverse H&S Read</h2>
+  <p>
+    Imagine price forms a left shoulder, pushes lower into a head, then forms a higher low right shoulder.
+  </p>
+
+  <form id="lesson58-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="ihs" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Seller exhaustion.</option>
+        <option value="b">Strong continuation down.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the reversal?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Neckline breakout.</option>
+        <option value="b">The right shoulder.</option>
+        <option value="c">The wick.</option>
+      </select>
+    </label>
+
+    <div id="lesson58-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 58</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson58();
+  });
+</script>
+
+</body>
+</html>
