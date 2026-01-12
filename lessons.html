@@ -6,197 +6,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="theme-dark">
-  <header class="top-bar">
-    <a href="index.html" class="icon-button" aria-label="Back home">←</a>
-    <h1 class="app-title">Lesson Stages</h1>
-    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
-  </header>
+<header class="top-bar">
+  <a href="index.html" class="icon-button">←</a>
+  <h1 class="app-title">Discipline Academy – Lessons</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+  <button id="secure-toggle" class="icon-button" title="Toggle Secure Mode">🔒</button>
+</header>
 
-  <main class="main-content">
-    <section id="lessons-locked" class="card hidden">
-      <h2 class="section-title">Lessons Locked</h2>
-      <p>
-        You must complete the <strong>Mock Options Application Simulation</strong> before you can
-        access the lesson stages.
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <section class="sidebar-section">
+      <h2 class="sidebar-title">Academy Overview</h2>
+      <p class="sidebar-text">
+        This academy is built to change how you think about trading:
+        <strong>discipline over excitement, process over impulse</strong>.
       </p>
-      <a href="mock-options.html" class="primary-button">Complete Mock Options Application</a>
+      <p class="sidebar-text">
+        Move through each stage in order. Don’t skip. Each lesson builds on the last.
+      </p>
     </section>
 
-    <section id="lessons-content" class="card hidden">
-      <h2 class="section-title">Your Training Path</h2>
-      <p>
-        Each stage must be completed in order. New stages unlock only after you finish the ones
-        before them. Each lesson includes a detailed explanation, an interactive quiz, and a
-        mock simulation that adds one more piece to your full practice trade.
+    <section class="sidebar-section">
+      <h3 class="sidebar-subtitle">Chapters</h3>
+      <ul class="sidebar-nav">
+        <li><button class="sidebar-link" data-target="intro">Orientation</button></li>
+        <li><button class="sidebar-link" data-target="patterns">Chart Pattern Mastery</button></li>
+        <li><button class="sidebar-link" data-target="certification">Certification & Badge</button></li>
+      </ul>
+    </section>
+
+    <section class="sidebar-section">
+      <h3 class="sidebar-subtitle">Certification Path</h3>
+      <p class="sidebar-text">
+        To earn your <strong>Discipline Academy – Chart Pattern Mastery</strong> certificate:
       </p>
+      <ul class="sidebar-bullets">
+        <li>Complete all pattern lessons and simulations.</li>
+        <li>Pass the final pattern exam (Stage 84).</li>
+        <li>Submit your name/details (Stage 85).</li>
+        <li>Generate and save/print your certificate (Stage 86).</li>
+      </ul>
+      <p class="sidebar-text">
+        You’ll also unlock a Chart Pattern Mastery badge on completion.
+      </p>
+    </section>
 
-      <div class="lesson-stage" data-stage="1">
-        <div class="lesson-stage-header">
-          <h3>Stage 1 — Discipline & Simple Direction</h3>
-          <span class="stage-status" id="stage-1-status">Unlocked</span>
-        </div>
-        <p>
-          Learn why discipline and timing matter more than anything, and build your first mental
-          model: the market can move up or down, you put money in, you want it to move your way,
-          and then you take it out.
-        </p>
-        <button class="primary-button small" data-open-stage="1">Open Lesson</button>
+    <section class="sidebar-section">
+      <h3 class="sidebar-subtitle">Discipline Check‑In</h3>
+      <p class="sidebar-text">
+        Once a week, you’ll see a discipline reminder. This is serious work, not gambling.
+      </p>
+      <button id="discipline-button" class="sidebar-button">
+        9 o'clock Discipline Check
+      </button>
+    </section>
+  </aside>
+
+  <!-- MAIN CONTENT (SECURE AREA) -->
+  <main class="main-content secure-area" id="lesson-container">
+    <section class="card" id="intro-section">
+      <h2 class="section-title">Start Here – Orientation</h2>
+      <p>
+        Welcome to the Chart Pattern Mastery track of Discipline Academy. You’ll learn to
+        read trends, levels, moving averages, candles, and patterns as one disciplined system.
+      </p>
+      <p>
+        When you're ready, start with the first pattern lesson:
+      </p>
+      <div class="button-row">
+        <a href="lessons/lesson-49.html" class="primary-button">Start Chart Pattern Mastery</a>
       </div>
+    </section>
 
-      <div class="lesson-stage" data-stage="2">
-        <div class="lesson-stage-header">
-          <h3>Stage 2 — What the Market Really Is</h3>
-          <span class="stage-status" id="stage-2-status">Locked</span>
-        </div>
-        <p>
-          Understand that the market is made of real people and institutions on the other side of
-          every contract, moving in real time. Learn what a ticker is, what a chart is, and what
-          you are actually trading when you trade options on a ticker.
-        </p>
-        <button class="secondary-button small" data-open-stage="2" disabled>Locked</button>
-      </div>
+    <section class="card" id="patterns-section">
+      <h2 class="section-title">Chart Pattern Mastery – Lessons</h2>
+      <p>Select a lesson to continue:</p>
+      <ul class="sidebar-bullets">
+        <li><a href="lessons/lesson-49.html">Stage 49 – What Chart Patterns Are</a></li>
+        <li><a href="lessons/lesson-50.html">Stage 50 – Flag Patterns</a></li>
+        <li><a href="lessons/lesson-51.html">Stage 51 – Pennant Patterns</a></li>
+        <!-- ... continue listing key lessons or link to a full lesson map page ... -->
+        <li><a href="lessons/lesson-84.html">Stage 84 – Final Pattern Exam</a></li>
+        <li><a href="lessons/lesson-85.html">Stage 85 – Pattern Certification Info</a></li>
+        <li><a href="lessons/lesson-86.html">Stage 86 – Certificate Preview</a></li>
+        <li><a href="lessons/lesson-87.html">Stage 87 – Mastery Badge & Completion</a></li>
+      </ul>
+    </section>
 
-      <div class="lesson-stage" data-stage="3">
-        <div class="lesson-stage-header">
-          <h3>Stage 3 — Calls, Puts, and Direction</h3>
-          <span class="stage-status" id="stage-3-status">Locked</span>
-        </div>
-        <p>
-          Connect your simple up-or-down model to options language: calls generally benefit when
-          price goes up, puts when price goes down. Begin mapping the dumbed-down model to the
-          real-world terms.
-        </p>
-        <button class="secondary-button small" data-open-stage="3" disabled>Locked</button>
-      </div>
-
-      <div class="lesson-stage" data-stage="4">
-        <div class="lesson-stage-header">
-          <h3>Stage 4 — Options Page Breakdown</h3>
-          <span class="stage-status" id="stage-4-status">Locked</span>
-        </div>
-        <p>
-          Walk through an options page step by step: strike prices, expiration, quantity, bid,
-          ask, and spreads—and why each one matters for discipline and execution.
-        </p>
-        <button class="secondary-button small" data-open-stage="4" disabled>Locked</button>
-      </div>
-
-      <div class="lesson-stage" data-stage="5">
-        <div class="lesson-stage-header">
-          <h3>Stage 5 — Entering & Exiting Simulated Trades</h3>
-          <span class="stage-status" id="stage-5-status">Locked</span>
-        </div>
-        <p>
-          Practice entering and exiting calls and puts in a simulated environment. Each step maps
-          back to the simple “money in, move, money out” model.
-        </p>
-        <button class="secondary-button small" data-open-stage="5" disabled>Locked</button>
-      </div>
-
-      <div class="lesson-stage" data-stage="6">
-        <div class="lesson-stage-header">
-          <h3>Stage 6 — Full Mock Trade & Emotional Control</h3>
-          <span class="stage-status" id="stage-6-status">Locked</span>
-        </div>
-        <p>
-          Combine everything: discipline, direction, calls, puts, options pages, and order
-          execution into one final simulated flow, plus questions about emotional control and
-          preparedness. Completing this stage unlocks Chapter 2.
-        </p>
-        <button class="secondary-button small" data-open-stage="6" disabled>Locked</button>
+    <section class="card" id="certification-section">
+      <h2 class="section-title">Certification & Badge</h2>
+      <p>
+        After you pass the exam and enter your details, you’ll unlock:
+      </p>
+      <ul class="sidebar-bullets">
+        <li>A printable certificate with your name and completion date.</li>
+        <li>A Chart Pattern Mastery badge inside the academy.</li>
+      </ul>
+      <div class="button-row">
+        <a href="lessons/lesson-85.html" class="primary-button">Go to Certification Info</a>
+        <a href="lessons/lesson-86.html" class="secondary-button">View Certificate Preview</a>
       </div>
     </section>
   </main>
 
-  <script src="app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initTheme();
-      initLessonsPage();
-    });
-  </script>
-</body>
-</html>
-          <h3>Stage 1 — Discipline Training</h3>
-          <span class="stage-status" id="stage-1-status">Unlocked</span>
-        </div>
-        <p>
-          Establish your daily 9:00 AM ritual, maintain check-in streaks, and prove you can show
-          up on time before learning anything else.
-        </p>
-        <button class="primary-button small" data-open-stage="1">Open Stage</button>
-      </div>
+</div>
 
-      <div class="lesson-stage" data-stage="2">
-        <div class="lesson-stage-header">
-          <h3>Stage 2 — Up vs Down (Simple Direction)</h3>
-          <span class="stage-status" id="stage-2-status">Locked</span>
-        </div>
-        <p>
-          Learn the most basic model: the market can move up or down. You put money in, you want
-          it to move your way, and you take money out. No jargon—just direction and timing.
-        </p>
-        <button class="secondary-button small" data-open-stage="2" disabled>Locked</button>
-      </div>
+<!-- Discipline Popup -->
+<div id="discipline-popup" class="modal hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <h2 class="section-title">This Is Not a Game</h2>
+    <p>
+      Discipline Academy is designed to change the way you trade. This is not for gambling, not
+      for chasing, not for “get rich tomorrow”.
+    </p>
+    <p>
+      You are learning to:
+    </p>
+    <ul>
+      <li>Respect risk.</li>
+      <li>Follow your process over your emotions.</li>
+      <li>Use structure, not impulses.</li>
+      <li>Treat trading like serious work.</li>
+    </ul>
+    <p>
+      If you are not ready to treat this like real work, stop now. If you are, commit fully.
+    </p>
+    <div class="button-row">
+      <button id="discipline-close" class="primary-button">I Understand – Continue</button>
+    </div>
+  </div>
+</div>
 
-      <div class="lesson-stage" data-stage="3">
-        <div class="lesson-stage-header">
-          <h3>Stage 3 — Calls = Up, Puts = Down</h3>
-          <span class="stage-status" id="stage-3-status">Locked</span>
-        </div>
-        <p>
-          Connect your understanding of “up or down” to the language of options: calls for up,
-          puts for down. Still educational and direction-focused.
-        </p>
-        <button class="secondary-button small" data-open-stage="3" disabled>Locked</button>
-      </div>
+<script src="scripts/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    enforceGlobalAccessGate();   // lock everything until payment
+    initTheme();
+    initLessonsShell();          // sidebar, popup, secure mode
+  });
+</script>
 
-      <div class="lesson-stage" data-stage="4">
-        <div class="lesson-stage-header">
-          <h3>Stage 4 — Options Page Breakdown</h3>
-          <span class="stage-status" id="stage-4-status">Locked</span>
-        </div>
-        <p>
-          Step-by-step walkthrough of an options page: quantity, bid price, ask price, spreads,
-          and how these elements can help or hurt you based on your discipline.
-        </p>
-        <button class="secondary-button small" data-open-stage="4" disabled>Locked</button>
-      </div>
-
-      <div class="lesson-stage" data-stage="5">
-        <div class="lesson-stage-header">
-          <h3>Stage 5 — Entering & Exiting Simulated Trades</h3>
-          <span class="stage-status" id="stage-5-status">Locked</span>
-        </div>
-        <p>
-          Practice entering and exiting trades in a purely simulated environment. No real money,
-          just execution practice and feedback.
-        </p>
-        <button class="secondary-button small" data-open-stage="5" disabled>Locked</button>
-      </div>
-
-      <div class="lesson-stage" data-stage="6">
-        <div class="lesson-stage-header">
-          <h3>Stage 6 — Emotional Control & Risk Awareness</h3>
-          <span class="stage-status" id="stage-6-status">Locked</span>
-        </div>
-        <p>
-          Learn how impatience, fear, and greed sabotage traders—and how disciplined routines
-          protect you from yourself.
-        </p>
-        <button class="secondary-button small" data-open-stage="6" disabled>Locked</button>
-      </div>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initTheme();
-      initBlurAndViolationSystem();
-      initLessonsPage();
-    });
-  </script>
 </body>
 </html>
