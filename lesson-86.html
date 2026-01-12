@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 86 – Discipline Academy Certificate Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* Certificate-specific styling – you can move this into styles.css */
+
+    .certificate-wrapper {
+      max-width: 900px;
+      margin: 1.5rem auto;
+      padding: 1.5rem;
+      background: #fdfaf3;
+      color: #111;
+      border: 4px solid #222;
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      font-family: "Georgia", "Times New Roman", serif;
+    }
+
+    .certificate-border-inner {
+      border: 2px solid #999;
+      padding: 1.5rem;
+    }
+
+    .certificate-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .certificate-brand {
+      font-size: 1.2rem;
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .certificate-title {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .certificate-subtitle {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .certificate-body {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .certificate-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      border-bottom: 1px solid #555;
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      min-width: 260px;
+      margin-bottom: 0.5rem;
+    }
+
+    .certificate-text {
+      font-size: 1rem;
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .certificate-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .certificate-signature-block {
+      text-align: center;
+    }
+
+    .signature-line {
+      border-top: 1px solid #555;
+      width: 200px;
+      margin: 0.25rem auto 0.15rem;
+    }
+
+    .certificate-seal {
+      font-size: 0.85rem;
+      text-align: center;
+      border: 2px solid #222;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .certificate-seal span {
+      display: block;
+    }
+
+    @media print {
+      body {
+        background: #fff !important;
+      }
+      .top-bar,
+      .button-row,
+      #theme-toggle {
+        display: none !important;
+      }
+      .main-content {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="theme-dark">
+<header class="top-bar no-print">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 86 – Your Discipline Academy Certificate</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card no-print">
+  <h2 class="section-title">Certificate Preview</h2>
+  <p>
+    This is your official <strong>Discipline Academy – Chart Pattern Mastery</strong> certificate.
+  </p>
+  <p>
+    Your name and completion date are pulled from your saved information. If something is wrong,
+    go back and edit your details before printing.
+  </p>
+</section>
+
+<section class="certificate-wrapper" id="certificate">
+  <div class="certificate-border-inner">
+    <div class="certificate-header">
+      <div class="certificate-brand">DISCIPLINE ACADEMY</div>
+      <div class="certificate-title">Certificate of Completion</div>
+      <div class="certificate-subtitle">Chart Pattern Mastery Program</div>
+    </div>
+
+    <div class="certificate-body">
+      <div>This certifies that</div>
+      <div id="cert-name" class="certificate-name">Student Name</div>
+      <div class="certificate-text">
+        has successfully completed the Chart Pattern Mastery curriculum of Discipline Academy,<br />
+        demonstrating structured understanding of trends, levels, moving averages, candlestick behavior,<br />
+        and pattern‑based trade building with discipline‑first execution.
+      </div>
+
+      <div class="certificate-text" style="margin-top: 1.5rem;">
+        Awarded on <span id="cert-date">[Date]</span>
+        <span id="cert-location-wrapper" style="display:block;margin-top:0.35rem;font-size:0.9rem;">
+          in <span id="cert-location">[City, State]</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="certificate-footer">
+      <div class="certificate-signature-block">
+        <div class="signature-line"></div>
+        <div>Program Director</div>
+        <div style="font-size:0.8rem;color:#555;">Discipline Academy</div>
+      </div>
+
+      <div class="certificate-seal">
+        <span style="font-weight:bold;">DISCIPLINE</span>
+        <span style="font-size:0.75rem;">CHART PATTERN</span>
+        <span style="font-size:0.75rem;">MASTERY</span>
+      </div>
+
+      <div class="certificate-signature-block">
+        <div class="signature-line"></div>
+        <div>Certified Graduate</div>
+        <div style="font-size:0.8rem;color:#555;">Chart Patterns</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card no-print">
+  <h2 class="section-title">Save or Print Your Certificate</h2>
+  <p>
+    On phone: tap the button below, then use your browser’s print or share options to save as PDF
+    or screenshot to your gallery.
+  </p>
+  <p>
+    On desktop: use “Print” and select your printer or “Save as PDF”.
+  </p>
+
+  <div id="cert-actions-message" class="feedback-text"></div>
+
+  <div class="button-row">
+    <button type="button" class="primary-button" id="print-cert-button">
+      Download / Print Certificate
+    </button>
+  </div>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson86(); 
+    // In initLesson86 (app.js):
+    // - Pull saved user info (name, location, date or completion timestamp)
+    // - Fill #cert-name, #cert-date, #cert-location
+    // - Hide cert-location-wrapper if no location was provided
+    const printBtn = document.getElementById("print-cert-button");
+    if (printBtn) {
+      printBtn.addEventListener("click", function () {
+        window.print();
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
