@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="theme-dark">
-  <div id="blur-overlay" class="blur-overlay hidden"></div>
-
   <header class="top-bar">
     <a href="index.html" class="icon-button" aria-label="Back home">←</a>
     <h1 class="app-title">Lesson Stages</h1>
@@ -29,11 +27,97 @@
       <h2 class="section-title">Your Training Path</h2>
       <p>
         Each stage must be completed in order. New stages unlock only after you finish the ones
-        before them. This keeps your learning structured and discipline-driven.
+        before them. Each lesson includes a detailed explanation, an interactive quiz, and a
+        mock simulation that adds one more piece to your full practice trade.
       </p>
 
       <div class="lesson-stage" data-stage="1">
         <div class="lesson-stage-header">
+          <h3>Stage 1 — Discipline & Simple Direction</h3>
+          <span class="stage-status" id="stage-1-status">Unlocked</span>
+        </div>
+        <p>
+          Learn why discipline and timing matter more than anything, and build your first mental
+          model: the market can move up or down, you put money in, you want it to move your way,
+          and then you take it out.
+        </p>
+        <button class="primary-button small" data-open-stage="1">Open Lesson</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="2">
+        <div class="lesson-stage-header">
+          <h3>Stage 2 — What the Market Really Is</h3>
+          <span class="stage-status" id="stage-2-status">Locked</span>
+        </div>
+        <p>
+          Understand that the market is made of real people and institutions on the other side of
+          every contract, moving in real time. Learn what a ticker is, what a chart is, and what
+          you are actually trading when you trade options on a ticker.
+        </p>
+        <button class="secondary-button small" data-open-stage="2" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="3">
+        <div class="lesson-stage-header">
+          <h3>Stage 3 — Calls, Puts, and Direction</h3>
+          <span class="stage-status" id="stage-3-status">Locked</span>
+        </div>
+        <p>
+          Connect your simple up-or-down model to options language: calls generally benefit when
+          price goes up, puts when price goes down. Begin mapping the dumbed-down model to the
+          real-world terms.
+        </p>
+        <button class="secondary-button small" data-open-stage="3" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="4">
+        <div class="lesson-stage-header">
+          <h3>Stage 4 — Options Page Breakdown</h3>
+          <span class="stage-status" id="stage-4-status">Locked</span>
+        </div>
+        <p>
+          Walk through an options page step by step: strike prices, expiration, quantity, bid,
+          ask, and spreads—and why each one matters for discipline and execution.
+        </p>
+        <button class="secondary-button small" data-open-stage="4" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="5">
+        <div class="lesson-stage-header">
+          <h3>Stage 5 — Entering & Exiting Simulated Trades</h3>
+          <span class="stage-status" id="stage-5-status">Locked</span>
+        </div>
+        <p>
+          Practice entering and exiting calls and puts in a simulated environment. Each step maps
+          back to the simple “money in, move, money out” model.
+        </p>
+        <button class="secondary-button small" data-open-stage="5" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="6">
+        <div class="lesson-stage-header">
+          <h3>Stage 6 — Full Mock Trade & Emotional Control</h3>
+          <span class="stage-status" id="stage-6-status">Locked</span>
+        </div>
+        <p>
+          Combine everything: discipline, direction, calls, puts, options pages, and order
+          execution into one final simulated flow, plus questions about emotional control and
+          preparedness. Completing this stage unlocks Chapter 2.
+        </p>
+        <button class="secondary-button small" data-open-stage="6" disabled>Locked</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLessonsPage();
+    });
+  </script>
+</body>
+</html>
           <h3>Stage 1 — Discipline Training</h3>
           <span class="stage-status" id="stage-1-status">Unlocked</span>
         </div>
