@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 13 – Combining Chart Elements into a Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 13 – Combining Chart Elements</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">From Random Pieces to One Setup</h2>
+      <p>
+        You’ve seen candles, patterns, moving averages, and timeframes. Each one is a piece of
+        information. The goal is not to collect pieces—it is to combine them into one clear
+        trading setup.
+      </p>
+      <p>
+        A setup is a repeatable condition where multiple signals line up in a way that fits your
+        rules. For example: an uptrend, a pullback into a moving average, a small bullish pattern,
+        and a clear area for your stop.
+      </p>
+      <p>
+        The more your pieces agree, the more structured your idea becomes. This does not guarantee
+        success, but it gives you a logical story to trade from instead of emotion.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Example: A Simple Long Setup</h2>
+      <p>
+        Imagine this sequence:
+      </p>
+      <ul>
+        <li><strong>Trend:</strong> Price is above a rising moving average.</li>
+        <li><strong>Pattern:</strong> A small flag forms after an upward push.</li>
+        <li><strong>Candles:</strong> Recent candles show higher lows and controlled pullbacks.</li>
+        <li><strong>Timeframe:</strong> The pattern is visible on a timeframe you trust.</li>
+      </ul>
+      <p>
+        This combination might support a call idea if it fits your risk and exit rules. You are
+        not trading just a flag or just a moving average—you are trading the alignment.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Your Edge Is Process, Not Prediction</h2>
+      <p>
+        Even a “perfect” setup can lose. Your edge is not in predicting the future; it is in
+        managing yourself across many trades where your process is consistent.
+      </p>
+      <p>
+        This is why discipline is still the core. You could know every pattern in existence, but
+        if you abandon your rules in the moment, your knowledge cannot protect you.
+      </p>
+      <p>
+        Over time, setups that are logically built, risk-managed, and executed with discipline
+        give you a real chance to grow, just like the best stretches of my own journey.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Setup Thinking</h2>
+      <form id="lesson13-quiz" class="form">
+        <label class="form-label">
+          What is a “setup” in this academy’s language?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">A random trade idea without structure.</option>
+            <option value="b">
+              A repeatable combination of signals and context that fits your rules.
+            </option>
+            <option value="c">Any trade you feel excited about.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          In the simple long example, what elements are working together?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Only one candle.</option>
+            <option value="b">
+              Trend direction, a pattern (flag), candles, and timeframe alignment.
+            </option>
+            <option value="c">News only.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Where does your real edge come from?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Perfectly predicting every trade.</option>
+            <option value="b">
+              Applying a structured process with discipline across many trades.
+            </option>
+            <option value="c">Finding one pattern that never loses.</option>
+          </select>
+        </label>
+
+        <div id="lesson13-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Evaluating Setup Strength</h2>
+      <p>
+        Imagine two situations:
+        <br />
+        A) You see a random single green candle and feel excited.
+        <br />
+        B) You see an uptrend above a moving average, a pullback flag, and a clear area for a stop.
+      </p>
+      <form id="lesson13-sim" class="form">
+        <label class="form-label">
+          Which one better fits the idea of a structured setup?
+          <select name="choice" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">A: One candle plus excitement.</option>
+            <option value="b">
+              B: Trend, pattern, candles, and a defined risk area working together.
+            </option>
+            <option value="c">Neither; both are identical.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Before acting on B in real life, what is still required?
+          <select name="requirement" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Nothing; you can skip risk and rules.</option>
+            <option value="b">
+              A clear plan for position size, risk, and exit—and the discipline to follow it.
+            </option>
+            <option value="c">Only confirmation from a stranger online.</option>
+          </select>
+        </label>
+
+        <div id="lesson13-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 13</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson13();
+    });
+  </script>
+</body>
+</html>
