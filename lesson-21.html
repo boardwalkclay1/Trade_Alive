@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 21 – Candle Patterns & Confirmation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 21 – Candle Patterns</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Basic Candle Patterns</h2>
+  <p>
+    Candle patterns are combinations of bars that show shifts in pressure. Examples include:
+    <strong>engulfing candles</strong>, <strong>inside bars</strong>, and <strong>rejection wicks</strong>.
+  </p>
+  <p>
+    These patterns help you confirm or reject trade ideas. They are not magic — they are visual
+    evidence of buyers or sellers stepping in or backing off.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Confirmation with Discipline</h2>
+  <p>
+    A candle pattern alone is not a trade. You still need trend, moving averages, structure,
+    and your risk plan. Candle patterns confirm your idea — they don’t create it.
+  </p>
+  <p>
+    This is where your mock enter/exit simulator becomes powerful. You will use candle patterns
+    to confirm entries and manage exits with discipline.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Candle Patterns</h2>
+  <form id="lesson21-quiz" class="form">
+
+    <label class="form-label">
+      What is an engulfing candle?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A candle that fully covers the previous candle’s body.</option>
+        <option value="b">A candle with no wicks.</option>
+        <option value="c">A candle that predicts the future.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is an inside bar?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A candle that forms entirely inside the previous candle’s range.</option>
+        <option value="b">A candle with no meaning.</option>
+        <option value="c">A guaranteed breakout.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most when using candle patterns?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Context, trend, and discipline.</option>
+        <option value="b">Trading every pattern you see.</option>
+        <option value="c">Ignoring your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson21-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Pattern Confirmation</h2>
+  <p>
+    Imagine price pulls back into a rising moving average and forms a bullish engulfing candle.
+  </p>
+
+  <form id="lesson21-sim" class="form">
+
+    <label class="form-label">
+      What does this pattern suggest?
+      <select name="pattern" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers stepped in strongly.</option>
+        <option value="b">Sellers are dominating.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">
+          Consider a call only if trend, structure, and your risk plan all align.
+        </option>
+        <option value="b">Enter instantly with no plan.</option>
+        <option value="c">Double size because it “looks good.”</option>
+      </select>
+    </label>
+
+    <div id="lesson21-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 21</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson21();
+  });
+</script>
+
+</body>
+</html>
