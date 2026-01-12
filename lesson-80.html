@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 80 – Pattern-Based Case Studies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 80 – Case Studies</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Case Studies Build Mastery</h2>
+  <p>
+    Case studies show the entire process — from trend to entry to management to exit.  
+    This is where students learn how to think like disciplined traders.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Case Study 1: Ascending Triangle Breakout</h2>
+  <ul>
+    <li>Trend: Uptrend</li>
+    <li>Location: Major breakout level</li>
+    <li>Pattern: Ascending triangle</li>
+    <li>Volume: Rising into breakout</li>
+    <li>Entry: Breakout entry</li>
+    <li>Stop: Below rising trendline</li>
+    <li>Target: Triangle height projection</li>
+    <li>Management: Hold as long as structure stays intact</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Case Study 2: Head & Shoulders Breakdown</h2>
+  <ul>
+    <li>Trend: Uptrend into exhaustion</li>
+    <li>Location: Major resistance</li>
+    <li>Pattern: H&S</li>
+    <li>Volume: Spike on neckline break</li>
+    <li>Entry: Retest entry</li>
+    <li>Stop: Above right shoulder</li>
+    <li>Target: Head‑to‑neckline projection</li>
+    <li>Management: Reduce risk after breakdown holds</li>
+  </ul>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Case Studies</h2>
+  <form id="lesson80-quiz" class="form">
+
+    <label class="form-label">
+      What confirms an ascending triangle?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakout + volume.</option>
+        <option value="b">The shape alone.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms H&S?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Neckline break.</option>
+        <option value="b">The head.</option>
+        <option value="c">The wick.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most in case studies?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Full process understanding.</option>
+        <option value="b">Guessing.</option>
+        <option value="c">Emotion.</option>
+      </select>
+    </label>
+
+    <div id="lesson80-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Case Study Read</h2>
+  <p>
+    Imagine a symmetrical triangle forming mid‑trend with rising volume into breakout.
+  </p>
+
+  <form id="lesson80-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="cs" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Continuation.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the idea?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakout + strong candle.</option>
+        <option value="b">The wick.</option>
+        <option value="c">The triangle shape alone.</option>
+      </select>
+    </label>
+
+    <div id="lesson80-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 80</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson80();
+  });
+</script>
+
+</body>
+</html>
