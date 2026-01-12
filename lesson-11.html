@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 11 – Deeper Market Perspective (Auction View)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 11 – Deeper Market Perspective</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">The Market as a Continuous Auction</h2>
+      <p>
+        By now, you’ve seen that the stock market is a live auction. Buyers place bids, sellers
+        place asks, and price moves to wherever the most recent agreement is. This is happening
+        every second the market is open.
+      </p>
+      <p>
+        When you see price tick up, it means someone agreed to pay higher. When you see price tick
+        down, it means someone agreed to accept lower. Behind every move is a real decision: “Yes,
+        I will pay that” or “Yes, I will sell for that.”
+      </p>
+      <p>
+        Thinking this way keeps you grounded. You are not trading magic lines. You are trading the
+        constant negotiation between buyers and sellers. Your options contracts sit on top of that
+        negotiation.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">What Ten Years Teaches You</h2>
+      <p>
+        Over ten years, I’ve watched this auction play out across bull markets, drops, sideways
+        days, and chaotic news events. I’ve seen days where everything felt easy and days where
+        every trade felt like a battle.
+      </p>
+      <p>
+        That $400 to $20,000 stretch in five days did not happen because I found a cheat code. It
+        happened because I stayed aligned with the auction: traded with the flow, respected risk,
+        and did not let emotions hijack my plan.
+      </p>
+      <p>
+        Experience teaches you that the market does not care how you feel. Your job is to read
+        what buyers and sellers are doing, make a plan, and stick to it. The more you respect that,
+        the more the auction feels understandable rather than chaotic.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Connecting Auction View to Your Trades</h2>
+      <p>
+        Every time you consider a call or a put now, ask: “Where is the auction leaning?” Are
+        buyers slowly winning? Are sellers pressing price down? Is the market balanced and
+        undecided?
+      </p>
+      <p>
+        The chart, patterns, and moving averages are just tools to help you see the auction more
+        clearly. They don’t replace discipline. They support it.
+      </p>
+      <p>
+        In later stages, you’ll combine this auction view with concrete entry and exit structures.
+        For now, your goal is to start thinking like a participant in a live auction, not a
+        spectator of random movement.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Auction Perspective</h2>
+      <form id="lesson11-quiz" class="form">
+        <label class="form-label">
+          What does a price move up actually represent in the auction?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">A random glitch in the system.</option>
+            <option value="b">
+              Someone agreeing to pay higher, lifting price to a new level.
+            </option>
+            <option value="c">The market promising never to go down again.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What is the key lesson from years in this auction environment?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              The market will eventually reward emotional, impulsive behavior.
+            </option>
+            <option value="b">
+              The market does not care about your feelings; you must control yourself and respect
+              your plan.
+            </option>
+            <option value="c">You can force the market to do what you want.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should tools like charts and moving averages be viewed?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">As replacements for discipline and risk management.</option>
+            <option value="b">
+              As ways to see the auction more clearly while still requiring discipline.
+            </option>
+            <option value="c">As decorations that don’t matter.</option>
+          </select>
+        </label>
+
+        <div id="lesson11-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Reading Buyers vs Sellers</h2>
+      <p>
+        Imagine a ticker where price keeps bouncing between two levels: buyers step in near the
+        bottom of the range, sellers push back near the top.
+      </p>
+      <form id="lesson11-sim" class="form">
+        <label class="form-label">
+          In auction language, what does this range represent?
+          <select name="rangeView" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              A balance area where buyers and sellers are repeatedly negotiating around the same
+              prices.
+            </option>
+            <option value="b">Proof that patterns no longer work.</option>
+            <option value="c">A glitch with no participants.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          If you feel tempted to take random trades inside this range, what aligns with this
+          academy?
+          <select name="disciplineChoice" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Take trades just to stay “active.”</option>
+            <option value="b">
+              Recognize the balance, wait for a clearer edge, and stay aligned with your rules.
+            </option>
+            <option value="c">Increase size to force a “big win.”</option>
+          </select>
+        </label>
+
+        <div id="lesson11-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 11</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson11();
+    });
+  </script>
+</body>
+</html>
