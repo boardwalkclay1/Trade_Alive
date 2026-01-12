@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 17 – Moving Averages for Entries & Exits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 17 – Entries & Exits with MAs</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Moving Averages and Entry Areas</h2>
+      <p>
+        In an uptrend, you might use moving averages to help identify areas where a pullback
+        could offer a more disciplined entry, instead of chasing candles at the very top of a
+        move.
+      </p>
+      <p>
+        For example, if price has been respecting a rising 20-period moving average, a pullback
+        toward that line—combined with healthy candles and patterns—may offer a more structured
+        place to consider a call.
+      </p>
+      <p>
+        The point is not to click every time price touches the line. The point is to let the line
+        help you avoid emotional chasing and think in terms of “areas” instead of impulses.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Moving Averages and Exit Ideas</h2>
+      <p>
+        Moving averages can also help with exit thinking. If price has been trending above a
+        moving average and then starts to close below it with strong opposite candles, that may
+        be a sign that the trend is weakening.
+      </p>
+      <p>
+        Combined with your pre-defined profit target or stop, a change in how price behaves
+        around your moving averages can be a clue to scale out or exit—with discipline, not panic.
+      </p>
+      <p>
+        In your mock enter/exit simulations, you’ll start to think: “If price loses this moving
+        average and structure, that’s a warning to tighten up or step out.”
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Connecting MAs to the Mock Trade Flow</h2>
+      <p>
+        In earlier stages, you practiced entering and exiting trades in a simulated way, choosing
+        direction, contract type, order type, and exit plan.
+      </p>
+      <p>
+        Now, imagine doing that same simulation but with moving averages on the chart: you choose
+        a direction based on trend, pick entries near pullbacks, and define exits based in part on
+        what happens if price breaks structure around your moving averages.
+      </p>
+      <p>
+        This is how real structure and real discipline come together: the mock trade flow you’ve
+        already practiced plus moving averages as your guide rails.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Entries/Exits with MAs</h2>
+      <form id="lesson17-quiz" class="form">
+        <label class="form-label">
+          In an uptrend, how can a moving average help your entry?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              It can highlight pullback areas so you avoid chasing the very top of a move.
+            </option>
+            <option value="b">It tells you the exact top and bottom.</option>
+            <option value="c">It makes entries unnecessary.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How might moving averages help inform exits?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              If price starts breaking below a respected moving average with strong opposite
+              candles, it can signal possible trend weakness.
+            </option>
+            <option value="b">They guarantee the trend continues forever.</option>
+            <option value="c">They remove the need for stop losses.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How do moving averages connect to the mock enter/exit simulator?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              They give structure for where you might enter and where a break of structure might
+              trigger an exit.
+            </option>
+            <option value="b">They replace the simulator completely.</option>
+            <option value="c">They are unrelated.</option>
+          </select>
+        </label>
+
+        <div id="lesson17-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini simulation: MA-based mock planning -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Planning a Trade Around a Moving Average</h2>
+      <p>
+        Imagine an uptrend where price has repeatedly bounced near a rising 20-period moving
+        average. Price pulls back toward it again and shows a small bullish pattern.
+      </p>
+      <form id="lesson17-sim" class="form">
+        <label class="form-label">
+          How could you frame an entry idea in this academy’s language?
+          <select name="entryIdea" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Consider a call only if the trend, candles, pattern, and your risk plan all align.
+            </option>
+            <option value="b">Enter a huge position just because it bounced before.</option>
+            <option value="c">Ignore all structure and trade randomly.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How might you think about an exit in this scenario?
+          <select name="exitIdea" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Use your planned profit target or stop, and treat a strong break below the moving
+              average as a potential warning signal.
+            </option>
+            <option value="b">Refuse to exit no matter what happens.</option>
+            <option value="c">Close randomly with no reference to your plan.</option>
+          </select>
+        </label>
+
+        <div id="lesson17-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 17</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson17();
+    });
+  </script>
+</body>
+</html>
