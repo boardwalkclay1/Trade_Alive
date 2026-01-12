@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body class="theme-dark">
   <header class="top-bar">
-    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
     <h1 class="app-title">Stage 10 – Moving Averages & Trade Framework</h1>
     <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
   </header>
 
   <main class="main-content">
+
     <section class="card">
       <h2 class="section-title">What Moving Averages Show You</h2>
       <p>
@@ -53,13 +55,12 @@
     <section class="card">
       <h2 class="section-title">Quick Check: Moving Averages & Framework</h2>
       <form id="lesson10-quiz" class="form">
+
         <label class="form-label">
           What is a moving average in simple terms?
           <select name="q1" class="form-input" required>
             <option value="">Select an answer</option>
-            <option value="a">
-              A line that smooths price over a chosen period to show general direction.
-            </option>
+            <option value="a">A line that smooths price over a chosen period to show general direction.</option>
             <option value="b">A guarantee that price will reverse.</option>
             <option value="c">A random decoration on the chart.</option>
           </select>
@@ -79,10 +80,7 @@
           What makes a trade “solid” in the context of this academy?
           <select name="q3" class="form-input" required>
             <option value="">Select an answer</option>
-            <option value="a">
-              Alignment between direction, chart story, patterns, moving averages, and your
-              disciplined risk and exit plan.
-            </option>
+            <option value="a">Alignment between direction, chart story, patterns, moving averages, and your disciplined risk and exit plan.</option>
             <option value="b">One single indicator lighting up.</option>
             <option value="c">A feeling that “this one has to work.”</option>
           </select>
@@ -93,6 +91,7 @@
         <div class="button-row">
           <button type="submit" class="primary-button">Submit Quiz</button>
         </div>
+
       </form>
     </section>
 
@@ -102,15 +101,14 @@
         Imagine a ticker where price is above a gently rising moving average, recent candles show
         mostly higher lows, and a small flag has formed after an upward push.
       </p>
+
       <form id="lesson10-sim" class="form">
+
         <label class="form-label">
           From a high-level perspective, how does this setup look?
           <select name="setupView" class="form-input" required>
             <option value="">Select one</option>
-            <option value="a">
-              Several elements (trend, candles, pattern) align in favor of an upward idea, but it
-              still requires a clear plan.
-            </option>
+            <option value="a">Several elements (trend, candles, pattern) align in favor of an upward idea, but it still requires a clear plan.</option>
             <option value="b">It guarantees a winning trade.</option>
             <option value="c">It is meaningless information.</option>
           </select>
@@ -120,10 +118,7 @@
           What is the final piece before you would ever take this trade in real life?
           <select name="finalStep" class="form-input" required>
             <option value="">Select one</option>
-            <option value="a">
-              Define your risk, position size, and exit rules, and commit to following them with
-              discipline.
-            </option>
+            <option value="a">Define your risk, position size, and exit rules, and commit to following them with discipline.</option>
             <option value="b">Ignore risk because the setup looks strong.</option>
             <option value="c">Ask someone else to tell you what to do.</option>
           </select>
@@ -134,16 +129,12 @@
         <div class="button-row">
           <button type="submit" class="primary-button">Complete Stage 10</button>
         </div>
+
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initTheme();
-      initLesson10();
-    });
-  </script>
 </body>
 </html>
