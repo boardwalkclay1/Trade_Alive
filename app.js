@@ -43,14 +43,12 @@ function initSidebar() {
     sidebar.classList.remove("open");
   });
 
-  // Close when clicking outside (optional)
   document.addEventListener("click", (e) => {
     if (!sidebar.classList.contains("open")) return;
     const inside = sidebar.contains(e.target) || openBtn?.contains(e.target);
     if (!inside) sidebar.classList.remove("open");
   });
 
-  // Accordion sections
   const sections = sidebar.querySelectorAll(".sidebar-section");
   sections.forEach((sec) => {
     const toggle = sec.querySelector(".sidebar-section-toggle");
@@ -89,7 +87,6 @@ function initDisciplineModule() {
   const scoreEl = document.getElementById("discipline-score");
   const messageEl = document.getElementById("checkin-message");
   const marketDayStatusEl = document.getElementById("market-day-status");
-  const violationEl = document.getElementById("violation-count");
 
   let streak = parseInt(localStorage.getItem("disciplineStreak") || "0", 10);
   let score = parseInt(localStorage.getItem("disciplineScore") || "0", 10);
@@ -97,10 +94,9 @@ function initDisciplineModule() {
 
   streakEl.textContent = `${streak} day${streak === 1 ? "" : "s"}`;
   scoreEl.textContent = score.toString();
-  violationEl.textContent = `${getViolationCount()} / 3`;
 
   const now = new Date();
-  const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+  const day = now.getDay(); // 0 = Sun, 6 = Sat
 
   if (day === 0 || day === 6) {
     marketDayStatusEl.textContent = "Markets are closed today. No 9:00 AM check-in is required.";
@@ -114,20 +110,17 @@ function initDisciplineModule() {
   button.addEventListener("click", () => {
     const now = new Date();
     const hours = now.getHours();
-    const minutes = now.getMinutes();
     const todayStr = now.toISOString().split("T")[0];
 
-    // Prevent multiple check-ins same day
     if (lastCheckinDate === todayStr) {
       messageEl.textContent =
         "You have already checked in today. Focus on maintaining your streak tomorrow.";
       return;
     }
 
-    // Success if before 9:00 AM
     if (hours < 9) {
       streak += 1;
-      score += 5; // Simple scoring: +5 per success
+      score += 5;
       localStorage.setItem("disciplineStreak", String(streak));
       localStorage.setItem("disciplineScore", String(score));
       localStorage.setItem("lastCheckinDate", todayStr);
@@ -137,7 +130,6 @@ function initDisciplineModule() {
       messageEl.textContent =
         "You showed up on time. Discipline builds consistency. Consistency builds success.";
     } else {
-      // Late
       streak = 0;
       score = Math.max(0, score - 3);
       localStorage.setItem("disciplineStreak", String(streak));
@@ -150,115 +142,6 @@ function initDisciplineModule() {
         "You were late today. The market does not wait. Reset your focus and be ready before 9:00 AM tomorrow.";
     }
   });
-}
-
-// ----- Blur / violation / pseudo anti-screenshot -----
-
-function initBlurAndViolationSystem() {
-  const blurOverlay = document.getElementById("blur-overlay");
-  if (!blurOverlay) return;
-
-  function addViolation(reason) {
-    let count = getViolationCount();
-    count += 1;
-    localStorage.setItem("violationCount", String(count));
-
-    const violationEl = document.getElementById("violation-count");
-    if (violationEl) {
-      violationEl.textContent = `${count} / 3`;
-    }
-
-    showBlurOverlay(
-      count,
-      reason ||
-        "Suspicious activity detected. This training environment is meant to be experienced, not captured."
-    );
-
-    if (count >= 3) {
-      revokeAccess();
-    }
-  }
-
-  // Show blur with message
-  function showBlurOverlay(count, text) {
-    blurOverlay.classList.remove("hidden");
-    const existing = document.getElementById("blur-message");
-    if (existing) existing.remove();
-
-    const msg = document.createElement("div");
-    msg.id = "blur-message";
-    msg.style.position = "fixed";
-    msg.style.inset = "0";
-    msg.style.display = "flex";
-    msg.style.alignItems = "center";
-    msg.style.justifyContent = "center";
-    msg.style.zIndex = "66";
-    msg.innerHTML = `
-      <div style="
-        max-width: 380px;
-        margin: 0 1rem;
-        padding: 1.25rem 1.5rem;
-        border-radius: 0.9rem;
-        background: rgba(15,23,42,0.98);
-        color: #e5e7eb;
-        border: 1px solid rgba(148,163,184,0.7);
-        font-size: 0.9rem;
-      ">
-        <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">Attention</h3>
-        <p style="margin-bottom:0.5rem;">${text}</p>
-        <p style="margin-bottom:0.75rem;">
-          Violations: <strong>${count} / 3</strong>. At 3 violations, your access will be revoked and a new subscription will be required.
-        </p>
-        <button id="blur-dismiss" class="primary-button small">I Understand</button>
-      </div>
-    `;
-    document.body.appendChild(msg);
-
-    const dismiss = document.getElementById("blur-dismiss");
-    dismiss?.addEventListener("click", () => {
-      blurOverlay.classList.add("hidden");
-      msg.remove();
-    });
-  }
-
-  // Access revocation
-  function revokeAccess() {
-    // Clear subscription-like state (you can tie this to your real payment gate later)
-    localStorage.setItem("subscriptionExpires", "0");
-    showBlurOverlay(
-      getViolationCount(),
-      "Access revoked due to repeated capture or focus violations. A new subscription is required to regain access."
-    );
-  }
-
-  // Visibility / blur / fullscreen as crude heuristics
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      // Tab lost focus
-      addViolation("Focus left the training environment. Stay present while you are learning.");
-    }
-  });
-
-  document.addEventListener("fullscreenchange", () => {
-    if (document.fullscreenElement) {
-      addViolation("Fullscreen activity detected. Capture attempts are not allowed in this environment.");
-    }
-  });
-
-  window.addEventListener("blur", () => {
-    addViolation("Window lost focus. For your own progress, keep your attention on the training.");
-  });
-
-  // Optional: approximate 'Print Screen' on some systems
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "PrintScreen") {
-      addViolation("Screenshot key detected. Screenshots are not allowed in this academy.");
-    }
-  });
-}
-
-function getViolationCount() {
-  return parseInt(localStorage.getItem("violationCount") || "0", 10);
 }
 
 // ----- Subscription status (placeholder) -----
@@ -284,14 +167,14 @@ function updateSubscriptionStatus() {
     localStorage.removeItem("disciplineScore");
     localStorage.removeItem("lastCheckinDate");
     localStorage.removeItem("mockOptionsCompleted");
-    localStorage.removeItem("violationCount");
+    localStorage.removeItem("completedStages");
     localStorage.removeItem("subscriptionExpires");
     localStorage.removeItem("cautionAcknowledged");
     window.location.reload();
   });
 }
 
-// ----- Mock options form validation -----
+// ----- Mock options form -----
 
 function initMockOptionsForm() {
   const form = document.getElementById("mock-options-form");
@@ -315,7 +198,6 @@ function initMockOptionsForm() {
 
     const errors = [];
 
-    // Example "passing" criteria: you can tune this however you like
     if (experience === "none") {
       errors.push("You indicated no trading experience. At least limited experience is required.");
     }
@@ -337,14 +219,14 @@ function initMockOptionsForm() {
       errors.push("You must acknowledge that options trading involves significant risk.");
     }
 
+    const detailId = "mock-errors-list";
+    let list = document.getElementById(detailId);
+    if (list) list.remove();
+
     if (errors.length > 0) {
       msg.textContent =
         "Your simulation would likely not be approved. Please review the feedback below and adjust your answers.";
       msg.style.color = "#f97373";
-
-      const detailId = "mock-errors-list";
-      let list = document.getElementById(detailId);
-      if (list) list.remove();
 
       list = document.createElement("ul");
       list.id = detailId;
@@ -361,7 +243,6 @@ function initMockOptionsForm() {
       return;
     }
 
-    // Passed simulation
     localStorage.setItem("mockOptionsCompleted", "true");
     msg.textContent =
       "You have successfully completed the options registration simulation. Lessons are now unlocked.";
@@ -373,7 +254,7 @@ function initMockOptionsForm() {
   });
 }
 
-// ----- Lessons page -----
+// ----- Lessons hub -----
 
 function initLessonsPage() {
   const lockedSection = document.getElementById("lessons-locked");
@@ -391,9 +272,8 @@ function initLessonsPage() {
   lockedSection.classList.add("hidden");
   contentSection.classList.remove("hidden");
 
-  // Simple stage locking using localStorage
   const totalStages = 6;
-  const completedStages = parseInt(localStorage.getItem("completedStages") || "1", 10);
+  const completedStages = parseInt(localStorage.getItem("completedStages") || "0", 10);
 
   for (let stage = 1; stage <= totalStages; stage++) {
     const statusEl = document.getElementById(`stage-${stage}-status`);
@@ -401,13 +281,13 @@ function initLessonsPage() {
 
     if (!statusEl || !button) continue;
 
-    if (stage === 1 || stage <= completedStages) {
+    if (stage === 1 || stage <= completedStages + 1) {
       statusEl.textContent = "Unlocked";
       statusEl.style.borderColor = "#4ade80";
       button.disabled = false;
       button.classList.remove("secondary-button");
       button.classList.add("primary-button");
-      button.textContent = "Open Stage";
+      button.textContent = "Open Lesson";
     } else {
       statusEl.textContent = "Locked";
       statusEl.style.borderColor = "rgba(148,163,184,0.6)";
@@ -418,15 +298,131 @@ function initLessonsPage() {
     }
 
     button.addEventListener("click", () => {
-      openStage(stage, completedStages);
+      window.location.href = `lesson-${stage}.html`;
     });
   }
 }
 
-function openStage(stage, completedStages) {
-  // Placeholder: for now just mark as completed and move progression forward.
-  // Later you wire this to real lesson pages / modals / content.
-  alert(`Stage ${stage} would open here. In a later iteration, we'll load real lesson content.`);
-  const next = Math.max(completedStages, stage) + 1;
-  localStorage.setItem("completedStages", String(next));
+// ----- Stage completion helpers -----
+
+function markStageCompleted(stageNumber) {
+  const current = parseInt(localStorage.getItem("completedStages") || "0", 10);
+  if (stageNumber > current) {
+    localStorage.setItem("completedStages", String(stageNumber));
+  }
+}
+
+// ----- Lesson 1 logic -----
+
+function initLesson1() {
+  const quizForm = document.getElementById("lesson1-quiz");
+  const quizMsg = document.getElementById("lesson1-quiz-message");
+  const simForm = document.getElementById("lesson1-sim");
+  const simMsg = document.getElementById("lesson1-sim-message");
+
+  if (quizForm) {
+    quizForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(quizForm);
+      const q1 = data.get("q1");
+      const q2 = data.get("q2");
+      const q3 = data.get("q3");
+
+      if (q1 === "b" && q2 === "b" && q3 === "c") {
+        quizMsg.textContent = "Correct. You understand why discipline and simple direction come first.";
+        quizMsg.style.color = "#4ade80";
+      } else {
+        quizMsg.textContent =
+          "Some answers were off. Re-read the lesson and focus on discipline and the simple up/down model.";
+        quizMsg.style.color = "#f97373";
+      }
+    });
+  }
+
+  if (simForm) {
+    simForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(simForm);
+      const direction = data.get("direction");
+      const mindset = data.get("mindset");
+
+      if (!direction) {
+        simMsg.textContent = "Choose a direction to complete the simulation.";
+        simMsg.style.color = "#f97373";
+        return;
+      }
+
+      if (mindset === "b") {
+        simMsg.textContent =
+          "Good. You are connecting direction with a calm, rule-based mindset. Stage 1 completed.";
+        simMsg.style.color = "#4ade80";
+        markStageCompleted(1);
+        setTimeout(() => {
+          window.location.href = "lessons.html";
+        }, 1200);
+      } else {
+        simMsg.textContent =
+          "That mindset is not disciplined. Review the lesson and choose the response that reflects calm, rule-based behavior.";
+        simMsg.style.color = "#f97373";
+      }
+    });
+  }
+}
+
+// ----- Lesson 2 logic -----
+
+function initLesson2() {
+  const quizForm = document.getElementById("lesson2-quiz");
+  const quizMsg = document.getElementById("lesson2-quiz-message");
+  const simForm = document.getElementById("lesson2-sim");
+  const simMsg = document.getElementById("lesson2-sim-message");
+
+  if (quizForm) {
+    quizForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(quizForm);
+      const q1 = data.get("q1");
+      const q2 = data.get("q2");
+      const q3 = data.get("q3");
+
+      if (q1 === "b" && q2 === "b" && q3 === "b") {
+        quizMsg.textContent =
+          "Correct. You understand that real people are on the other side and what a ticker represents.";
+        quizMsg.style.color = "#4ade80";
+      } else {
+        quizMsg.textContent =
+          "Some answers were off. Re-read the lesson and focus on people, tickers, and what you’re really trading.";
+        quizMsg.style.color = "#f97373";
+      }
+    });
+  }
+
+  if (simForm) {
+    simForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(simForm);
+      const ticker = data.get("ticker");
+      const callIdea = data.get("callIdea");
+
+      if (!ticker) {
+        simMsg.textContent = "Select a ticker to continue.";
+        simMsg.style.color = "#f97373";
+        return;
+      }
+
+      if (callIdea === "a") {
+        simMsg.textContent =
+          `Good. You’ve connected a call contract on ${ticker} with an expectation of upward movement. Stage 2 completed.`;
+        simMsg.style.color = "#4ade80";
+        markStageCompleted(2);
+        setTimeout(() => {
+          window.location.href = "lessons.html";
+        }, 1200);
+      } else {
+        simMsg.textContent =
+          "That does not match the basic idea of a call. Re-read the section on tickers and what a call is implying.";
+        simMsg.style.color = "#f97373";
+      }
+    });
+  }
 }
