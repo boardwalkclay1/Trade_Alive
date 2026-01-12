@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 70 – Pattern Trading Mistakes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 70 – Pattern Trading Mistakes</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Most Traders Lose Because of This</h2>
+  <p>
+    Patterns don’t fail — <strong>traders fail patterns</strong>.  
+    Most traders lose because they treat patterns like predictions instead of context.
+  </p>
+  <p>
+    These are the biggest mistakes emotional traders make:
+  </p>
+  <ul>
+    <li>Trading patterns without trend</li>
+    <li>Trading patterns without confirmation</li>
+    <li>Trading patterns at the wrong location</li>
+    <li>Chasing breakouts</li>
+    <li>Ignoring volume</li>
+    <li>Ignoring moving averages</li>
+    <li>Forcing patterns that aren’t there</li>
+  </ul>
+  <p>
+    Discipline eliminates these mistakes.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">The Discipline Checklist</h2>
+  <ul>
+    <li>Trend first</li>
+    <li>Location second</li>
+    <li>Structure third</li>
+    <li>Volume fourth</li>
+    <li>Candles confirm</li>
+  </ul>
+  <p>
+    This is how you avoid emotional pattern trading.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Mistakes</h2>
+  <form id="lesson70-quiz" class="form">
+
+    <label class="form-label">
+      What causes most pattern failures?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Traders ignoring context.</option>
+        <option value="b">Patterns being unreliable.</option>
+        <option value="c">Randomness.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should come first?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Chasing breakouts.</option>
+        <option value="b">Waiting for confirmation.</option>
+        <option value="c">Following your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson70-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Mistake Read</h2>
+  <p>
+    Imagine a bull flag forming far above moving averages with low volume and a weak breakout candle.
+  </p>
+
+  <form id="lesson70-sim" class="form">
+
+    <label class="form-label">
+      What mistake is this?
+      <select name="mist" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Bad timing + bad location.</option>
+        <option value="b">Perfect continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should a disciplined trader do?
+      <select name="disc" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for deeper pullback or confirmation.</option>
+        <option value="b">Chase the breakout.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson70-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 70</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson70();
+  });
+</script>
+
+</body>
+</html>
