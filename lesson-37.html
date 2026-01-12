@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 37 – Candle Behavior During Trend Shifts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 37 – Trend Shift Candles</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Candles Reveal Trend Shifts Early</h2>
+  <p>
+    Trend shifts rarely happen instantly. They build. Candles begin to weaken before the trend
+    officially breaks. You’ll see smaller bodies, longer wicks, hesitation, and failed pushes.
+  </p>
+  <p>
+    A strong trend doesn’t suddenly reverse — it slows first. Candles tell you this before
+    moving averages catch up.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Early Warning Signs</h2>
+  <ul>
+    <li>Strong candles become weak candles</li>
+    <li>Wicks appear where they didn’t before</li>
+    <li>Inside bars form more frequently</li>
+    <li>Momentum candles fail to follow through</li>
+  </ul>
+  <p>
+    These are the first clues that buyers or sellers are losing control.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Trend Shift Candles</h2>
+  <form id="lesson37-quiz" class="form">
+
+    <label class="form-label">
+      What is an early sign of a trend shift?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Strong candles turning weak.</option>
+        <option value="b">Candles getting bigger.</option>
+        <option value="c">Random spikes.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most during a trend shift?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and patience.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Entering emotionally.</option>
+        <option value="b">Reading context.</option>
+        <option value="c">Following your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson37-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Trend Shift Read</h2>
+  <p>
+    Imagine an uptrend where strong green candles become small green candles with long upper wicks.
+  </p>
+
+  <form id="lesson37-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="shift" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend weakening.</option>
+        <option value="b">Trend strengthening.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for confirmation before acting.</option>
+        <option value="b">Chase the move.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson37-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 37</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson37();
+  });
+</script>
+
+</body>
+</html>
