@@ -800,3 +800,106 @@ document.addEventListener("DOMContentLoaded", () => {
   // 9 o'clock discipline system
   setupDisciplineButton();
 });
+/* ========================================================================
+   AUTO-FIX ENGINE — FIX BROKEN LESSON PAGES (1–14)
+   Ensures every lesson loads:
+   - correct stylesheet path
+   - correct app.js path
+   - loader
+   - theme
+   - glass-card layout
+   - top bar
+   ======================================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ------------------------------------------------------------
+     1. FIX WRONG CSS PATHS
+     ------------------------------------------------------------ */
+  const cssExists = [...document.querySelectorAll("link")].some(link =>
+    link.href.includes("styles.css")
+  );
+
+  if (!cssExists) {
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "../styles.css";   // correct path
+    document.head.appendChild(css);
+  }
+
+
+  /* ------------------------------------------------------------
+     2. FIX WRONG JS PATHS
+     ------------------------------------------------------------ */
+  const jsExists = [...document.querySelectorAll("script")].some(script =>
+    script.src.includes("app.js")
+  );
+
+  if (!jsExists) {
+    const script = document.createElement("script");
+    script.src = "../app.js";     // correct path
+    document.body.appendChild(script);
+  }
+
+
+  /* ------------------------------------------------------------
+     3. ENSURE THEME CLASS EXISTS
+     ------------------------------------------------------------ */
+  if (!document.body.classList.contains("theme-dark")) {
+    document.body.classList.add("theme-dark");
+  }
+
+
+  /* ------------------------------------------------------------
+     4. INJECT LOADER IF MISSING
+     ------------------------------------------------------------ */
+  if (!document.getElementById("loader-overlay")) {
+    const loader = document.createElement("div");
+    loader.id = "loader-overlay";
+    loader.className = "loader-overlay";
+    loader.innerHTML = `
+      <div class="loader-candles">
+        <div class="loader-candle"></div>
+        <div class="loader-candle"></div>
+        <div class="loader-candle"></div>
+        <div class="loader-candle"></div>
+        <div class="loader-candle"></div>
+      </div>
+      <div class="glow-text">Loading Lesson…</div>
+    `;
+    document.body.prepend(loader);
+  }
+
+
+  /* ------------------------------------------------------------
+     5. INJECT TOP BAR IF MISSING
+     ------------------------------------------------------------ */
+  if (!document.querySelector(".top-bar")) {
+    const topBar = document.createElement("header");
+    topBar.className = "top-bar glass-bar";
+    topBar.innerHTML = `
+      <a href="../lessons/lessons.html" class="icon-button">←</a>
+      <h1 class="app-title glow-text">Lesson</h1>
+      <div class="top-bar-right">
+        <button id="secure-toggle" class="icon-button">🔒</button>
+        <button id="theme-toggle" class="icon-button">🌓</button>
+      </div>
+    `;
+    document.body.prepend(topBar);
+  }
+
+
+  /* ------------------------------------------------------------
+     6. FIX MAIN CONTENT WRAPPER
+     ------------------------------------------------------------ */
+  const main = document.querySelector("main");
+  if (main && !main.classList.contains("main-content")) {
+    main.classList.add("main-content", "secure-area");
+  }
+
+  const section = document.querySelector("main > section");
+  if (section && !section.classList.contains("glass-card")) {
+    section.classList.add("glass-card");
+  }
+
+});
