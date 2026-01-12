@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 67 – Pattern + Volume Integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 67 – Pattern + Volume Integration</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Volume Reveals Commitment</h2>
+  <p>
+    Patterns show structure. Candles show execution. But volume shows <strong>commitment</strong>.
+    When a pattern breaks with strong volume, it means real money is behind the move.
+  </p>
+  <p>
+    Low‑volume breakouts are weak. High‑volume breakouts are strong.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Volume Rules</h2>
+  <ul>
+    <li><strong>Continuation patterns</strong> break with rising volume</li>
+    <li><strong>Reversal patterns</strong> break with volume spikes</li>
+    <li><strong>Traps</strong> break with low volume then reverse with high volume</li>
+    <li><strong>Fakeouts</strong> often have weak volume</li>
+  </ul>
+  <p>
+    Volume is the lie detector of chart patterns.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Volume Integration</h2>
+  <form id="lesson67-quiz" class="form">
+
+    <label class="form-label">
+      What does volume show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Commitment.</option>
+        <option value="b">Prediction.</option>
+        <option value="c">Emotion.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms a breakout?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Strong volume.</option>
+        <option value="b">Pattern shape alone.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What exposes traps?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Low‑volume breakout + high‑volume reversal.</option>
+        <option value="b">The wick alone.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson67-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Volume Read</h2>
+  <p>
+    Imagine a bull pennant breaks out with a strong green candle and rising volume.
+  </p>
+
+  <form id="lesson67-sim" class="form">
+
+    <label class="form-label">
+      What does this confirm?
+      <select name="vol" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">High‑quality continuation.</option>
+        <option value="b">Weak breakout.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="disc" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Enter only if your full plan aligns.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson67-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 67</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson67();
+  });
+</script>
+
+</body>
+</html>
