@@ -8,65 +8,83 @@
 </head>
 
 <body class="theme-dark">
-<header class="top-bar">
-  <h1 class="app-title">Discipline Academy</h1>
-  <button id="theme-toggle" class="icon-button">🌓</button>
+<header class="top-bar glass-bar">
+  <h1 class="app-title glow-text">Discipline Academy</h1>
+  <div class="top-bar-right">
+    <button id="theme-toggle" class="icon-button">🌓</button>
+  </div>
 </header>
 
-<main class="main-content">
+<main class="main-content landing">
 
-<section class="card">
-  <h2 class="section-title">Chart Pattern Mastery – Locked Training</h2>
-  <p>
-    Welcome to <strong>Discipline Academy</strong>, a discipline‑first trading academy focused on
-    structure, not hype. This program takes you from basic reading of price action to full
-    pattern‑based trade building with real, printable certification.
-  </p>
-  <p>
-    The entire academy is <strong>locked</strong> until payment. Once you unlock, you get full
-    access to:
-  </p>
-  <ul>
-    <li>All Chart Pattern Mastery lessons and simulations.</li>
-    <li>Execution, management, journaling, and drills.</li>
-    <li>Certification with a real certificate in your name.</li>
-    <li>Mastery badge and chapter completion tracking.</li>
-  </ul>
-</section>
+  <section class="hero glass-card">
+    <h2 class="hero-title glow-text">Chart Pattern Mastery</h2>
+    <p class="hero-subtitle">
+      A discipline‑first trading academy. No hype. No lotto tickets. Just structure, patterns,
+      moving averages, and execution – built the way real traders actually think.
+    </p>
 
-<section class="card">
-  <h2 class="section-title">How It Works</h2>
-  <ol>
-    <li>Go to the payment page.</li>
-    <li>Complete your payment via PayPal.</li>
-    <li>Get redirected back and unlock full access on this device.</li>
-  </ol>
-  <p>
-    Once unlocked, you can return anytime using this device and continue where you left off.
-  </p>
+    <div class="hero-grid">
+      <div class="hero-block">
+        <h3 class="hero-block-title">What You Learn</h3>
+        <ul class="hero-list">
+          <li>Trend, levels, and moving averages as one system.</li>
+          <li>Flags, pennants, wedges, triangles, double tops/bottoms, H&S, traps.</li>
+          <li>Pattern timing, location, volume, and candle confirmation.</li>
+          <li>Pattern‑based entries, stops, targets, and trade management.</li>
+          <li>Journaling, drills, and a final pattern exam.</li>
+        </ul>
+      </div>
 
-  <div class="button-row">
-    <a href="paywall.html" class="primary-button">Unlock Discipline Academy</a>
-  </div>
-</section>
+      <div class="hero-block">
+        <h3 class="hero-block-title">What You Get</h3>
+        <ul class="hero-list">
+          <li>Access to 87 structured stages.</li>
+          <li>Interactive quizzes and simulations.</li>
+          <li>Pattern certification with your name on it.</li>
+          <li>Chart Pattern Mastery badge inside the academy.</li>
+          <li>A serious environment built around discipline, not gambling.</li>
+        </ul>
+      </div>
+    </div>
 
-<section class="card">
-  <h2 class="section-title">Need to Contact Me?</h2>
-  <p>
-    If you ever need support, clarification, or help with access, you can reach me directly at:
-  </p>
-  <p>
-    <strong>Boardwalkclay1@gmail.com</strong>
-  </p>
-  <p>
-    This is serious work. If you’re ready to treat trading like a discipline, not a game, unlock
-    the academy and start the process.
-  </p>
-</section>
+    <div class="button-row hero-actions">
+      <a href="paywall.html" class="primary-button primary-glow">
+        Unlock Discipline Academy
+      </a>
+    </div>
+  </section>
+
+  <section class="glass-card">
+    <h2 class="section-title glow-text">How It Works</h2>
+    <ol class="hero-list numbered">
+      <li>Go to the access page.</li>
+      <li>Enter the email that unlocks your academy or complete payment.</li>
+      <li>Once access is granted, the entire academy unlocks on this device.</li>
+    </ol>
+    <p class="muted-text">
+      Progress and access are stored locally on this device. If you switch devices, you’ll need to
+      unlock again.
+    </p>
+  </section>
+
+  <section class="glass-card">
+    <h2 class="section-title glow-text">Need to Contact Me?</h2>
+    <p>
+      If you ever need help with access, clarity on lessons, or support, reach out directly:
+    </p>
+    <p class="highlight-text">
+      <strong>Boardwalkclay1@gmail.com</strong>
+    </p>
+    <p class="muted-text">
+      This is a serious environment. If you’re ready to treat trading like a discipline instead of
+      a game, unlock the academy and move stage by stage.
+    </p>
+  </section>
 
 </main>
 
-<script src="scripts/app.js"></script>
+<script src="app.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
