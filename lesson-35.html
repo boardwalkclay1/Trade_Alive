@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 35 – Expansion & Contraction Cycles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 35 – Expansion & Contraction</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">The Market Breathes</h2>
+  <p>
+    Candles expand and contract in cycles. Expansion is when candles grow in size — volatility
+    increases. Contraction is when candles shrink — volatility decreases.
+  </p>
+  <p>
+    Expansion often follows contraction. Contraction often follows expansion. This is the rhythm
+    of the auction.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Expansion + Trend</h2>
+  <p>
+    Expansion in the direction of trend is healthy.  
+    Expansion against trend is often a trap.  
+    Contraction near moving averages is often a pause before continuation.
+  </p>
+  <p>
+    This is how you stay disciplined and avoid emotional trades.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Expansion & Contraction</h2>
+  <form id="lesson35-quiz" class="form">
+
+    <label class="form-label">
+      What is expansion?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Candles growing in size.</option>
+        <option value="b">Candles shrinking.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is contraction?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Candles shrinking.</option>
+        <option value="b">Candles growing.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend and context.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson35-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Expansion Cycle</h2>
+  <p>
+    Imagine two small candles near a rising moving average, followed by a large green candle.
+  </p>
+
+  <form id="lesson35-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="cycle" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Healthy expansion after contraction.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Consider continuation only if your plan aligns.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson35-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 35</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson35();
+  });
+</script>
+
+</body>
+</html>
