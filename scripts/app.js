@@ -43,7 +43,7 @@ function initFreeAccessGate() {
     e.preventDefault();
     const data = new FormData(form);
     const email = (data.get("freeEmail") || "").toString().trim().toLowerCase();
-    const allowed = "FREE_ACCESS_EMAIL_HERE".toLowerCase(); // replace with your email
+    const allowed = "boardwalkclay1@gmail.com".toLowerCase(); // replace with your email
 
     if (!email) {
       msg.textContent = "Please enter an email.";
