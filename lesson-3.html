@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 3 – Calls, Puts, and Direction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 3 – Calls, Puts, and Direction</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Connecting Up/Down to Calls and Puts</h2>
+      <p>
+        In Stage 1, you learned the simplest model: you put money in, the market can go up or
+        down from your entry, and then you take money out. Now we map that simple model onto
+        options language.
+      </p>
+      <p>
+        A <strong>call option</strong> is a contract that generally benefits when the price of the
+        underlying ticker moves <strong>up</strong> from where you entered. A
+        <strong>put option</strong> is a contract that generally benefits when the price of the
+        underlying ticker moves <strong>down</strong> from where you entered.
+      </p>
+      <p>
+        You are not required to know every detail of options yet. What matters here is the link:
+        <strong>calls = up</strong>, <strong>puts = down</strong>, always anchored to your entry.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Why This Mapping Matters</h2>
+      <p>
+        Without this simple mapping, options can feel like a foreign language. Traders get lost
+        in symbols and forget the core question: “Am I positioning for up or down from here?”
+      </p>
+      <p>
+        When you think in terms of calls and puts, you must always tie it back to:
+        “Where am I entering? What direction am I expecting next? How disciplined am I about
+        exits?” This keeps you from treating options like lottery tickets.
+      </p>
+      <p>
+        In future stages, when you see an options chain full of numbers and codes, this
+        up/down, call/put framework will keep you grounded.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Calls vs Puts</h2>
+      <form id="lesson3-quiz" class="form">
+        <label class="form-label">
+          In this academy, how do we describe a call option in simple terms?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">A bet that the market disappears.</option>
+            <option value="b">A contract that generally benefits when price moves up from entry.</option>
+            <option value="c">A contract that benefits when nothing moves.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          In this academy, how do we describe a put option in simple terms?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              A contract that generally benefits when price moves down from entry.
+            </option>
+            <option value="b">The same thing as a call.</option>
+            <option value="c">A contract with no relationship to direction.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          When thinking about calls and puts, what must you always remember?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Only the symbols and codes matter.</option>
+            <option value="b">
+              The relationship between your entry, the direction you expect, and your discipline.
+            </option>
+            <option value="c">Direction does not matter for options.</option>
+          </select>
+        </label>
+
+        <div id="lesson3-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini call/put simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Choosing Call or Put</h2>
+      <p>
+        Imagine a ticker that is currently trading at $100. You believe that over the next short
+        period, it is more likely to move in one direction from here.
+      </p>
+      <form id="lesson3-sim" class="form">
+        <label class="form-label">
+          Based on this simple belief, which contract type matches an expectation of
+          <strong>up</strong> from here?
+          <select name="directionUp" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="call">Call</option>
+            <option value="put">Put</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Which contract type matches an expectation of <strong>down</strong> from here?
+          <select name="directionDown" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="call">Call</option>
+            <option value="put">Put</option>
+          </select>
+        </label>
+
+        <div id="lesson3-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 3</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson3();
+    });
+  </script>
+</body>
+</html>
