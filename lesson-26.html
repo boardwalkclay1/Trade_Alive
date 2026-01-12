@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 26 – Candle Traps & Fakeouts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 26 – Candle Traps</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Is a Candle Trap?</h2>
+  <p>
+    A candle trap is when a candle looks strong but is actually weak — or looks weak but is
+    actually strong. This happens when traders react emotionally to a single bar instead of the
+    full story.
+  </p>
+  <p>
+    A strong green candle at the top of a move can be a trap.  
+    A strong red candle into support can be a trap.  
+    A wick that looks scary can be a trap.
+  </p>
+  <p>
+    This is why discipline matters. You don’t react to one candle. You read the context.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Avoiding Traps with Structure</h2>
+  <p>
+    Moving averages, trend, and patterns protect you from candle traps. A strong green candle
+    against the trend is not strength — it’s a trap. A strong red candle into rising support is
+    not weakness — it’s a trap.
+  </p>
+  <p>
+    This is how you avoid emotional trades and stay aligned with your plan.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Candle Traps</h2>
+  <form id="lesson26-quiz" class="form">
+
+    <label class="form-label">
+      What is a candle trap?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A candle that looks strong but is actually weak.</option>
+        <option value="b">A guaranteed signal.</option>
+        <option value="c">A random candle.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      How do you avoid traps?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Use trend, structure, and moving averages.</option>
+        <option value="b">Trade every candle.</option>
+        <option value="c">Guess.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and context.</option>
+        <option value="b">Emotion.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson26-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Trap Detection</h2>
+  <p>
+    Imagine a strong green candle forms — but it’s pushing directly into a falling moving average.
+  </p>
+
+  <form id="lesson26-sim" class="form">
+
+    <label class="form-label">
+      What does this likely represent?
+      <select name="trap" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A trap — strength against trend.</option>
+        <option value="b">Guaranteed breakout.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for confirmation.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson26-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 26</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson26();
+  });
+</script>
+
+</body>
+</html>
