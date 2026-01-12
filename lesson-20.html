@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 20 – Candle Strength & Momentum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 20 – Candle Strength & Momentum</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Understanding Candle Strength</h2>
+  <p>
+    Candle strength is about how aggressively buyers or sellers moved price. A strong green candle
+    with a full body and small wicks shows confident buying. A weak green candle with long upper
+    wick shows hesitation.
+  </p>
+  <p>
+    These details matter. They help you understand whether momentum is building or fading. They
+    help you avoid emotional entries and stay aligned with your moving averages and patterns.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Momentum & Pressure</h2>
+  <p>
+    Momentum is the speed and force behind price movement. When candles grow in size and close
+    near their highs, buyers are applying pressure. When candles shrink or show long wicks,
+    pressure is fading.
+  </p>
+  <p>
+    This connects directly to your mock enter/exit simulator. You will use candle strength to
+    confirm entries and manage exits with discipline.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Candle Strength</h2>
+  <form id="lesson20-quiz" class="form">
+
+    <label class="form-label">
+      What does a strong green candle with small wicks show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Confident buying pressure.</option>
+        <option value="b">Weak sellers.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does a long upper wick on a green candle suggest?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers tried but sellers pushed back.</option>
+        <option value="b">Guaranteed reversal.</option>
+        <option value="c">Nothing important.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most when reading momentum?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and context.</option>
+        <option value="b">Guessing the next candle.</option>
+        <option value="c">Trading every move.</option>
+      </select>
+    </label>
+
+    <div id="lesson20-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Reading Momentum</h2>
+  <p>
+    Imagine a sequence of candles: medium green, larger green, even larger green, then a small
+    green with long upper wick.
+  </p>
+
+  <form id="lesson20-sim" class="form">
+
+    <label class="form-label">
+      What does this shift suggest?
+      <select name="momentum" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Momentum was strong but is now slowing.</option>
+        <option value="b">Momentum is increasing forever.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for confirmation before entering.</option>
+        <option value="b">Chase the move.</option>
+        <option value="c">Double size immediately.</option>
+      </select>
+    </label>
+
+    <div id="lesson20-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 20</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson20();
+  });
+</script>
+
+</body>
+</html>
