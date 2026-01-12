@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 85 – Pattern Certification Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 85 – Pattern Certification</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Discipline Academy Pattern Certification</h2>
+  <p>
+    You’ve reached the certification stage for the Chart Patterns chapter. This is where your
+    work turns into something you can hold: a real certificate with your name on it from
+    <strong>Discipline Academy</strong>.
+  </p>
+  <p>
+    To unlock your certificate, you must:
+  </p>
+  <ul>
+    <li>Complete all pattern lessons and simulations</li>
+    <li>Pass the final pattern exam</li>
+    <li>Confirm your identity details below</li>
+  </ul>
+  <p>
+    Your certificate will be printable and saveable to your phone.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Enter Your Certification Details</h2>
+  <p>
+    Make sure this information is correct. It will appear exactly as typed on your
+    Discipline Academy certificate.
+  </p>
+
+  <form id="cert-info-form" class="form">
+
+    <label class="form-label">
+      Full name (for certificate)
+      <input type="text" name="fullName" class="form-input" required maxlength="60" />
+    </label>
+
+    <label class="form-label">
+      Email (for your records only)
+      <input type="email" name="email" class="form-input" required />
+    </label>
+
+    <label class="form-label">
+      City, State (optional – for certificate)
+      <input type="text" name="location" class="form-input" maxlength="60" />
+    </label>
+
+    <label class="form-label">
+      I confirm all information is correct and I understand this will appear on my certificate.
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="yes">Yes, I confirm.</option>
+        <option value="no">No, I need to fix it.</option>
+      </select>
+    </label>
+
+    <div id="cert-info-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <!-- You can also gate this button with your exam-complete flag in app.js -->
+      <button type="submit" class="primary-button">
+        Save Info & Unlock Certificate Preview
+      </button>
+    </div>
+
+  </form>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Certification Requirements Reminder</h2>
+  <p>
+    If your exam score or progress does not meet the requirements yet, the certificate preview
+    will stay locked. Finish the work first — then you earn the paper.
+  </p>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson85(); // In app.js: handle saving user info & setting a "certUnlocked" flag
+  });
+</script>
+
+</body>
+</html>
