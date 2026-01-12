@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 33 – Candle Timing & Market Rhythm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 33 – Candle Timing</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Timing Is Everything</h2>
+  <p>
+    A candle at the right time means everything. A candle at the wrong time means nothing.
+    Timing is one of the most advanced candle skills — and one of the most important.
+  </p>
+  <p>
+    A strong candle at market open? Normal.  
+    A strong candle at lunch hour? Weak.  
+    A strong candle near close? Powerful.
+  </p>
+  <p>
+    Timing reveals the rhythm of the auction.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Timing + Trend + MAs</h2>
+  <p>
+    Timing matters most when combined with trend and moving averages. A strong candle at the
+    right time in the right place is confirmation. A strong candle at the wrong time in the wrong
+    place is a trap.
+  </p>
+  <p>
+    This is how you stay disciplined and avoid emotional trades.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Timing</h2>
+  <form id="lesson33-quiz" class="form">
+
+    <label class="form-label">
+      What matters most when reading timing?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Context and market rhythm.</option>
+        <option value="b">Guessing.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      When is a strong candle most meaningful?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Near close or after compression.</option>
+        <option value="b">At random times.</option>
+        <option value="c">Only at open.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trading candles without timing context.</option>
+        <option value="b">Following your plan.</option>
+        <option value="c">Reading trend.</option>
+      </select>
+    </label>
+
+    <div id="lesson33-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Timing Read</h2>
+  <p>
+    Imagine a strong green candle forming at 3:45 PM in an uptrend above rising moving averages.
+  </p>
+
+  <form id="lesson33-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="timing" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Strong end‑of‑day pressure.</option>
+        <option value="b">Weakness.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Consider continuation only if your full plan aligns.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson33-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 33</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson33();
+  });
+</script>
+
+</body>
+</html>
