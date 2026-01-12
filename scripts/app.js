@@ -1,19 +1,23 @@
-// scripts/app.js
+// app.js
 
 // ---------- THEME ----------
 function initTheme() {
   const btn = document.getElementById("theme-toggle");
   if (!btn) return;
+
   const stored = localStorage.getItem("theme") || "dark";
-  document.body.classList.toggle("theme-dark", stored === "dark");
-  document.body.classList.toggle("theme-light", stored === "light");
+  setTheme(stored);
 
   btn.addEventListener("click", () => {
     const isDark = document.body.classList.contains("theme-dark");
-    document.body.classList.toggle("theme-dark", !isDark);
-    document.body.classList.toggle("theme-light", isDark);
-    localStorage.setItem("theme", isDark ? "light" : "dark");
+    setTheme(isDark ? "light" : "dark");
   });
+
+  function setTheme(mode) {
+    document.body.classList.toggle("theme-dark", mode === "dark");
+    document.body.classList.toggle("theme-light", mode === "light");
+    localStorage.setItem("theme", mode);
+  }
 }
 
 // ---------- GLOBAL ACCESS GATE ----------
@@ -24,47 +28,47 @@ function enforceGlobalAccessGate() {
   }
 }
 
-// ---------- PAYMENT RETURN HANDLER (OPTIONAL) ----------
-function checkPaymentReturn() {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("access") === "granted") {
-    localStorage.setItem("academyAccess", "true");
-    window.location.replace("lessons.html");
-  }
-}
-
-// ---------- FREE ACCESS GATE BY EMAIL ----------
+// ---------- FREE ACCESS GATE BY EMAIL (OPTION C) ----------
 function initFreeAccessGate() {
   const form = document.getElementById("free-access-form");
   const msg = document.getElementById("free-access-message");
   if (!form) return;
 
+  // Your override email
+  const allowed = "Boardwalkclay1@gmail.com".toLowerCase();
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = new FormData(form);
     const email = (data.get("freeEmail") || "").toString().trim().toLowerCase();
-    const allowed = "boardwalkclay1@gmail.com".toLowerCase(); // replace with your email
 
     if (!email) {
       msg.textContent = "Please enter an email.";
-      msg.classList.add("error-text");
+      msg.className = "feedback-text error-text";
       return;
     }
 
     if (email === allowed) {
       localStorage.setItem("academyAccess", "true");
+      localStorage.setItem("academyEmail", email);
       msg.textContent = "Access granted. Redirecting to lessons...";
-      msg.classList.remove("error-text");
-      msg.classList.add("success-text");
+      msg.className = "feedback-text success-text";
       setTimeout(() => {
         window.location.href = "lessons.html";
-      }, 800);
+      }, 700);
     } else {
-      msg.textContent = "This email is not authorized for free access.";
-      msg.classList.add("error-text");
-      msg.classList.remove("success-text");
+      msg.textContent = "This email is not authorized for access.";
+      msg.className = "feedback-text error-text";
     }
   });
+}
+
+// If already unlocked, skip the email step
+function autoEnterIfAlreadyUnlocked() {
+  const hasAccess = localStorage.getItem("academyAccess") === "true";
+  if (hasAccess) {
+    window.location.href = "lessons.html";
+  }
 }
 
 // ---------- LESSONS SHELL ----------
@@ -74,7 +78,7 @@ function initLessonsShell() {
   setupSecureMode();
 }
 
-// Sidebar navigation scroll between sections
+// Sidebar navigation
 function setupSidebarNav() {
   const links = document.querySelectorAll(".sidebar-link");
   links.forEach((btn) => {
@@ -100,6 +104,7 @@ function setupDisciplinePopup() {
   const lastShown = Number(localStorage.getItem("lastDisciplinePopup") || 0);
   const now = Date.now();
 
+  // Auto once a week
   if (!lastShown || now - lastShown > WEEK_MS) {
     showPopup();
   }
@@ -124,12 +129,20 @@ function setupDisciplinePopup() {
   }
 }
 
-// ---------- SECURE MODE (BLUE/BLUR ON VISIBILITY CHANGE) ----------
+// ---------- SECURE MODE (BLUE/BLUR TO DETER SCREEN CAPTURES) ----------
 function setupSecureMode() {
   const area = document.querySelector(".secure-area");
   const toggle = document.getElementById("secure-toggle");
   if (!area) return;
 
+  // Manual toggle
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      area.classList.toggle("secure-blur");
+    });
+  }
+
+  // Auto blur when tab loses focus, unblur on return
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
       area.classList.add("secure-blur");
@@ -137,10 +150,4 @@ function setupSecureMode() {
       area.classList.remove("secure-blur");
     }
   });
-
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      area.classList.toggle("secure-blur");
-    });
-  }
 }
