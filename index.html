@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Discipline Academy – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <div id="blur-overlay" class="blur-overlay hidden"></div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Discipline Academy</span>
+      <button id="sidebar-close" class="icon-button" aria-label="Close menu">✕</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">
+        <button class="sidebar-section-toggle">Getting Started</button>
+        <div class="sidebar-section-content">
+          <p><strong>What this academy is:</strong> A discipline-first training system for options traders.</p>
+          <p><strong>Why discipline:</strong> Without timing and control, no strategy will save you.</p>
+          <p><strong>9:00 AM check-in:</strong> Your daily ritual to prove you are prepared.</p>
+          <p><strong>Mock options form:</strong> Required simulation before lessons unlock.</p>
+          <a href="mock-options.html" class="sidebar-link">Go to Mock Options Application</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <button class="sidebar-section-toggle">Daily Discipline Tools</button>
+        <div class="sidebar-section-content">
+          <p><strong>9:00 AM Check-In:</strong> Press the button before the market opens.</p>
+          <p><strong>Streak:</strong> Tracks how many days you showed up on time.</p>
+          <p><strong>Discipline Score:</strong> Measures your consistency over time.</p>
+          <p><strong>Violations:</strong> Repeated capture/switch attempts can revoke access.</p>
+        </div>
+      </div>
+
+      <div class6="sidebar-section">
+        <button class="sidebar-section-toggle">Simulations</button>
+        <div class="sidebar-section-content">
+          <p>Practice in a safe, simulated environment before touching real markets.</p>
+          <ul>
+            <li>Options registration simulator</li>
+            <li>Order entry simulator</li>
+            <li>Order exit simulator</li>
+          </ul>
+          <a href="mock-options.html" class="sidebar-link">Start Options Registration Simulator</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <button class="sidebar-section-toggle">Lessons</button>
+        <div class="sidebar-section-content">
+          <p>Structured, locked stages that unlock only when you complete the one before.</p>
+          <ul>
+            <li>Stage 1: Discipline</li>
+            <li>Stage 2: Up vs Down</li>
+            <li>Stage 3: Calls vs Puts</li>
+            <li>Stage 4: Options Page Breakdown</li>
+            <li>Stage 5: Execution Mechanics</li>
+            <li>Stage 6: Emotional Control</li>
+          </ul>
+          <a href="lessons.html" class="sidebar-link">Go to Lessons</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <button class="sidebar-section-toggle">Settings & Status</button>
+        <div class="sidebar-section-content">
+          <p>Manage appearance and see your current status.</p>
+          <button id="sidebar-theme-toggle" class="primary-button small">Toggle Theme</button>
+          <p id="subscription-status" class="status-text"></p>
+          <button id="reset-progress" class="danger-button small">Reset Progress</button>
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Top bar -->
+  <header class="top-bar">
+    <button id="sidebar-open" class="icon-button" aria-label="Open menu">☰</button>
+    <h1 class="app-title">Discipline Academy</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <!-- Caution modal -->
+  <div id="caution-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Caution — This Information Can Change Your Life</h2>
+      <p>
+        This academy is designed to reshape how you think, prepare, and act in the markets.
+        Before you learn about options, you must build strict control over your emotions, your
+        timing, and your discipline.
+      </p>
+      <p>
+        This is not financial advice. This is behavioral training for your own safety. Your
+        success depends on your ability to follow instructions and remain consistent.
+      </p>
+      <button id="caution-continue" class="primary-button">I Understand. Continue.</button>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <!-- 9 AM discipline block -->
+    <section class="card">
+      <h2 class="section-title">Daily 9:00 AM Discipline Check-In</h2>
+      <p class="section-subtitle">
+        Your day starts with discipline. The market will not wait for you.
+      </p>
+
+      <p id="market-day-status" class="status-text"></p>
+
+      <button id="checkin-button" class="checkin-button">
+        I Am Present. I Am Prepared. Check In Now.
+      </button>
+
+      <p id="checkin-message" class="feedback-text"></p>
+
+      <div class="metrics-row">
+        <div class="metric">
+          <span class="metric-label">Streak</span>
+          <span id="streak-value" class="metric-value">0 days</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Discipline Score</span>
+          <span id="discipline-score" class="metric-value">0</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Violations</span>
+          <span id="violation-count" class="metric-value">0 / 3</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How the site works -->
+    <section class="card">
+      <h2 class="section-title">How This Academy Works</h2>
+      <p>
+        This platform is a discipline-first training environment for aspiring options traders.
+        We do not tell you what to trade. We train how you show up, how you prepare, and how you
+        execute. Every part of this experience is designed to build timing, consistency, and
+        emotional control.
+      </p>
+      <ol class="explanation-list">
+        <li>
+          <strong>Daily 9:00 AM Check-In:</strong>
+          Monday through Friday, you must check in before the market opens. This trains you to be
+          prepared on time. Missed check-ins break your streak and lower your discipline score.
+        </li>
+        <li>
+          <strong>Mock Options Registration:</strong>
+          Before you can access any lessons, you must complete a simulated options trading
+          application. This teaches you what real brokers look for—without risking anything.
+        </li>
+        <li>
+          <strong>Locked Lesson Stages:</strong>
+          Lessons are broken into stages. Each stage unlocks only when you complete the one
+          before it. You cannot skip ahead. Discipline and completion are required.
+        </li>
+        <li>
+          <strong>Simulated Execution:</strong>
+          You will practice entering and exiting trades in a fully simulated environment. You
+          will see how quantity, bid price, and timing affect your outcomes.
+        </li>
+        <li>
+          <strong>Emotional Control Training:</strong>
+          As you progress, you will work on managing fear, greed, and impatience—because
+          undisciplined emotions are the fastest way to lose in the market.
+        </li>
+      </ol>
+      <p>
+        This is not a get-rich-quick platform. This is an academy for people who are willing to
+        show up, follow instructions, and build real habits.
+      </p>
+
+      <div class="button-row">
+        <a href="mock-options.html" class="primary-button">Start Mock Options Application</a>
+        <a href="lessons.html" class="secondary-button">Go to Lessons</a>
+      </div>
+    </section>
+
+    <!-- Subscription / access note -->
+    <section class="card">
+      <h2 class="section-title">Access & Safety</h2>
+      <p>
+        Access to this academy is time-limited and device-bound. Repeated attempts to capture or
+        misuse content can result in immediate access revocation and a required re-subscription.
+        This protects the integrity of the training and the safety of all members.
+      </p>
+      <p>
+        Treat this environment like a real market preparation room: show up on time, stay
+        focused, and respect the process.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Page-specific initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initSidebar();
+      initCautionModal();
+      initDisciplineModule();
+      initBlurAndViolationSystem();
+      updateSubscriptionStatus();
+    });
+  </script>
+</body>
+</html>
