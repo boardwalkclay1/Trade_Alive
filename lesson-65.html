@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 65 – Pattern Location</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 65 – Pattern Location</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Location Determines Meaning</h2>
+  <p>
+    A pattern at the wrong location is meaningless. A bull flag at resistance is not the same as
+    a bull flag at support. A head & shoulders in the middle of a trend is not the same as one at
+    major resistance.
+  </p>
+  <p>
+    Location gives the pattern its purpose.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Key Locations</h2>
+  <ul>
+    <li><strong>Support</strong> – bullish reversals</li>
+    <li><strong>Resistance</strong> – bearish reversals</li>
+    <li><strong>Moving averages</strong> – continuation zones</li>
+    <li><strong>Trendlines</strong> – structure confirmation</li>
+    <li><strong>Breakout levels</strong> – expansion zones</li>
+  </ul>
+  <p>
+    Patterns without location are just drawings.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Location</h2>
+  <form id="lesson65-quiz" class="form">
+
+    <label class="form-label">
+      What gives a pattern meaning?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Location.</option>
+        <option value="b">Shape alone.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Where do continuation patterns work best?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Near moving averages.</option>
+        <option value="b">Far above structure.</option>
+        <option value="c">At random levels.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Where do reversal patterns work best?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">At major support or resistance.</option>
+        <option value="b">In the middle of a trend.</option>
+        <option value="c">During news.</option>
+      </select>
+    </label>
+
+    <div id="lesson65-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Location Read</h2>
+  <p>
+    Imagine a head & shoulders forming at major resistance after a long uptrend.
+  </p>
+
+  <form id="lesson65-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="loc" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">High‑quality bearish reversal.</option>
+        <option value="b">Continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the idea?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Neckline break.</option>
+        <option value="b">The left shoulder.</option>
+        <option value="c">The wick.</option>
+      </select>
+    </label>
+
+    <div id="lesson65-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 65</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson65();
+  });
+</script>
+
+</body>
+</html>
