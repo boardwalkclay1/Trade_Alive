@@ -216,3 +216,149 @@ function setupUniversalQuizzes() {
     });
   });
 }
+/* ============================================================
+   DISCIPLINE ACADEMY — UNIVERSAL AUTO-FIX ENGINE
+   This script automatically upgrades ALL pages to the new style.
+============================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  autoFixStylesheet();
+  autoFixBodyClass();
+  autoFixTopBar();
+  autoFixMainWrapper();
+  autoFixGlassCards();
+  autoFixLessonChips();
+  autoFixSidebarButtons();
+  autoFixLoader();
+});
+
+/* ------------------------------------------------------------
+   1. Ensure correct stylesheet path
+------------------------------------------------------------ */
+function autoFixStylesheet() {
+  const links = document.querySelectorAll("link[rel='stylesheet']");
+  const correctRoot = "styles.css";
+  const correctLessons = "../styles.css";
+
+  if (!links.length) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+
+    if (location.pathname.includes("/lessons/")) {
+      link.href = correctLessons;
+    } else {
+      link.href = correctRoot;
+    }
+
+    document.head.appendChild(link);
+  }
+}
+
+/* ------------------------------------------------------------
+   2. Ensure body has theme-dark
+------------------------------------------------------------ */
+function autoFixBodyClass() {
+  if (!document.body.classList.contains("theme-dark")) {
+    document.body.classList.add("theme-dark");
+  }
+}
+
+/* ------------------------------------------------------------
+   3. Ensure top bar exists and is styled
+------------------------------------------------------------ */
+function autoFixTopBar() {
+  const header = document.querySelector("header");
+
+  if (!header) return;
+
+  header.classList.add("top-bar", "glass-bar");
+
+  const title = header.querySelector("h1");
+  if (title) title.classList.add("app-title", "glow-text");
+
+  const buttons = header.querySelectorAll("button");
+  buttons.forEach((btn) => btn.classList.add("icon-button"));
+}
+
+/* ------------------------------------------------------------
+   4. Ensure main wrapper exists
+------------------------------------------------------------ */
+function autoFixMainWrapper() {
+  const main = document.querySelector("main");
+  if (!main) return;
+
+  main.classList.add("main-content", "secure-area");
+}
+
+/* ------------------------------------------------------------
+   5. Wrap orphan content in glass cards
+------------------------------------------------------------ */
+function autoFixGlassCards() {
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach((sec) => {
+    if (!sec.classList.contains("glass-card")) {
+      sec.classList.add("glass-card");
+    }
+  });
+}
+
+/* ------------------------------------------------------------
+   6. Upgrade lesson chips automatically
+------------------------------------------------------------ */
+function autoFixLessonChips() {
+  const links = document.querySelectorAll("a, button");
+
+  links.forEach((el) => {
+    const text = el.textContent.trim();
+
+    if (text.startsWith("Stage")) {
+      el.classList.add("lesson-chip");
+
+      // Extract lesson number
+      const num = Number(text.replace("Stage", "").trim());
+      if (!isNaN(num)) {
+        el.setAttribute("data-lesson", num);
+      }
+    }
+  });
+}
+
+/* ------------------------------------------------------------
+   7. Upgrade sidebar buttons
+------------------------------------------------------------ */
+function autoFixSidebarButtons() {
+  const sidebarButtons = document.querySelectorAll(".sidebar-link");
+
+  sidebarButtons.forEach((btn) => {
+    btn.classList.add("lesson-chip");
+  });
+}
+
+/* ------------------------------------------------------------
+   8. Add loader if missing
+------------------------------------------------------------ */
+function autoFixLoader() {
+  if (document.getElementById("loader-overlay")) return;
+
+  const loader = document.createElement("div");
+  loader.id = "loader-overlay";
+  loader.className = "loader-overlay";
+
+  loader.innerHTML = `
+    <div class="loader-candles">
+      <div class="loader-candle"></div>
+      <div class="loader-candle"></div>
+      <div class="loader-candle"></div>
+      <div class="loader-candle"></div>
+      <div class="loader-candle"></div>
+    </div>
+    <div class="glow-text">Loading…</div>
+  `;
+
+  document.body.prepend(loader);
+
+  setTimeout(() => {
+    loader.classList.add("loader-hidden");
+  }, 900);
+}
