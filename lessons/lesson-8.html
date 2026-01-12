@@ -6,14 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body class="theme-dark">
   <header class="top-bar">
-    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
     <h1 class="app-title">Stage 8 – Charts & Candles</h1>
     <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
   </header>
 
   <main class="main-content">
+
     <section class="card">
       <h2 class="section-title">What a Chart Really Is</h2>
       <p>
@@ -36,4 +38,126 @@
     <section class="card">
       <h2 class="section-title">Red and Green Candles</h2>
       <p>
-        Most trading platforms show price using <
+        Most trading platforms show price using <strong>candlesticks</strong>. A green candle
+        means price closed higher than it opened. A red candle means price closed lower than it
+        opened.
+      </p>
+      <p>
+        The “body” of the candle shows the open and close. The “wicks” show the highest and
+        lowest prices reached during that period. Together, they tell a story about pressure:
+      </p>
+      <ul>
+        <li><strong>Strong green candle:</strong> buyers were in control.</li>
+        <li><strong>Strong red candle:</strong> sellers were in control.</li>
+        <li><strong>Long wicks:</strong> rejection or hesitation.</li>
+      </ul>
+      <p>
+        Candles are not predictions. They are footprints of what buyers and sellers already did.
+        Your job is to read them with discipline, not emotion.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Candles Tell a Story</h2>
+      <p>
+        A single candle is one moment in the auction. A series of candles becomes a story:
+        higher lows, lower highs, momentum, hesitation, pressure building, pressure releasing.
+      </p>
+      <p>
+        When you combine candles with the auction mindset, you begin to see the market as a
+        living negotiation instead of random noise.
+      </p>
+      <p>
+        This stage prepares you for patterns, moving averages, and full setups in the next
+        lessons.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Candles & Price Story</h2>
+      <form id="lesson8-quiz" class="form">
+
+        <label class="form-label">
+          What does a green candle represent?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Price closed lower than it opened.</option>
+            <option value="b">Price closed higher than it opened.</option>
+            <option value="c">The market is closed.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What do long wicks often indicate?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Rejection or hesitation.</option>
+            <option value="b">Guaranteed continuation.</option>
+            <option value="c">A glitch in the chart.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What is your job when reading candles?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Predict the future perfectly.</option>
+            <option value="b">Read the story calmly and connect it to your plan.</option>
+            <option value="c">React emotionally to every candle.</option>
+          </select>
+        </label>
+
+        <div id="lesson8-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- Simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Candle Interpretation</h2>
+      <p>
+        Imagine you see a strong green candle with a small wick on top, followed by another green
+        candle making a higher low.
+      </p>
+
+      <form id="lesson8-sim" class="form">
+
+        <label class="form-label">
+          What does this sequence suggest?
+          <select name="sequence" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Buyers are showing strength and lifting price.</option>
+            <option value="b">Sellers are dominating.</option>
+            <option value="c">The chart is meaningless.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should you respond emotionally?
+          <select name="emotion" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Get excited and chase immediately.</option>
+            <option value="b">Stay calm, read the story, and act only if it fits your rules.</option>
+            <option value="c">Double your size instantly.</option>
+          </select>
+        </label>
+
+        <div id="lesson8-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 8</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <script src="../app.js"></script>
+</body>
+</html>
