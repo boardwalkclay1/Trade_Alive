@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 25 – Multi‑Candle Storytelling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 25 – Multi‑Candle Storytelling</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Candles Are Chapters, Not Words</h2>
+  <p>
+    A single candle is a word. A sequence of candles is a sentence. A full trend is a story.
+    Traders who only look at one candle miss the bigger message. You’ve already learned how
+    moving averages show trend and structure — now you learn how candles reveal the emotional
+    rhythm inside that trend.
+  </p>
+  <p>
+    Three strong green candles in a row? Buyers pressing.  
+    A strong green followed by hesitation? Buyers slowing.  
+    A rejection wick after momentum? Pressure shifting.
+  </p>
+  <p>
+    This is how you read the auction with clarity instead of guessing.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Sequence > Single Candle</h2>
+  <p>
+    A bullish engulfing candle means more when it appears after compression.  
+    A rejection wick means more when it appears at a moving average.  
+    A strong candle means more when it aligns with trend.
+  </p>
+  <p>
+    This is why your discipline matters. You don’t react to one bar. You read the sequence.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Candle Sequences</h2>
+  <form id="lesson25-quiz" class="form">
+
+    <label class="form-label">
+      What is a candle sequence?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A group of candles that tell a story together.</option>
+        <option value="b">A single candle.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Why does a pattern matter more in context?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Because trend and structure give it meaning.</option>
+        <option value="b">Because patterns always win.</option>
+        <option value="c">Because candles predict the future.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and reading the full story.</option>
+        <option value="b">Trading every candle.</option>
+        <option value="c">Guessing the next bar.</option>
+      </select>
+    </label>
+
+    <div id="lesson25-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Sequence Reading</h2>
+  <p>
+    Imagine this sequence:  
+    • Medium green  
+    • Larger green  
+    • Strong green  
+    • Small green with long upper wick  
+    • Inside bar  
+  </p>
+
+  <form id="lesson25-sim" class="form">
+
+    <label class="form-label">
+      What does this sequence suggest?
+      <select name="sequence" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Momentum rising, then slowing.</option>
+        <option value="b">Guaranteed reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for confirmation before entering.</option>
+        <option value="b">Chase the move.</option>
+        <option value="c">Double size immediately.</option>
+      </select>
+    </label>
+
+    <div id="lesson25-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 25</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson25();
+  });
+</script>
+
+</body>
+</html>
