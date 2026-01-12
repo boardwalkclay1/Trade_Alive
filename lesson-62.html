@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 62 – Pattern Failure Logic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 62 – Pattern Failure Logic</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Pattern Failure Really Means</h2>
+  <p>
+    Pattern failure happens when price breaks a pattern in the expected direction, then instantly
+    reverses and breaks the opposite way. This exposes emotional traders and rewards disciplined ones.
+  </p>
+  <p>
+    Failure is not random — it’s a shift in pressure.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Failure Requirements</h2>
+  <ul>
+    <li>Breakout wick</li>
+    <li>Snap‑back inside pattern</li>
+    <li>Breakout opposite direction</li>
+    <li>Candle confirmation</li>
+  </ul>
+  <p>
+    Failure is one of the strongest reversal signals in the market.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Pattern Failure</h2>
+  <form id="lesson62-quiz" class="form">
+
+    <label class="form-label">
+      What is pattern failure?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakout then reversal in opposite direction.</option>
+        <option value="b">Guaranteed continuation.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What reveals failure?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Snap‑back + opposite breakout.</option>
+        <option value="b">The wick alone.</option>
+        <option value="c">The pattern shape.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Confirmation candles.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson62-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Failure Read</h2>
+  <p>
+    Imagine a bull flag breaks upward with a wick, snaps back inside, then breaks down.
+  </p>
+
+  <form id="lesson62-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="fail" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pattern failure.</option>
+        <option value="b">Strong continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the failure?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakdown after snap‑back.</option>
+        <option value="b">The wick.</option>
+        <option value="c">The first breakout.</option>
+      </select>
+    </label>
+
+    <div id="lesson62-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 62</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson62();
+  });
+</script>
+
+</body>
+</html>
