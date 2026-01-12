@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 5 – Entering & Exiting Simulated Trades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 5 – Entering & Exiting Simulated Trades</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">From Chain to Action</h2>
+      <p>
+        Up to now, you’ve focused on direction, calls vs puts, and reading the options chain.
+        Now you connect those ideas to actual order entry and exit—still in a simulated,
+        educational environment.
+      </p>
+      <p>
+        A disciplined trader does not just click “buy” and “sell.” They know which contract
+        they are choosing, how many contracts, at what price, and how they plan to exit.
+      </p>
+      <p>
+        This stage walks you through that process step by step so that later, when you see a real
+        order ticket, it feels familiar—not intimidating.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Basic Order Ticket Elements</h2>
+      <p>
+        A simple options order ticket will usually ask you for:
+      </p>
+      <ul>
+        <li><strong>Action:</strong> Buy to open, sell to close, etc.</li>
+        <li><strong>Quantity:</strong> How many contracts you want.</li>
+        <li><strong>Limit or market:</strong> Whether you set a specific price or accept the current ask.</li>
+        <li><strong>Price:</strong> Your limit price if you choose a limit order.</li>
+        <li><strong>Time in force:</strong> How long the order stays active (e.g., day only).</li>
+      </ul>
+      <p>
+        For this academy, we will focus on <strong>buy to open</strong> and
+        <strong>sell to close</strong>, and on the difference between blindly hitting the market
+        and using a thoughtful limit price.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Order Basics</h2>
+      <form id="lesson5-quiz" class="form">
+        <label class="form-label">
+          If you want to start a new position in a call option, what action type do you select?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Sell to close</option>
+            <option value="b">Buy to open</option>
+            <option value="c">Cancel only</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What is the main difference between a market order and a limit order?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              A market order takes the current available price; a limit order waits for your chosen price.
+            </option>
+            <option value="b">They are identical.</option>
+            <option value="c">A limit order is random.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Why is “sell to close” important?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">It closes your position and realizes your result.</option>
+            <option value="b">It opens a new position.</option>
+            <option value="c">It changes the ticker.</option>
+          </select>
+        </label>
+
+        <div id="lesson5-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Stepwise order simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Enter & Exit a Practice Call</h2>
+      <p>
+        In this simulation, you will choose a call contract (from a simplified choice), select
+        quantity, pick order type, and then “exit” the trade.
+      </p>
+      <form id="lesson5-sim" class="form">
+        <label class="form-label">
+          Choose your contract type for an expected upward move:
+          <select name="contractType" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="call">Call option</option>
+            <option value="put">Put option</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Choose quantity (number of contracts):
+          <select name="quantity" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="1">1 contract</option>
+            <option value="5">5 contracts</option>
+            <option value="10">10 contracts</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Choose order type for entry:
+          <select name="orderType" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="market">Market order</option>
+            <option value="limit">Limit order near the bid/ask</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          After the contract moves in your favor, what is a disciplined action?
+          <select name="exitPlan" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Ignore your plan and hope it keeps running.</option>
+            <option value="b">Panic and close randomly.</option>
+            <option value="c">
+              Follow your exit rules and use sell to close to realize the result.
+            </option>
+          </select>
+        </label>
+
+        <div id="lesson5-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 5</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson5();
+    });
+  </script>
+</body>
+</html>
