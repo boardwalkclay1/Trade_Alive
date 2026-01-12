@@ -362,3 +362,441 @@ function autoFixLoader() {
     loader.classList.add("loader-hidden");
   }, 900);
 }
+/* ========================================================================
+   UNIVERSAL QUIZ + PROGRESSION + DISCIPLINE SYSTEM
+   - Quizzes (all lessons)
+   - Finish lesson button
+   - Lesson progression lock
+   - 9 o'clock discipline streak system
+   ======================================================================== */
+
+/* -----------------------------
+   QUIZ ANSWER KEY
+   ----------------------------- */
+/*
+  Define correct answers for each quiz/sim here.
+
+  - Key: form id (e.g., "lesson1-quiz", "lesson1-sim")
+  - Value: object where keys are input names and values are correct answers.
+
+  Example:
+    "lesson1-quiz": { q1: "a", q2: "c", q3: "b" }
+*/
+const QUIZ_ANSWER_KEY = {
+  // TODO: Fill in real answers as you build.
+  // "lesson1-quiz": { q1: "a", q2: "b", q3: "c" },
+  // "lesson1-sim":  { sim1: "b", sim2: "a" },
+
+  // Example placeholder like your test:
+  "lesson75-quiz": { q1: "a", q2: "a", q3: "a" },
+  "lesson75-sim":  { sim1: "a", sim2: "a" }
+};
+
+
+/* -----------------------------
+   LOCALSTORAGE HELPERS
+   ----------------------------- */
+
+function getCompletedLessons() {
+  try {
+    return JSON.parse(localStorage.getItem("completedLessons") || "[]");
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveCompletedLessons(list) {
+  localStorage.setItem("completedLessons", JSON.stringify(list));
+}
+
+/*
+  Mark a lesson completed and persist in localStorage.
+  lessonNumber: number (e.g., 1, 2, 75)
+*/
+function markLessonComplete(lessonNumber) {
+  if (!lessonNumber || isNaN(lessonNumber)) return;
+
+  const completed = getCompletedLessons();
+  if (!completed.includes(lessonNumber)) {
+    completed.push(lessonNumber);
+    completed.sort((a, b) => a - b);
+    saveCompletedLessons(completed);
+  }
+}
+
+
+/* -----------------------------
+   UNIVERSAL QUIZ ENGINE
+   ----------------------------- */
+
+function setupUniversalQuizzes() {
+  const forms = document.querySelectorAll("form[id*='quiz'], form[id*='sim']");
+  if (!forms.length) return;
+
+  forms.forEach((form) => {
+    const id = form.id;
+    if (!id) return;
+
+    const messageBox = document.getElementById(id + "-message");
+    const answerKey = QUIZ_ANSWER_KEY[id];
+
+    // If there is no answer key, still prevent reload & show warning.
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      if (!answerKey) {
+        if (messageBox) {
+          messageBox.textContent = "Quiz not configured for this lesson yet.";
+          messageBox.className = "feedback-text error-text";
+        }
+        return;
+      }
+
+      let allCorrect = true;
+
+      Object.keys(answerKey).forEach((fieldName) => {
+        const field = form.elements[fieldName];
+        const value = field ? field.value : null;
+        if (value !== answerKey[fieldName]) {
+          allCorrect = false;
+        }
+      });
+
+      if (!messageBox) return;
+
+      if (allCorrect) {
+        messageBox.textContent = "Correct. Stage completed.";
+        messageBox.className = "feedback-text success-text";
+
+        // Try to infer lesson number from form id (e.g., "lesson75-quiz")
+        const numMatch = id.match(/(\d+)/);
+        if (numMatch) {
+          const lessonNumber = Number(numMatch[1]);
+          markLessonComplete(lessonNumber);
+        }
+      } else {
+        messageBox.textContent = "Incorrect. Try again.";
+        messageBox.className = "feedback-text error-text";
+      }
+    });
+  });
+}
+
+
+/* -----------------------------
+   FORCE QUIZ FORMS TO BE JS-ONLY
+   ----------------------------- */
+
+function autoFixQuizForms() {
+  const quizForms = document.querySelectorAll("form[id*='quiz'], form[id*='sim']");
+
+  quizForms.forEach((form) => {
+    form.setAttribute("action", "javascript:void(0)");
+    form.setAttribute("method", "post");
+
+    const btns = form.querySelectorAll("button, input[type='submit']");
+    btns.forEach((btn) => {
+      btn.type = "button";
+      btn.addEventListener("click", () => {
+        form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+      });
+    });
+  });
+}
+
+
+/* -----------------------------
+   FINISH LESSON BUTTON
+   ----------------------------- */
+
+/*
+  Determine the current lesson number.
+  - If body has data-lesson-number, use that
+  - Otherwise, try to extract from URL, e.g., ".../lesson75.html"
+*/
+function getCurrentLessonNumber() {
+  const body = document.body;
+  if (body && body.dataset && body.dataset.lessonNumber) {
+    const n = Number(body.dataset.lessonNumber);
+    if (!isNaN(n)) return n;
+  }
+
+  const path = window.location.pathname;
+  const match = path.match(/lesson(\d+)/i);
+  if (match) {
+    return Number(match[1]);
+  }
+
+  return null;
+}
+
+/*
+  Wire up the "Finish Lesson" button (id="finish-lesson") so:
+  - It only works if the current lesson is completed in localStorage
+  - It shows error if quiz not passed
+  - It redirects back to lessons hub on success
+*/
+function setupFinishLessonButton() {
+  const btn = document.getElementById("finish-lesson");
+  if (!btn) return;
+
+  const msg = document.getElementById("finish-message");
+  const lessonNumber = getCurrentLessonNumber();
+
+  btn.addEventListener("click", () => {
+    if (!lessonNumber) {
+      if (msg) {
+        msg.textContent = "Lesson number not detected. Cannot finish this lesson.";
+        msg.className = "feedback-text error-text";
+      }
+      return;
+    }
+
+    const completed = getCompletedLessons();
+    if (!completed.includes(lessonNumber)) {
+      if (msg) {
+        msg.textContent = "You must pass the quiz for this lesson before finishing.";
+        msg.className = "feedback-text error-text";
+      }
+      return;
+    }
+
+    if (msg) {
+      msg.textContent = "Lesson completed. Redirecting to lessons hub…";
+      msg.className = "feedback-text success-text";
+    }
+
+    // Adjust this path if your hub lives elsewhere
+    setTimeout(() => {
+      window.location.href = "/lessons/lessons.html";
+    }, 700);
+  });
+}
+
+
+/* -----------------------------
+   LESSON PROGRESSION LOCK
+   ----------------------------- */
+
+/*
+  On the lessons hub page:
+  - Expect each lesson card/link to have data-lesson-number
+  - Hide or disable lessons greater than (maxCompleted + 1)
+*/
+function setupLessonProgressionLock() {
+  const lessonItems = document.querySelectorAll("[data-lesson-number]");
+  if (!lessonItems.length) return;
+
+  const completed = getCompletedLessons();
+  const maxCompleted = completed.length ? Math.max(...completed) : 0;
+  const allowedNext = (maxCompleted || 0) + 1;
+
+  lessonItems.forEach((item) => {
+    const n = Number(item.dataset.lessonNumber);
+    if (!n || isNaN(n)) return;
+
+    const link = item.querySelector("a") || item;
+
+    if (n > allowedNext) {
+      // Lock / hide future lessons
+      link.classList.add("locked-lesson");
+      link.setAttribute("aria-disabled", "true");
+      link.addEventListener("click", (e) => e.preventDefault());
+      if (!link.querySelector(".lock-label")) {
+        const span = document.createElement("span");
+        span.className = "lock-label";
+        span.textContent = "Locked — complete previous lesson first";
+        link.appendChild(span);
+      }
+    } else {
+      // This one is available
+      link.classList.remove("locked-lesson");
+      link.removeAttribute("aria-disabled");
+    }
+  });
+}
+
+
+/* -----------------------------
+   9 O'CLOCK DISCIPLINE STREAK
+   ----------------------------- */
+
+/*
+  Assumptions:
+  - Button:        id="discipline-checkin-btn"
+  - Message box:   id="discipline-message"
+  - Streak display id="discipline-streak"
+  - Timer display: id="discipline-timer" (optional)
+*/
+
+const DISCIPLINE_STORAGE_KEY = "disciplineStreakData";
+const DISCIPLINE_TARGET_HOUR = 21; // 21 = 9 PM (24h format)
+const DISCIPLINE_WINDOW_MINUTES = 60; // Window around 9 PM (e.g., 60 = 9:00–9:59)
+
+function getDisciplineData() {
+  try {
+    return JSON.parse(localStorage.getItem(DISCIPLINE_STORAGE_KEY) || "{}");
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveDisciplineData(data) {
+  localStorage.setItem(DISCIPLINE_STORAGE_KEY, JSON.stringify(data));
+}
+
+function isWithinDisciplineWindow(now = new Date()) {
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+
+  // Simple window: same hour, any minute
+  // If you want tighter control, adjust this logic
+  return hour === DISCIPLINE_TARGET_HOUR;
+}
+
+function formatDateKey(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function updateDisciplineUI() {
+  const data = getDisciplineData();
+  const streakEl = document.getElementById("discipline-streak");
+  const msgEl = document.getElementById("discipline-message");
+
+  const streak = data.streak || 0;
+
+  if (streakEl) {
+    streakEl.textContent = streak.toString();
+  }
+
+  if (msgEl && streak > 0) {
+    msgEl.textContent = `Current streak: ${streak} day${streak === 1 ? "" : "s"}.`;
+    msgEl.className = "feedback-text success-text";
+  }
+}
+
+function setupDisciplineTimer() {
+  const timerEl = document.getElementById("discipline-timer");
+  if (!timerEl) return;
+
+  function update() {
+    const now = new Date();
+    const target = new Date();
+
+    if (now.getHours() >= DISCIPLINE_TARGET_HOUR) {
+      // Next day 9 PM
+      target.setDate(target.getDate() + 1);
+    }
+    target.setHours(DISCIPLINE_TARGET_HOUR, 0, 0, 0);
+
+    const diffMs = target - now;
+    const diffSec = Math.max(0, Math.floor(diffMs / 1000));
+    const h = String(Math.floor(diffSec / 3600)).padStart(2, "0");
+    const m = String(Math.floor((diffSec % 3600) / 60)).padStart(2, "0");
+    const s = String(diffSec % 60).padStart(2, "0");
+
+    timerEl.textContent = `Next check-in window in ${h}:${m}:${s}`;
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+function setupDisciplineButton() {
+  const btn = document.getElementById("discipline-checkin-btn");
+  if (!btn) return;
+
+  const msgEl = document.getElementById("discipline-message");
+  const data = getDisciplineData();
+  const now = new Date();
+  const todayKey = formatDateKey(now);
+  const lastDate = data.lastDate || null;
+  let streak = data.streak || 0;
+
+  // Initialize UI
+  updateDisciplineUI();
+  setupDisciplineTimer();
+
+  btn.addEventListener("click", () => {
+    const nowInner = new Date();
+    const todayKeyInner = formatDateKey(nowInner);
+
+    if (!isWithinDisciplineWindow(nowInner)) {
+      if (msgEl) {
+        msgEl.textContent = "Discipline check-in only counts at 9:00 PM.";
+        msgEl.className = "feedback-text error-text";
+      }
+      return;
+    }
+
+    const dataInner = getDisciplineData();
+    const lastDateInner = dataInner.lastDate || null;
+    streak = dataInner.streak || 0;
+
+    if (lastDateInner === todayKeyInner) {
+      if (msgEl) {
+        msgEl.textContent = "You already checked in today. Come back tomorrow.";
+        msgEl.className = "feedback-text error-text";
+      }
+      return;
+    }
+
+    // Update streak: if last check-in was yesterday, continue streak; otherwise reset
+    if (lastDateInner) {
+      const prev = new Date(lastDateInner);
+      const diffDays = Math.floor((nowInner - prev) / (1000 * 60 * 60 * 24));
+      if (diffDays === 1) {
+        streak += 1;
+      } else {
+        streak = 1;
+      }
+    } else {
+      streak = 1;
+    }
+
+    const newData = {
+      lastDate: todayKeyInner,
+      streak
+    };
+    saveDisciplineData(newData);
+
+    if (msgEl) {
+      msgEl.textContent = `Locked in. Streak: ${streak} day${streak === 1 ? "" : "s"}.`;
+      msgEl.className = "feedback-text success-text";
+    }
+
+    // Simple reward milestones
+    if (streak === 3 && msgEl) {
+      msgEl.textContent += " First streak milestone — 3 days straight. Keep going.";
+    }
+    if (streak === 7 && msgEl) {
+      msgEl.textContent += " 7-day streak — serious discipline. Respect.";
+    }
+    if (streak === 30 && msgEl) {
+      msgEl.textContent += " 30 days. This is identity-level discipline.";
+    }
+
+    updateDisciplineUI();
+  });
+}
+
+
+/* -----------------------------
+   GLOBAL INIT
+   ----------------------------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Quizzes
+  autoFixQuizForms();
+  setupUniversalQuizzes();
+
+  // Lesson progression
+  setupFinishLessonButton();
+  setupLessonProgressionLock();
+
+  // 9 o'clock discipline system
+  setupDisciplineButton();
+});
