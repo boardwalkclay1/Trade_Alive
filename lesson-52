@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 52 – Wedge Patterns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 52 – Wedges</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What a Wedge Pattern Is</h2>
+  <p>
+    A wedge is a pattern where price compresses into a narrowing structure. Both trendlines point
+    in the same direction — either both rising or both falling.
+  </p>
+  <p>
+    Wedges show <strong>pressure imbalance</strong>. One side is losing strength.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Types of Wedges</h2>
+  <ul>
+    <li><strong>Rising Wedge</strong> – bearish reversal or continuation</li>
+    <li><strong>Falling Wedge</strong> – bullish reversal or continuation</li>
+  </ul>
+  <p>
+    Rising wedge = buyers weakening.  
+    Falling wedge = sellers weakening.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Wedges</h2>
+  <form id="lesson52-quiz" class="form">
+
+    <label class="form-label">
+      What defines a wedge?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Two trendlines moving in the same direction.</option>
+        <option value="b">A flat top and bottom.</option>
+        <option value="c">Random spikes.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does a rising wedge show?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers weakening.</option>
+        <option value="b">Sellers strengthening.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most for wedges?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakout + candle confirmation.</option>
+        <option value="b">Guessing.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson52-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Wedge Read</h2>
+  <p>
+    Imagine price forms a rising wedge with shrinking candles and long upper wicks.
+  </p>
+
+  <form id="lesson52-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="wedge" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Buyers weakening — possible breakdown.</option>
+        <option value="b">Strong continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for breakdown + confirmation.</option>
+        <option value="b">Chase the wedge.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson52-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 52</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson52();
+  });
+</script>
+
+</body>
+</html>
