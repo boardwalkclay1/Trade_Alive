@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 15 – Moving Averages Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 15 – Moving Averages Foundation</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Why Moving Averages Matter So Much</h2>
+      <p>
+        By now, you’ve seen the market as an auction, learned basic chart reading, patterns,
+        and how to build a structured trade idea. In this chapter, we focus on a tool that I
+        personally value above all others: <strong>moving averages</strong>.
+      </p>
+      <p>
+        Over more than ten years of trading—through wins, losses, and the stretch where I turned
+        $400 into $40,000 in five days—moving averages have been one of my most reliable guides.
+        Not because they are magic, but because they help me see trend and structure clearly.
+      </p>
+      <p>
+        This chapter is about teaching you how to see what I see when I look at a chart with
+        moving averages: the flow of buyers and sellers, the rhythm of pullbacks, and where a
+        disciplined trader might build or exit a position.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">What a Moving Average Actually Is</h2>
+      <p>
+        A moving average is simply the average price over a certain number of candles, updated
+        as each new candle forms. Common settings include 9, 20, 50, or 200 periods.
+      </p>
+      <p>
+        On your chart, it shows up as a smooth line that follows price. When price is generally
+        above a rising moving average, buyers have often been in control. When price is generally
+        below a falling moving average, sellers have often been in control.
+      </p>
+      <p>
+        Think of it as a way to smooth out noise and see the “tilt” of the market. It does not
+        predict the future. It gives you context for the present.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Connecting Moving Averages to Previous Lessons</h2>
+      <p>
+        In earlier chapters, you learned to ask: “Up or down from here? Who is winning the
+        auction? Does this fit my plan?” Moving averages help you answer those questions with more
+        clarity.
+      </p>
+      <p>
+        When you later build a mock trade and walk through the enter/exit simulator, your moving
+        averages will act like the backbone of the chart: showing trend, helping you judge pullbacks,
+        and supporting your calls or puts with structure instead of guesswork.
+      </p>
+      <p>
+        You will learn to use moving averages together with candles, patterns, and timeframes to
+        confirm or reject trade ideas, not to force trades that aren’t there.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Moving Average Basics</h2>
+      <form id="lesson15-quiz" class="form">
+        <label class="form-label">
+          What is a moving average in simple terms?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              A line that averages price over a set number of candles and updates as new ones form.
+            </option>
+            <option value="b">A random line with no calculation.</option>
+            <option value="c">A guarantee that price will reverse.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Why do I personally value moving averages so highly?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              Because they help me clearly see trend and structure across many years of trading.
+            </option>
+            <option value="b">Because they never fail.</option>
+            <option value="c">Because they make charts look cooler.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should moving averages be used in this academy?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              As context to support disciplined trade ideas, not as magic signals that replace rules.
+            </option>
+            <option value="b">As the only thing that matters.</option>
+            <option value="c">As a way to avoid having a plan.</option>
+          </select>
+        </label>
+
+        <div id="lesson15-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Reading a Simple Moving Average</h2>
+      <p>
+        Imagine a chart where price has been above a gently rising moving average for the past
+        twenty candles, with only small dips that quickly bounce back.
+      </p>
+      <form id="lesson15-sim" class="form">
+        <label class="form-label">
+          In simple terms, what does this moving average behavior suggest?
+          <select name="maView" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Buyers have generally been in control and the trend has been upward.
+            </option>
+            <option value="b">Sellers have dominated the entire period.</option>
+            <option value="c">The market is closed.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should a disciplined trader respond to this context?
+          <select name="discipline" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Consider bullish ideas only if they fit the full plan, not just because the line is rising.
+            </option>
+            <option value="b">Enter immediately with no plan.</option>
+            <option value="c">Double size because the line “looks good.”</option>
+          </select>
+        </label>
+
+        <div id="lesson15-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 15</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson15();
+    });
+  </script>
+</body>
+</html>
