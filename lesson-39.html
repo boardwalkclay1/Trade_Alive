@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 39 – Pullback Candle Behavior</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 39 – Pullback Candles</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Healthy Pullbacks</h2>
+  <p>
+    Healthy pullbacks have small candles, small wicks, and controlled movement. They often form
+    near rising moving averages in an uptrend or falling moving averages in a downtrend.
+  </p>
+  <p>
+    These pullbacks show that the trend is intact and buyers or sellers are simply taking a breath.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Dangerous Pullbacks</h2>
+  <p>
+    Dangerous pullbacks have large candles, long wicks, and aggressive movement. They often break
+    moving averages or key structure levels.
+  </p>
+  <p>
+    These pullbacks show that the trend may be weakening — or reversing.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Pullbacks</h2>
+  <form id="lesson39-quiz" class="form">
+
+    <label class="form-label">
+      What is a healthy pullback?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Small candles near moving averages.</option>
+        <option value="b">Huge candles breaking structure.</option>
+        <option value="c">Random spikes.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is a dangerous pullback?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Large candles breaking structure.</option>
+        <option value="b">Small candles.</option>
+        <option value="c">Inside bars.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend, structure, and discipline.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson39-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Pullback Read</h2>
+  <p>
+    Imagine an uptrend above rising moving averages. Price pulls back with small candles, then
+    prints a strong green candle.
+  </p>
+
+  <form id="lesson39-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="pull" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Healthy pullback + continuation.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Consider continuation only if your plan aligns.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson39-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 39</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson39();
+  });
+</script>
+
+</body>
+</html>
