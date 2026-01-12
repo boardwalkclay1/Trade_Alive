@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 63 – Pattern + Candle Integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 63 – Pattern + Candle Integration</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Patterns Don’t Work Alone</h2>
+  <p>
+    A pattern is just structure. A candle is just a bar. But when you combine them with trend,
+    moving averages, and levels — you get a complete system.
+  </p>
+  <p>
+    Patterns show <strong>pressure</strong>.  
+    Candles show <strong>execution</strong>.  
+    Together they show <strong>intent</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Integration Checklist</h2>
+  <ul>
+    <li>Trend direction</li>
+    <li>Pattern structure</li>
+    <li>Moving average alignment</li>
+    <li>Candle confirmation</li>
+    <li>Breakout or failure logic</li>
+  </ul>
+  <p>
+    This is how disciplined traders build consistent setups.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Integration</h2>
+  <form id="lesson63-quiz" class="form">
+
+    <label class="form-label">
+      What do patterns show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pressure.</option>
+        <option value="b">Prediction.</option>
+        <option value="c">Emotion.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What do candles show?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Execution.</option>
+        <option value="b">Randomness.</option>
+        <option value="c">Noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What creates a full system?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + pattern + MAs + candles.</option>
+        <option value="b">Pattern alone.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson63-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Full Integration</h2>
+  <p>
+    Imagine an ascending triangle in an uptrend above rising moving averages. Price compresses,
+    then breaks out with a bullish engulfing candle.
+  </p>
+
+  <form id="lesson63-sim" class="form">
+
+    <label class="form-label">
+      What does this confirm?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Strong continuation.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="disc" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Enter only if your full plan aligns.</option>
+        <option value="b">Chase the breakout.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson63-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">
+        Complete Stage 63
+      </button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson63();
+  });
+</script>
+
+</body>
+</html>
