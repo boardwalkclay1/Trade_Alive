@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 51 – Pennant Patterns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 51 – Pennants</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What a Pennant Is</h2>
+  <p>
+    A pennant is a continuation pattern that forms after a strong move, just like a flag — but
+    instead of a channel, price compresses into a small triangle.
+  </p>
+  <p>
+    This shows buyers and sellers tightening up before the next expansion.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Pennant Requirements</h2>
+  <ul>
+    <li>Strong trend move (the pole)</li>
+    <li>Compression into a triangle</li>
+    <li>Lower highs + higher lows</li>
+    <li>Small candles</li>
+    <li>Breakout in trend direction</li>
+  </ul>
+  <p>
+    Pennants are powerful when combined with candle confirmation.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Pennants</h2>
+  <form id="lesson51-quiz" class="form">
+
+    <label class="form-label">
+      What is the key difference between a flag and a pennant?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pennants compress into triangles.</option>
+        <option value="b">Flags compress into triangles.</option>
+        <option value="c">No difference.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does pennant compression show?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pressure tightening.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Breakout + confirmation.</option>
+        <option value="b">Guessing.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson51-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Pennant Read</h2>
+  <p>
+    Imagine a strong uptrend. Price compresses into a small triangle with lower highs and higher lows.
+  </p>
+
+  <form id="lesson51-sim" class="form">
+
+    <label class="form-label">
+      What is this forming?
+      <select name="pennant" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A bull pennant.</option>
+        <option value="b">A reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for breakout + confirmation.</option>
+        <option value="b">Chase the compression.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson51-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 51</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson51();
+  });
+</script>
+
+</body>
+</html>
