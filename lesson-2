@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 2 – What the Market Really Is</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 2 – What the Market Really Is</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Real People, Real Time</h2>
+      <p>
+        The market is not a game running in isolation. Every contract, every order, and every
+        price movement is tied to real people and institutions making decisions in real time.
+      </p>
+      <p>
+        When you trade an options contract, you are interacting with someone on the other side of
+        that trade—a buyer, a seller, a market maker, or an institution. Your decisions affect
+        them, and their decisions affect you.
+      </p>
+      <p>
+        Never forget this. It keeps you grounded, respectful, and aware that this is not
+        play-money. Even in this simulation, you are training your mind for a real environment.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Tickers, Charts, and What You’re Really Trading</h2>
+      <p>
+        A <strong>ticker</strong> is a short symbol that represents a specific company or fund in
+        the market. Examples: AAPL for Apple, MSFT for Microsoft, SPY for the S&amp;P 500 ETF.
+      </p>
+      <p>
+        A <strong>chart</strong> is a visual history of how that ticker’s price has moved over
+        time. Every candle or bar represents real buying and selling from real participants.
+      </p>
+      <p>
+        When you trade an <strong>options contract</strong>, you are not trading the chart itself.
+        You are trading a contract whose value is tied to how that ticker’s price moves. Your
+        options contract lives on top of that underlying ticker.
+      </p>
+      <p>
+        So when you later choose a call or a put, you are effectively saying: “I expect this
+        ticker to move in a certain direction, within a certain time.” The chart is your map, the
+        ticker is your vehicle, and the options contract is the way you choose to participate.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Market, People, and Tickers</h2>
+      <form id="lesson2-quiz" class="form">
+        <label class="form-label">
+          When you trade an options contract, who is on the other side?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">No one, it is just a computer simulation.</option>
+            <option value="b">Real people and institutions participating in the market.</option>
+            <option value="c">Only the government.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What is a ticker?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">A random code with no meaning.</option>
+            <option value="b">A short symbol that represents a specific stock or fund.</option>
+            <option value="c">The nickname for your trading account.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What are you really trading when you trade an options contract?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">The chart itself.</option>
+            <option value="b">A contract whose value depends on how the ticker’s price moves.</option>
+            <option value="c">Only the volume of the market.</option>
+          </select>
+        </label>
+
+        <div id="lesson2-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Simple simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Choosing a Ticker and Seeing the Contract</h2>
+      <p>
+        In this simulation, you will choose a ticker and see how an options contract is connected
+        to it at a basic level.
+      </p>
+      <form id="lesson2-sim" class="form">
+        <label class="form-label">
+          Choose a ticker for this simulation:
+          <select name="ticker" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="AAPL">AAPL (Apple)</option>
+            <option value="MSFT">MSFT (Microsoft)</option>
+            <option value="SPY">SPY (S&amp;P 500 ETF)</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          If you later choose a call contract on this ticker, what are you essentially saying?
+          <select name="callIdea" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">I expect this ticker’s price to generally move up.</option>
+            <option value="b">I expect this ticker’s price to never move.</option>
+            <option value="c">I have no idea, I am just guessing.</option>
+          </select>
+        </label>
+
+        <div id="lesson2-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 2</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson2();
+    });
+  </script>
+</body>
+</html>
