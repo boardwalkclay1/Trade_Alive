@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 50 – Flag Patterns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 50 – Flag Patterns</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What a Flag Pattern Is</h2>
+  <p>
+    A flag is a continuation pattern that forms after a strong move. Price pulls back in a tight,
+    controlled channel — like a flag on a pole.
+  </p>
+  <p>
+    The “pole” is the strong move.  
+    The “flag” is the controlled pullback.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Flag Requirements</h2>
+  <ul>
+    <li>Strong trend move (the pole)</li>
+    <li>Tight pullback channel</li>
+    <li>Small candles</li>
+    <li>Low volatility</li>
+    <li>Breakout in trend direction</li>
+  </ul>
+  <p>
+    Flags are one of the highest‑quality continuation patterns when combined with moving averages.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Flags</h2>
+  <form id="lesson50-quiz" class="form">
+
+    <label class="form-label">
+      What is the “pole” of a flag?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">The strong trend move.</option>
+        <option value="b">The pullback.</option>
+        <option value="c">The breakout.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does the flag represent?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A controlled pullback.</option>
+        <option value="b">A reversal.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most for flags?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + tight structure.</option>
+        <option value="b">Guessing.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson50-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Flag Read</h2>
+  <p>
+    Imagine a strong uptrend. Price pulls back in a tight downward channel with small candles.
+  </p>
+
+  <form id="lesson50-sim" class="form">
+
+    <label class="form-label">
+      What is this forming?
+      <select name="flag" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A bull flag.</option>
+        <option value="b">A reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for breakout + confirmation.</option>
+        <option value="b">Chase the pullback.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson50-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 50</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson50();
+  });
+</script>
+
+</body>
+</html>
