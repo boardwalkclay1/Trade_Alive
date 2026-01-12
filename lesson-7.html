@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 7 – What the Market Really Is (Chapter 2)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 7 – What the Market Really Is</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">The Market Behind the Contracts</h2>
+      <p>
+        In Chapter 1, you focused on direction, discipline, calls and puts, the options chain,
+        and a full mock trade. Now we zoom out. Every options contract you touched in Chapter 1
+        lives on top of something deeper: the stock market itself.
+      </p>
+      <p>
+        The stock market is not just numbers on a screen. It is a live auction of real businesses,
+        funds, and indexes. Every tick is a negotiation between buyers and sellers, each with
+        their own reasons, fears, goals, and timeframes.
+      </p>
+      <p>
+        When you choose a direction, a call, or a put, you are stepping into that auction. You are
+        not playing a game alone. You are participating in a shared environment where capital
+        moves in real time.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">A Decade of Experience, Condensed for You</h2>
+      <p>
+        I have been in this environment for over ten years. I have seen accounts grow, accounts
+        shrink, strategies work and then stop working. I have experienced long stretches of
+        discipline and painful periods of emotional trading.
+      </p>
+      <p>
+        One of the most intense stretches of my journey was turning $400 into $20,000 in five
+        days. On the surface, that sounds like a pure “knowledge” story. In reality, it was a
+        discipline story: following my rules, respecting my risk, and not letting greed pull me
+        out of my plan.
+      </p>
+      <p>
+        Here is the truth I am passing to you: the most important part of trading is not the
+        knowledge, the patterns, or the indicators. It is your discipline and your control over
+        yourself while you use them.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">How This Connects Back to Chapter 1</h2>
+      <p>
+        In Chapter 1, you learned to think in simple terms: money in, up or down from entry,
+        money out. You mapped that to calls and puts, read a basic options chain, and practiced
+        order entry and exit.
+      </p>
+      <p>
+        All of that still applies here. The stock market is the stage. Your contracts are how you
+        choose to participate. Your discipline is how you survive that stage long enough to grow.
+      </p>
+      <p>
+        In this chapter, you will start to see the bigger picture: what a chart is, what the red
+        and green bars mean, how patterns and moving averages help you read the flow of buyers
+        and sellers—and how they all come together to support one solid trade idea.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Market and Discipline</h2>
+      <form id="lesson7-quiz" class="form">
+        <label class="form-label">
+          What is the stock market in simple terms?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">A random number generator.</option>
+            <option value="b">A live auction between real buyers and sellers.</option>
+            <option value="c">A guaranteed money machine.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What was the key lesson from turning $400 into $20,000 in five days?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">That knowledge alone guarantees similar results.</option>
+            <option value="b">
+              That discipline, rules, and emotional control are more important than raw knowledge.
+            </option>
+            <option value="c">That you should always trade as aggressively as possible.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          In this academy, what matters most for long-term trading success?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Memorizing as many indicators as possible.</option>
+            <option value="b">Discipline and control of yourself while you trade.</option>
+            <option value="c">Finding a secret pattern that never loses.</option>
+          </select>
+        </label>
+
+        <div id="lesson7-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Seeing the Market as an Auction</h2>
+      <p>
+        Imagine you are watching a ticker that has been moving slowly up all morning. Buyers have
+        been stepping in higher and higher, and sellers have been willing to accept those prices.
+      </p>
+      <form id="lesson7-sim" class="form">
+        <label class="form-label">
+          How should you think about this move in auction terms?
+          <select name="auctionView" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Random lines with no meaning.</option>
+            <option value="b">
+              Buyers are currently winning the auction, lifting price as they outbid sellers.
+            </option>
+            <option value="c">Proof that the market can never go down again.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          If you feel FOMO (fear of missing out) during this move, what aligns with this academy?
+          <select name="response" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">Chase the move with no plan.</option>
+            <option value="b">
+              Slow down, review your rules, and only act if the trade fits your plan.
+            </option>
+            <option value="c">Double your size to “make up for lost time.”</option>
+          </select>
+        </label>
+
+        <div id="lesson7-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 7</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson7();
+    });
+  </script>
+</body>
+</html>
