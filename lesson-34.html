@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 34 – Candle Volume Interaction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 34 – Candle Volume Interaction</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Why Volume Matters with Candles</h2>
+  <p>
+    A candle shows direction and pressure. Volume shows participation. When a strong candle forms
+    with strong volume, it means real buyers or sellers stepped in. When a strong candle forms
+    with weak volume, it may be a trap.
+  </p>
+  <p>
+    This is how you separate real strength from fake strength — and avoid emotional trades.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Volume + Trend + MAs</h2>
+  <p>
+    A strong green candle at a moving average with rising volume? Healthy continuation.  
+    A strong red candle breaking below a moving average with rising volume? Real weakness.  
+    A candle with no volume? Noise.
+  </p>
+  <p>
+    This is how you confirm your ideas with discipline.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Volume Interaction</h2>
+  <form id="lesson34-quiz" class="form">
+
+    <label class="form-label">
+      What does strong volume with a strong candle show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Real participation and pressure.</option>
+        <option value="b">Random noise.</option>
+        <option value="c">Guaranteed reversal.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What does weak volume with a strong candle suggest?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Possible trap.</option>
+        <option value="b">Guaranteed continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Context and discipline.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson34-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Volume Confirmation</h2>
+  <p>
+    Imagine a strong green candle forms at a rising moving average with rising volume.
+  </p>
+
+  <form id="lesson34-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="vol" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Healthy continuation.</option>
+        <option value="b">Weakness.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Consider continuation only if your full plan aligns.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson34-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 34</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson34();
+  });
+</script>
+
+</body>
+</html>
