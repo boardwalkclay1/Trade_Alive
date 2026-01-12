@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 74 – Pattern-Based Stop Placement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 74 – Pattern-Based Stop Placement</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Stops Must Be Logical</h2>
+  <p>
+    A stop is not a guess — it is placed at the point where your trade idea is invalidated.
+  </p>
+  <p>
+    Stops protect discipline.  
+    No stop = emotional trading.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Stop Placement Rules</h2>
+  <ul>
+    <li><strong>Continuation patterns:</strong> Stop goes below/above pattern structure</li>
+    <li><strong>Reversal patterns:</strong> Stop goes beyond the extreme (head, double bottom, etc.)</li>
+    <li><strong>Breakout entries:</strong> Stop goes below/above breakout level</li>
+    <li><strong>Retest entries:</strong> Stop goes below/above retest candle</li>
+  </ul>
+  <p>
+    Stops must be placed where the pattern fails — not where you feel scared.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Stops</h2>
+  <form id="lesson74-quiz" class="form">
+
+    <label class="form-label">
+      What is a stop based on?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Invalidation.</option>
+        <option value="b">Emotion.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Where does a continuation stop go?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Below/above pattern structure.</option>
+        <option value="b">Random level.</option>
+        <option value="c">Far away.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Where does a reversal stop go?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Beyond the extreme.</option>
+        <option value="b">Inside the pattern.</option>
+        <option value="c">At the wick.</option>
+      </select>
+    </label>
+
+    <div id="lesson74-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Stop Read</h2>
+  <p>
+    Imagine a double bottom forms at support and you enter on the neckline break.
+  </p>
+
+  <form id="lesson74-sim" class="form">
+
+    <label class="form-label">
+      Where should the stop go?
+      <select name="stop" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Below the second bottom.</option>
+        <option value="b">Inside the pattern.</option>
+        <option value="c">Random level.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Why?
+      <select name="why" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">That’s where the idea fails.</option>
+        <option value="b">It feels safe.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson74-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 74</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson74();
+  });
+</script>
+
+</body>
+</html>
