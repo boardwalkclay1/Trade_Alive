@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 4 – Options Page Breakdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 4 – Options Page Breakdown</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Reading the Options Chain</h2>
+      <p>
+        When you open an options page on a broker platform, you see an
+        <strong>options chain</strong>: a table of contracts with different
+        <strong>strike prices</strong> and <strong>expiration dates</strong>.
+      </p>
+      <p>
+        Each row usually represents a strike price. Each column holds information like
+        <strong>bid</strong>, <strong>ask</strong>, <strong>last price</strong>, and sometimes
+        volume and open interest. You use this page to choose the exact contract you want to
+        trade.
+      </p>
+      <p>
+        You are not just clicking randomly. A disciplined trader reads this table like a pilot
+        reads instruments—slow, clear, and intentional.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Key Elements: Strike, Expiration, Quantity, Bid, Ask</h2>
+      <p>
+        <strong>Strike price:</strong> The price level associated with the contract. It is a
+        reference point for your call or put.  
+      </p>
+      <p>
+        <strong>Expiration date:</strong> The last date the contract is valid. Time matters. As
+        expiration approaches, options lose value faster.
+      </p>
+      <p>
+        <strong>Quantity:</strong> How many contracts you are trading. One options contract
+        typically controls 100 shares of the underlying ticker. Quantity multiplies both risk and
+        potential reward.
+      </p>
+      <p>
+        <strong>Bid:</strong> What buyers are currently willing to pay.  
+        <strong>Ask:</strong> What sellers are currently asking to receive. The difference is the
+        <strong>spread</strong>.
+      </p>
+      <p>
+        The bid and ask matter because impatience can make you overpay or accept a poor price,
+        while disciplined limit orders can help you enter and exit more efficiently.
+      </p>
+    </section>
+
+    <!-- Simplified visual chain -->
+    <section class="card">
+      <h2 class="section-title">Interactive Chain Example</h2>
+      <p>
+        Below is a simplified options chain for a fictional ticker trading around $100. This is
+        only for training purposes.
+      </p>
+
+      <div class="card" style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:0.25rem;">Strike</th>
+              <th style="text-align:left; padding:0.25rem;">Type</th>
+              <th style="text-align:left; padding:0.25rem;">Bid</th>
+              <th style="text-align:left; padding:0.25rem;">Ask</th>
+              <th style="text-align:left; padding:0.25rem;">Expires</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:0.25rem;">95</td>
+              <td style="padding:0.25rem;">Call</td>
+              <td style="padding:0.25rem;">2.50</td>
+              <td style="padding:0.25rem;">2.70</td>
+              <td style="padding:0.25rem;">This Friday</td>
+            </tr>
+            <tr>
+              <td style="padding:0.25rem;">100</td>
+              <td style="padding:0.25rem;">Call</td>
+              <td style="padding:0.25rem;">1.50</td>
+              <td style="padding:0.25rem;">1.65</td>
+              <td style="padding:0.25rem;">This Friday</td>
+            </tr>
+            <tr>
+              <td style="padding:0.25rem;">105</td>
+              <td style="padding:0.25rem;">Put</td>
+              <td style="padding:0.25rem;">1.80</td>
+              <td style="padding:0.25rem;">1.95</td>
+              <td style="padding:0.25rem;">This Friday</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:0.75rem;">
+        Notice how each row tells you: what price level (strike), what type (call or put), what
+        people are willing to pay (bid), what others are asking (ask), and when it expires.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Reading the Chain</h2>
+      <form id="lesson4-quiz" class="form">
+        <label class="form-label">
+          What does the strike price represent?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">A random number with no meaning.</option>
+            <option value="b">A reference level associated with the options contract.</option>
+            <option value="c">Your account balance.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What is the bid?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">The price sellers want to receive.</option>
+            <option value="b">The price buyers are currently willing to pay.</option>
+            <option value="c">An unrelated statistic.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Why does quantity matter?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">It does not matter.</option>
+            <option value="b">It multiplies both your risk and potential reward.</option>
+            <option value="c">It only affects your broker’s fees.</option>
+          </select>
+        </label>
+
+        <div id="lesson4-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini chain selection simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Selecting a Contract</h2>
+      <p>
+        You believe the ticker will move <strong>up</strong> from around $100 by this Friday.
+        You want a contract that matches that idea.
+      </p>
+      <form id="lesson4-sim" class="form">
+        <label class="form-label">
+          Which contract from the simplified chain best matches “up by this Friday”?
+          <select name="contract" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="95-call">95 Call (Bid 2.50 / Ask 2.70)</option>
+            <option value="100-call">100 Call (Bid 1.50 / Ask 1.65)</option>
+            <option value="105-put">105 Put (Bid 1.80 / Ask 1.95)</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          If you place a market order, which side of the spread are you likely to interact with?
+          <select name="spreadSide" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="bid">Bid</option>
+            <option value="ask">Ask</option>
+          </select>
+        </label>
+
+        <div id="lesson4-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 4</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson4();
+    });
+  </script>
+</body>
+</html>
