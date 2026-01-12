@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 64 – Pattern Timing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 64 – Pattern Timing</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Timing Makes or Breaks a Pattern</h2>
+  <p>
+    A pattern is only valid when it forms at the right time in the trend. A bull flag at the top
+    of a massive move is not the same as a bull flag early in a trend.
+  </p>
+  <p>
+    Timing determines whether a pattern is:
+  </p>
+  <ul>
+    <li>Continuation</li>
+    <li>Exhaustion</li>
+    <li>Trap</li>
+    <li>Reversal</li>
+  </ul>
+  <p>
+    Emotional traders ignore timing. Disciplined traders wait for it.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Good Timing vs Bad Timing</h2>
+  <ul>
+    <li><strong>Good Timing:</strong> Early or mid‑trend continuation patterns</li>
+    <li><strong>Bad Timing:</strong> Late‑trend patterns far from moving averages</li>
+    <li><strong>Good Timing:</strong> Reversal patterns after exhaustion</li>
+    <li><strong>Bad Timing:</strong> Reversal patterns in the middle of a strong trend</li>
+  </ul>
+  <p>
+    Timing is context — and context is discipline.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Timing</h2>
+  <form id="lesson64-quiz" class="form">
+
+    <label class="form-label">
+      What determines pattern validity?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Timing + context.</option>
+        <option value="b">Pattern shape alone.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      When is a continuation pattern strongest?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Early or mid‑trend.</option>
+        <option value="b">At exhaustion.</option>
+        <option value="c">During news.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trading patterns with bad timing.</option>
+        <option value="b">Waiting for confirmation.</option>
+        <option value="c">Following your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson64-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Timing Read</h2>
+  <p>
+    Imagine a bull flag forming far above moving averages after a massive run.
+  </p>
+
+  <form id="lesson64-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="timing" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Bad timing — possible exhaustion.</option>
+        <option value="b">Perfect continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="disc" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for deeper pullback or confirmation.</option>
+        <option value="b">Chase the breakout.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson64-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 64</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson64();
+  });
+</script>
+
+</body>
+</html>
