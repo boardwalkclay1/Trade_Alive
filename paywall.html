@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unlock Discipline Academy – Chart Pattern Mastery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="index.html" class="icon-button">←</a>
+  <h1 class="app-title">Unlock Discipline Academy</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What You Unlock</h2>
+  <ul>
+    <li>Full Chart Pattern Mastery curriculum (lessons 49–87).</li>
+    <li>Pattern execution, risk, management, and journaling modules.</li>
+    <li>Certification flow with printable Discipline Academy certificate.</li>
+    <li>Mastery badge and chapter completion page.</li>
+  </ul>
+  <p>
+    This is not a signals group. This is a discipline‑first training system designed to
+    change how you think and behave in the market.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Pay With PayPal</h2>
+  <p>
+    Complete your payment securely via PayPal below. After payment, you’ll be redirected
+    back to Discipline Academy and your access will be unlocked on this device.
+  </p>
+
+  <!-- PayPal Hosted Button -->
+  <div class="paypal-wrapper">
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=BAATF49HKoRbCK65m7W0bYTarz8r9_JhusqikTQGTGIQ1l6GPuaiCxXx23jXoC2HdQldxmOIz3FydVHHjg&components=hosted-buttons&enable-funding=venmo&currency=USD">
+    </script>
+    <div id="paypal-container-8GL22KCQ5EANQ"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "8GL22KCQ5EANQ",
+      }).render("#paypal-container-8GL22KCQ5EANQ")
+    </script>
+  </div>
+
+  <p class="small-text">
+    After payment, if you are not automatically redirected, return to this site. If you need help
+    unlocking access after paying, contact: <strong>CONTACT_EMAIL_HERE</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Have a Free Access Code?</h2>
+  <p>
+    If you’ve been given special access by the academy, enter the email associated with
+    your access below. This will unlock the entire site on this device.
+  </p>
+
+  <form id="free-access-form" class="form">
+    <label class="form-label">
+      Email for free access
+      <input type="email" name="freeEmail" class="form-input" required />
+    </label>
+
+    <div id="free-access-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Unlock With Email</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="scripts/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initFreeAccessGate();
+    checkPaymentReturn(); // in case PayPal redirects with a param later
+  });
+</script>
+
+</body>
+</html>
