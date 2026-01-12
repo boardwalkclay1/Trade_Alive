@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 43 – Trend Acceleration Candles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 43 – Trend Acceleration Candles</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Trend Acceleration Looks Like</h2>
+  <p>
+    Trend acceleration happens when a trend gains speed. Candles grow larger, wicks shrink, and
+    price moves quickly in one direction. This is the market showing urgency — buyers or sellers
+    pressing harder.
+  </p>
+  <p>
+    These candles often appear after a breakout, after compression, or after a strong pullback.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Acceleration + Moving Averages</h2>
+  <p>
+    When acceleration happens near rising moving averages in an uptrend, it’s healthy.  
+    When acceleration happens far from moving averages, it can be dangerous — overextension.
+  </p>
+  <p>
+    This is why discipline matters. You don’t chase acceleration — you read it.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Acceleration</h2>
+  <form id="lesson43-quiz" class="form">
+
+    <label class="form-label">
+      What does trend acceleration look like?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Large candles with small wicks.</option>
+        <option value="b">Small candles with long wicks.</option>
+        <option value="c">Random spikes.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      When is acceleration healthy?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Near moving averages in trend direction.</option>
+        <option value="b">Far from structure.</option>
+        <option value="c">Against the trend.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Chasing acceleration emotionally.</option>
+        <option value="b">Reading context.</option>
+        <option value="c">Following your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson43-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Acceleration Read</h2>
+  <p>
+    Imagine an uptrend above rising moving averages. Price prints three large green candles in a row.
+  </p>
+
+  <form id="lesson43-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="accel" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend acceleration.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Avoid chasing — wait for a pullback.</option>
+        <option value="b">Chase the move.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson43-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 43</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson43();
+  });
+</script>
+
+</body>
+</html>
