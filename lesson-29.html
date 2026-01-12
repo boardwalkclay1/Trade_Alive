@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 29 – Candle Continuation Signals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 29 – Continuation Signals</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Continuation Candles</h2>
+  <p>
+    Continuation candles show that the trend is still healthy. These include:
+  </p>
+  <ul>
+    <li>Small pullback candles with small wicks</li>
+    <li>Inside bars near moving averages</li>
+    <li>Strong candles after compression</li>
+  </ul>
+  <p>
+    These candles don’t predict — they confirm that the trend is still intact.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Continuation + Moving Averages</h2>
+  <p>
+    Continuation signals matter most when they appear near rising or falling moving averages.
+    A small pullback candle into a rising MA? Healthy.  
+    A small pullback candle into a falling MA? Healthy for sellers.
+  </p>
+  <p>
+    This is how you stay aligned with your plan instead of guessing.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Continuation</h2>
+  <form id="lesson29-quiz" class="form">
+
+    <label class="form-label">
+      What is a continuation candle?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A candle that supports the existing trend.</option>
+        <option value="b">A reversal candle.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Where do continuation candles matter most?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Near moving averages.</option>
+        <option value="b">In random places.</option>
+        <option value="c">Only at market open.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Discipline and context.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson29-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Continuation</h2>
+  <p>
+    Imagine an uptrend above rising moving averages. Price pulls back with a small candle, then
+    prints a strong green candle.
+  </p>
+
+  <form id="lesson29-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="continue" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Healthy continuation.</option>
+        <option value="b">Reversal.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Consider continuation only if your plan aligns.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson29-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 29</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson29();
+  });
+</script>
+
+</body>
+</html>
