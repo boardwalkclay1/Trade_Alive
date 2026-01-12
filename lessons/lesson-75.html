@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 75 – Pattern-Based Target Placement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
 
+<body class="theme-dark">
+<header class="top-bar glass-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title glow-text">Stage 75 – Pattern-Based Target Placement</h1>
+  <div class="top-bar-right">
+    <button id="theme-toggle" class="icon-button">🌓</button>
+  </div>
+</header>
+
+<main class="main-content secure-area">
+
+<section class="glass-card">
+  <h2 class="section-title glow-text">Why Targets Matter</h2>
+  <p>
+    Targets define the <strong>reward side</strong> of your trade.  
+    Without a target, you’re not trading — you’re hoping.  
+    Pattern‑based targets give you:
+  </p>
+  <ul class="hero-list">
+    <li>Clear reward expectations</li>
+    <li>Consistent R:R (risk-to-reward)</li>
+    <li>Objective exits instead of emotional exits</li>
+    <li>A structured way to measure pattern performance</li>
+  </ul>
+</section>
+
+<section class="glass-card">
+  <h2 class="section-title glow-text">Target Types</h2>
+  <p>
+    Every pattern has a logical target based on its structure.  
+    These are the most reliable:
+  </p>
+
+  <ul class="hero-list">
+    <li><strong>Measured Move Target:</strong>  
+      Use the height of the pattern projected from the breakout.</li>
+
+    <li><strong>Structure Target:</strong>  
+      Use the next major support/resistance level.</li>
+
+    <li><strong>Trend Target:</strong>  
+      Use the next trendline or channel boundary.</li>
+
+    <li><strong>Volume Target:</strong>  
+      Use the point where volume historically fades.</li>
+  </ul>
+
+  <p class="muted-text">
+    Targets must be logical, repeatable, and tied to the pattern — not random.
+  </p>
+</section>
+
+<section class="glass-card">
+  <h2 class="section-title glow-text">Examples</h2>
+
+  <h3 class="hero-block-title">1. Bull Flag</h3>
+  <ul class="hero-list">
+    <li>Target = length of the pole projected upward</li>
+    <li>Secondary target = next resistance</li>
+  </ul>
+
+  <h3 class="hero-block-title">2. Double Bottom</h3>
+  <ul class="hero-list">
+    <li>Target = neckline distance projected upward</li>
+    <li>Secondary target = previous swing high</li>
+  </ul>
+
+  <h3 class="hero-block-title">3. Head & Shoulders</h3>
+  <ul class="hero-list">
+    <li>Target = head-to-neckline distance projected downward</li>
+    <li>Secondary target = next major support</li>
+  </ul>
+</section>
+
+<!-- QUIZ -->
+<section class="glass-card">
+  <h2 class="section-title glow-text">Quick Check: Target Placement</h2>
+
+  <form id="lesson75-quiz" class="form">
+
+    <label class="form-label">
+      What is the purpose of a target?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Define reward objectively.</option>
+        <option value="b">Guess where price might go.</option>
+        <option value="c">Exit emotionally.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is a measured move target?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pattern height projected from breakout.</option>
+        <option value="b">Random number.</option>
+        <option value="c">Volume spike.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should targets be based on?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Pattern structure.</option>
+        <option value="b">Hope.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <div id="lesson75-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button primary-glow">
+        Submit Quiz
+      </button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="glass-card">
+  <h2 class="section-title glow-text">Mini Simulation: Target Logic</h2>
+  <p>
+    Scenario: A symmetrical triangle breaks upward with strong volume.
+  </p>
+
+  <form id="lesson75-sim" class="form">
+
+    <label class="form-label">
+      What is the logical target?
+      <select name="sim1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Triangle height projected upward.</option>
+        <option value="b">Random candle high.</option>
+        <option value="c">No target.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is a secondary target?
+      <select name="sim2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Next resistance level.</option>
+        <option value="b">The wick.</option>
+        <option value="c">Hope.</option>
+      </select>
+    </label>
+
+    <div id="lesson75-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button primary-glow">
+        Complete Stage 75
+      </button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    enforceGlobalAccessGate();
+    initTheme();
+    // Add your lesson-specific JS here if needed
+  });
+</script>
+
+</body>
+</html>
