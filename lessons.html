@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Discipline Academy – Lessons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <div id="blur-overlay" class="blur-overlay hidden"></div>
+
+  <header class="top-bar">
+    <a href="index.html" class="icon-button" aria-label="Back home">←</a>
+    <h1 class="app-title">Lesson Stages</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section id="lessons-locked" class="card hidden">
+      <h2 class="section-title">Lessons Locked</h2>
+      <p>
+        You must complete the <strong>Mock Options Application Simulation</strong> before you can
+        access the lesson stages.
+      </p>
+      <a href="mock-options.html" class="primary-button">Complete Mock Options Application</a>
+    </section>
+
+    <section id="lessons-content" class="card hidden">
+      <h2 class="section-title">Your Training Path</h2>
+      <p>
+        Each stage must be completed in order. New stages unlock only after you finish the ones
+        before them. This keeps your learning structured and discipline-driven.
+      </p>
+
+      <div class="lesson-stage" data-stage="1">
+        <div class="lesson-stage-header">
+          <h3>Stage 1 — Discipline Training</h3>
+          <span class="stage-status" id="stage-1-status">Unlocked</span>
+        </div>
+        <p>
+          Establish your daily 9:00 AM ritual, maintain check-in streaks, and prove you can show
+          up on time before learning anything else.
+        </p>
+        <button class="primary-button small" data-open-stage="1">Open Stage</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="2">
+        <div class="lesson-stage-header">
+          <h3>Stage 2 — Up vs Down (Simple Direction)</h3>
+          <span class="stage-status" id="stage-2-status">Locked</span>
+        </div>
+        <p>
+          Learn the most basic model: the market can move up or down. You put money in, you want
+          it to move your way, and you take money out. No jargon—just direction and timing.
+        </p>
+        <button class="secondary-button small" data-open-stage="2" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="3">
+        <div class="lesson-stage-header">
+          <h3>Stage 3 — Calls = Up, Puts = Down</h3>
+          <span class="stage-status" id="stage-3-status">Locked</span>
+        </div>
+        <p>
+          Connect your understanding of “up or down” to the language of options: calls for up,
+          puts for down. Still educational and direction-focused.
+        </p>
+        <button class="secondary-button small" data-open-stage="3" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="4">
+        <div class="lesson-stage-header">
+          <h3>Stage 4 — Options Page Breakdown</h3>
+          <span class="stage-status" id="stage-4-status">Locked</span>
+        </div>
+        <p>
+          Step-by-step walkthrough of an options page: quantity, bid price, ask price, spreads,
+          and how these elements can help or hurt you based on your discipline.
+        </p>
+        <button class="secondary-button small" data-open-stage="4" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="5">
+        <div class="lesson-stage-header">
+          <h3>Stage 5 — Entering & Exiting Simulated Trades</h3>
+          <span class="stage-status" id="stage-5-status">Locked</span>
+        </div>
+        <p>
+          Practice entering and exiting trades in a purely simulated environment. No real money,
+          just execution practice and feedback.
+        </p>
+        <button class="secondary-button small" data-open-stage="5" disabled>Locked</button>
+      </div>
+
+      <div class="lesson-stage" data-stage="6">
+        <div class="lesson-stage-header">
+          <h3>Stage 6 — Emotional Control & Risk Awareness</h3>
+          <span class="stage-status" id="stage-6-status">Locked</span>
+        </div>
+        <p>
+          Learn how impatience, fear, and greed sabotage traders—and how disciplined routines
+          protect you from yourself.
+        </p>
+        <button class="secondary-button small" data-open-stage="6" disabled>Locked</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initBlurAndViolationSystem();
+      initLessonsPage();
+    });
+  </script>
+</body>
+</html>
