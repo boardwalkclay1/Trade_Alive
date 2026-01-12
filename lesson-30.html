@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 30 – Candle Exhaustion Signals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 30 – Exhaustion Signals</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Is Exhaustion?</h2>
+  <p>
+    Exhaustion happens when a trend runs out of energy. Buyers stop pushing. Sellers stop
+    pressing. Candles shrink. Wicks grow. Momentum fades.
+  </p>
+  <p>
+    Exhaustion is not a reversal signal by itself — it is a warning. It tells you to tighten up,
+    protect profits, and avoid emotional entries.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Exhaustion + Moving Averages</h2>
+  <p>
+    Exhaustion near a moving average can be healthy — a pause before continuation.  
+    Exhaustion far from a moving average can be dangerous — a sign of overextension.
+  </p>
+  <p>
+    This is why you always combine candles with trend and structure.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Exhaustion</h2>
+  <form id="lesson30-quiz" class="form">
+
+    <label class="form-label">
+      What is exhaustion?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">A trend losing energy.</option>
+        <option value="b">Guaranteed reversal.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most when reading exhaustion?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Context and moving averages.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Entering emotionally.</option>
+        <option value="b">Following your plan.</option>
+        <option value="c">Reading context.</option>
+      </select>
+    </label>
+
+    <div id="lesson30-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Exhaustion Reading</h2>
+  <p>
+    Imagine an uptrend far above moving averages. Candles shrink. Wicks grow. Momentum fades.
+  </p>
+
+  <form id="lesson30-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="exhaust" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Exhaustion.</option>
+        <option value="b">Continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Protect profits and avoid chasing.</option>
+        <option value="b">Chase the move.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson30-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 30</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson30();
+  });
+</script>
+
+</body>
+</html>
