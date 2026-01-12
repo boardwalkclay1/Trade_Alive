@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 16 – Moving Averages & Trend Structure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 16 – Moving Averages & Trend</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Short, Medium, and Long Moving Averages</h2>
+      <p>
+        Moving averages can be set to different lengths. Shorter ones (like 9 or 10) react
+        quickly to price. Medium ones (like 20 or 21) balance speed and stability. Longer ones
+        (like 50 or 200) move slowly and show the bigger trend.
+      </p>
+      <p>
+        I often use a combination, because it lets me see the “tempo” of price: fast movement,
+        the main swing, and the broader direction. You do not need to memorize every setting
+        right now—just understand that each length sees the market at a different speed.
+      </p>
+      <p>
+        Later, you can decide which specific moving averages become part of your personal plan.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Trend and Dynamic Support/Resistance</h2>
+      <p>
+        When price respects a moving average—bouncing near it multiple times—it often acts like
+        <strong>dynamic support</strong> in an uptrend or <strong>dynamic resistance</strong> in
+        a downtrend.
+      </p>
+      <p>
+        In an uptrend, you may see price pull back toward a rising moving average, then buyers
+        step in again. In a downtrend, you may see price pop up into a falling moving average,
+        then sellers push it back down.
+      </p>
+      <p>
+        This behavior gives structure to your ideas. Instead of random entries, you can look for
+        trades that align with the trend and respect these dynamic levels.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Discipline: Not Worshipping the Line</h2>
+      <p>
+        It is tempting to treat a moving average as a magic line: “If price touches it, I must
+        buy or sell.” That is not how this academy works.
+      </p>
+      <p>
+        Moving averages are part of a bigger system. You still need to consider the auction
+        context, candles, patterns, timeframes, and your risk and exit rules.
+      </p>
+      <p>
+        Used with discipline, moving averages help you avoid random trades. Used without
+        discipline, they become just another way to justify emotional decisions.
+      </p>
+    </section>
+
+    <!-- Quiz -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Moving Averages & Trend</h2>
+      <form id="lesson16-quiz" class="form">
+        <label class="form-label">
+          What do shorter moving averages (like 9 or 10) tend to show?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Very slow, long-term movement only.</option>
+            <option value="b">
+              Faster reactions to price and short-term movement.
+            </option>
+            <option value="c">Unrelated markets.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What can a respected moving average act like in an uptrend?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">Dynamic support, where buyers often step in.</option>
+            <option value="b">Guaranteed reversal every time.</option>
+            <option value="c">Pure randomness.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should you treat moving averages inside this academy?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              As part of a bigger system that still requires discipline and risk rules.
+            </option>
+            <option value="b">As magic lines that replace thinking.</option>
+            <option value="c">As optional decorations.</option>
+          </select>
+        </label>
+
+        <div id="lesson16-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Mini simulation -->
+    <section class="card">
+      <h2 class="section-title">Mini Simulation: Identifying Trend with Moving Averages</h2>
+      <p>
+        Imagine a chart where a short moving average and a medium moving average are both sloping
+        upward, and price keeps pulling back near them before pushing higher again.
+      </p>
+      <form id="lesson16-sim" class="form">
+        <label class="form-label">
+          What does this combination suggest?
+          <select name="trendView" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              An uptrend where moving averages are acting as dynamic support.
+            </option>
+            <option value="b">A confirmed long-term downtrend.</option>
+            <option value="c">No information at all.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should a disciplined trader use this information?
+          <select name="usage" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Look for bullish ideas only if they align with candles, patterns, and a clear risk
+              plan.
+            </option>
+            <option value="b">Blindly buy every touch of the moving average.</option>
+            <option value="c">Ignore it and trade randomly.</option>
+          </select>
+        </label>
+
+        <div id="lesson16-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Complete Stage 16</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson16();
+    });
+  </script>
+</body>
+</html>
