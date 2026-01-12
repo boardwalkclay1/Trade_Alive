@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 32 – Candle Location & Context</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 32 – Candle Location</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Location Changes Everything</h2>
+  <p>
+    A candle means nothing without location. A strong green candle at the top of a move is
+    dangerous. A strong green candle at a moving average in trend is healthy.
+  </p>
+  <p>
+    Location is the difference between a disciplined entry and an emotional mistake.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Location + Trend + MAs</h2>
+  <p>
+    Candles near moving averages matter more.  
+    Candles at support or resistance matter more.  
+    Candles inside patterns matter more.
+  </p>
+  <p>
+    This is how you avoid traps and stay aligned with your plan.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Location</h2>
+  <form id="lesson32-quiz" class="form">
+
+    <label class="form-label">
+      What matters most when reading a candle?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Location and context.</option>
+        <option value="b">Color only.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Where do candles matter most?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Near moving averages or key levels.</option>
+        <option value="b">In random places.</option>
+        <option value="c">Only at open.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trading candles without context.</option>
+        <option value="b">Following your plan.</option>
+        <option value="c">Reading trend.</option>
+      </select>
+    </label>
+
+    <div id="lesson32-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Location Reading</h2>
+  <p>
+    Imagine a strong green candle forming far above moving averages after a long run.
+  </p>
+
+  <form id="lesson32-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="loc" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Danger — overextension.</option>
+        <option value="b">Healthy continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Avoid chasing.</option>
+        <option value="b">Chase the candle.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson32-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 32</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson32();
+  });
+</script>
+
+</body>
+</html>
