@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <title>Stage 8 – Charts, Candles, and Price Story</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body class="theme-dark">
   <header class="top-bar">
-    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
     <h1 class="app-title">Stage 8 – Charts & Candles</h1>
     <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
   </header>
@@ -36,130 +36,4 @@
     <section class="card">
       <h2 class="section-title">Red and Green Candles</h2>
       <p>
-        Most trading platforms show price using <strong>candles</strong>. A green candle usually
-        means price closed higher than it opened in that period. A red candle usually means price
-        closed lower than it opened.
-      </p>
-      <p>
-        The “body” of the candle shows the open and close. The thin lines above or below (wicks)
-        show the extremes—how high or low price moved during that period.
-      </p>
-      <p>
-        A series of strong green candles tells a story of aggressive buyers. A series of strong
-        red candles tells a story of aggressive sellers. Mixed, choppy candles tell a story of
-        indecision or balance.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">Connecting Charts Back to Options</h2>
-      <p>
-        When you choose a call or a put, you are making a decision about direction from your
-        entry. The chart helps you see whether buyers or sellers have been winning recently, and
-        where that might change.
-      </p>
-      <p>
-        A disciplined trader does not guess. They look at the chart, read the story, and then
-        decide whether taking a position makes sense inside their rules. The chart is not a
-        guarantee. It is context.
-      </p>
-      <p>
-        Later chapters will go deeper into patterns and indicators, but it all starts here: red
-        and green candles telling you which side has had control.
-      </p>
-    </section>
-
-    <!-- Quiz -->
-    <section class="card">
-      <h2 class="section-title">Quick Check: Candles and Story</h2>
-      <form id="lesson8-quiz" class="form">
-        <label class="form-label">
-          What is a price chart in simple terms?
-          <select name="q1" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">A guaranteed prediction of the future.</option>
-            <option value="b">A visual history of how price has moved over time.</option>
-            <option value="c">A random graphic with no meaning.</option>
-          </select>
-        </label>
-
-        <label class="form-label">
-          What does a green candle usually mean?
-          <select name="q2" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Price closed higher than it opened in that period.</option>
-            <option value="b">Price closed lower than it opened in that period.</option>
-            <option value="c">The market is closed.</option>
-          </select>
-        </label>
-
-        <label class="form-label">
-          When you look at a chart before choosing a call or put, what are you really asking?
-          <select name="q3" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">“Is this the prettiest chart?”</option>
-            <option value="b">
-              “Who has been winning recently—buyers or sellers—and does that fit my plan?”
-            </option>
-            <option value="c">“Can I make this trade instantly with no thought?”</option>
-          </select>
-        </label>
-
-        <div id="lesson8-quiz-message" class="feedback-text"></div>
-
-        <div class="button-row">
-          <button type="submit" class="primary-button">Submit Quiz</button>
-        </div>
-      </form>
-    </section>
-
-    <!-- Mini simulation -->
-    <section class="card">
-      <h2 class="section-title">Mini Simulation: Reading a Simple Candle Sequence</h2>
-      <p>
-        Imagine a five-candle sequence on a one-minute chart: three solid green candles pushing
-        up, followed by two small red candles that barely pull back.
-      </p>
-      <form id="lesson8-sim" class="form">
-        <label class="form-label">
-          What is the simplest way to read this story?
-          <select name="story" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="a">
-              Buyers have been in control, and sellers have only managed a small pause so far.
-            </option>
-            <option value="b">Sellers have been fully in control the entire time.</option>
-            <option value="c">Nothing can be learned from candles.</option>
-          </select>
-        </label>
-
-        <label class="form-label">
-          If you are feeling rushed to jump in, what aligns with this academy’s discipline?
-          <select name="discipline" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="a">Enter immediately because you hate missing out.</option>
-            <option value="b">
-              Pause, check your rules, and decide if this setup actually fits your plan.
-            </option>
-            <option value="c">Double your size to make it “worth it.”</option>
-          </select>
-        </label>
-
-        <div id="lesson8-sim-message" class="feedback-text"></div>
-
-        <div class="button-row">
-          <button type="submit" class="primary-button">Complete Stage 8</button>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initTheme();
-      initLesson8();
-    });
-  </script>
-</body>
-</html>
+        Most trading platforms show price using <
