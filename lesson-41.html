@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 41 – Volatility Spike Candles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 41 – Volatility Spikes</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Volatility Spikes Look Like</h2>
+  <p>
+    Volatility spikes create large candles, long wicks, and fast movement. These spikes often
+    happen during news, open, close, or major level tests.
+  </p>
+  <p>
+    Emotional traders get destroyed here. Disciplined traders stay patient.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Volatility + Trend + MAs</h2>
+  <p>
+    A volatility spike in trend direction can be continuation.  
+    A volatility spike against trend is often a trap.  
+    A volatility spike at a key level can be a reversal or breakout — but only with confirmation.
+  </p>
+  <p>
+    This is where discipline matters most.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Volatility Spikes</h2>
+  <form id="lesson41-quiz" class="form">
+
+    <label class="form-label">
+      What do volatility spikes create?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Large candles + fast movement.</option>
+        <option value="b">Small candles.</option>
+        <option value="c">No movement.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most during spikes?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + confirmation.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What should you avoid?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Chasing volatility.</option>
+        <option value="b">Waiting.</option>
+        <option value="c">Following your plan.</option>
+      </select>
+    </label>
+
+    <div id="lesson41-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Volatility Read</h2>
+  <p>
+    Imagine a huge green candle forms instantly at resistance with a long upper wick.
+  </p>
+
+  <form id="lesson41-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="vol" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Volatility spike — possible trap.</option>
+        <option value="b">Guaranteed breakout.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is the disciplined response?
+      <select name="discipline" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Wait for confirmation.</option>
+        <option value="b">Chase the spike.</option>
+        <option value="c">Double size.</option>
+      </select>
+    </label>
+
+    <div id="lesson41-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 41</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson41();
+  });
+</script>
+
+</body>
+</html>
