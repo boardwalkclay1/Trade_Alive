@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 59 – Rounded Tops & Bottoms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 59 – Rounded Tops & Bottoms</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">What Rounded Patterns Are</h2>
+  <p>
+    Rounded tops and bottoms are slow, controlled reversals. Instead of sharp rejection, price
+    gradually shifts direction — showing a smooth transition of power.
+  </p>
+  <p>
+    These patterns reflect <strong>gradual exhaustion</strong> and <strong>gradual takeover</strong>.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Types</h2>
+  <ul>
+    <li><strong>Rounded Top</strong> – bearish reversal</li>
+    <li><strong>Rounded Bottom</strong> – bullish reversal</li>
+  </ul>
+  <p>
+    These patterns often form on higher timeframes and align beautifully with moving averages.
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Rounded Patterns</h2>
+  <form id="lesson59-quiz" class="form">
+
+    <label class="form-label">
+      What do rounded patterns show?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Gradual exhaustion + takeover.</option>
+        <option value="b">Instant reversal.</option>
+        <option value="c">Random noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What is a rounded top?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Bearish reversal.</option>
+        <option value="b">Bullish continuation.</option>
+        <option value="c">Noise.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What matters most?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Trend + moving averages + confirmation.</option>
+        <option value="b">Impulse.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson59-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Rounded Read</h2>
+  <p>
+    Imagine price slowly curves upward into a rounded bottom, then breaks above structure.
+  </p>
+
+  <form id="lesson59-sim" class="form">
+
+    <label class="form-label">
+      What does this suggest?
+      <select name="round" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Bullish reversal.</option>
+        <option value="b">Bearish continuation.</option>
+        <option value="c">Nothing meaningful.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the reversal?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Break of structure.</option>
+        <option value="b">The curve itself.</option>
+        <option value="c">The wick.</option>
+      </select>
+    </label>
+
+    <div id="lesson59-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 59</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson59();
+  });
+</script>
+
+</body>
+</html>
