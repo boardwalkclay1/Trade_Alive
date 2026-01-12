@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 6 – Full Mock Trade & Emotional Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+  <header class="top-bar">
+    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+    <h1 class="app-title">Stage 6 – Full Mock Trade & Emotional Control</h1>
+    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+  </header>
+
+  <main class="main-content">
+    <section class="card">
+      <h2 class="section-title">Bringing It All Together</h2>
+      <p>
+        You’ve built a foundation: discipline, simple direction, calls and puts, options chains,
+        and basic order entry and exit. Now you will walk through a complete mock trade from
+        start to finish.
+      </p>
+      <p>
+        This is not about predicting the market. It is about showing that you can think clearly,
+        follow a process, and stay emotionally grounded at every step.
+      </p>
+      <p>
+        Completing this stage means you are ready to move into Chapter 2, where we go deeper into
+        what the stock market is, how charts work, and how your contracts sit on top of real
+        price action.
+      </p>
+    </section>
+
+    <!-- Quiz: emotional control -->
+    <section class="card">
+      <h2 class="section-title">Quick Check: Emotional Control</h2>
+      <form id="lesson6-quiz" class="form">
+        <label class="form-label">
+          Which statement best reflects a disciplined trader’s mindset?
+          <select name="q1" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              “My goal is to follow my rules, not to win every single trade.”
+            </option>
+            <option value="b">“If I feel something strongly, I must act immediately.”</option>
+            <option value="c">“I’ll just revenge trade if I lose.”</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          How should you respond after a losing trade that followed your rules?
+          <select name="q2" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">
+              Review the trade, respect that losses happen, and focus on staying disciplined.
+            </option>
+            <option value="b">Immediately double your size to win it back.</option>
+            <option value="c">Abandon your plan entirely.</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          What is the purpose of routines like the 9:00 AM check-in?
+          <select name="q3" class="form-input" required>
+            <option value="">Select an answer</option>
+            <option value="a">To make the app more complicated.</option>
+            <option value="b">
+              To train you to be prepared, on time, and mentally present before the market.
+            </option>
+            <option value="c">To guarantee profits.</option>
+          </select>
+        </label>
+
+        <div id="lesson6-quiz-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Submit Quiz</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Full mock trade simulation -->
+    <section class="card">
+      <h2 class="section-title">Full Mock: From Idea to Exit</h2>
+      <p>
+        In this simulation, you will walk through a full practice trade:
+        choose direction, select call/put, pick a contract from a simple chain, define quantity,
+        choose order type, and plan your exit.
+      </p>
+      <form id="lesson6-sim" class="form">
+        <label class="form-label">
+          Step 1 – Direction: For this simulation, which direction do you expect from your entry?
+          <select name="direction" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 2 – Contract Type: Based on that direction, which contract type do you choose?
+          <select name="contractType" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="call">Call</option>
+            <option value="put">Put</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 3 – Contract Selection: Choose a contract from this simplified chain:
+          <select name="contractChoice" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="near-money-short">
+              Near-the-money, short expiration (more sensitive, higher risk)
+            </option>
+            <option value="slightly-otm-more-time">
+              Slightly out-of-the-money, more time (slower, more room)
+            </option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 4 – Quantity: How many contracts do you choose for this simulation?
+          <select name="quantity" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="1">1 contract (controlled, beginner-friendly)</option>
+            <option value="5">5 contracts (larger risk)</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 5 – Entry Order Type:
+          <select name="orderType" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="market">Market (instant, but less price control)</option>
+            <option value="limit">Limit (price control, may not fill)</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          Step 6 – Exit Plan: Before you “enter,” what is your approach?
+          <select name="exitPlan" class="form-input" required>
+            <option value="">Select one</option>
+            <option value="a">
+              Set clear exit rules (profit target or loss limit) and respect them.
+            </option>
+            <option value="b">Wait and see how you feel in the moment.</option>
+            <option value="c">Have no plan and hope for the best.</option>
+          </select>
+        </label>
+
+        <div id="lesson6-sim-message" class="feedback-text"></div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">
+            Complete Stage 6 and Finish Chapter 1
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      initTheme();
+      initLesson6();
+    });
+  </script>
+</body>
+</html>
