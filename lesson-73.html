@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stage 73 – Pattern-Based Entry Types</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body class="theme-dark">
+<header class="top-bar">
+  <a href="../lessons.html" class="icon-button">←</a>
+  <h1 class="app-title">Stage 73 – Pattern-Based Entry Types</h1>
+  <button id="theme-toggle" class="icon-button">🌓</button>
+</header>
+
+<main class="main-content">
+
+<section class="card">
+  <h2 class="section-title">Entries Must Be Systematic</h2>
+  <p>
+    A pattern does not give you an entry — your system does.  
+    Entries must align with:
+  </p>
+  <ul>
+    <li>Trend</li>
+    <li>Location</li>
+    <li>Structure</li>
+    <li>Volume</li>
+    <li>Candle confirmation</li>
+  </ul>
+  <p>
+    Emotional entries destroy accounts. Systematic entries build consistency.
+  </p>
+</section>
+
+<section class="card">
+  <h2 class="section-title">Entry Types</h2>
+  <ul>
+    <li><strong>Breakout Entry:</strong> Enter on the breakout candle</li>
+    <li><strong>Retest Entry:</strong> Enter on the retest of the breakout level</li>
+    <li><strong>Anticipation Entry:</strong> Enter inside the pattern with early confirmation</li>
+  </ul>
+  <p>
+    Breakout = aggressive  
+    Retest = conservative  
+    Anticipation = advanced  
+  </p>
+</section>
+
+<!-- QUIZ -->
+<section class="card">
+  <h2 class="section-title">Quick Check: Entry Types</h2>
+  <form id="lesson73-quiz" class="form">
+
+    <label class="form-label">
+      What creates an entry?
+      <select name="q1" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">System alignment.</option>
+        <option value="b">Pattern shape alone.</option>
+        <option value="c">Impulse.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Which entry is conservative?
+      <select name="q2" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Retest entry.</option>
+        <option value="b">Breakout entry.</option>
+        <option value="c">Anticipation entry.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      Which entry is advanced?
+      <select name="q3" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Anticipation entry.</option>
+        <option value="b">Breakout entry.</option>
+        <option value="c">Random entry.</option>
+      </select>
+    </label>
+
+    <div id="lesson73-quiz-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Submit Quiz</button>
+    </div>
+
+  </form>
+</section>
+
+<!-- SIMULATION -->
+<section class="card">
+  <h2 class="section-title">Mini Simulation: Entry Read</h2>
+  <p>
+    Imagine a bull flag breaks out with a strong candle, then retests the breakout level.
+  </p>
+
+  <form id="lesson73-sim" class="form">
+
+    <label class="form-label">
+      What entry type is this?
+      <select name="entry" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Retest entry.</option>
+        <option value="b">Breakout entry.</option>
+        <option value="c">Anticipation entry.</option>
+      </select>
+    </label>
+
+    <label class="form-label">
+      What confirms the entry?
+      <select name="confirm" class="form-input" required>
+        <option value="">Select</option>
+        <option value="a">Bullish candle off the retest.</option>
+        <option value="b">The wick alone.</option>
+        <option value="c">Guessing.</option>
+      </select>
+    </label>
+
+    <div id="lesson73-sim-message" class="feedback-text"></div>
+
+    <div class="button-row">
+      <button type="submit" class="primary-button">Complete Stage 73</button>
+    </div>
+
+  </form>
+</section>
+
+</main>
+
+<script src="../app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    initTheme();
+    initLesson73();
+  });
+</script>
+
+</body>
+</html>
