@@ -917,3 +917,81 @@ function fixBackButtons() {
 document.addEventListener("DOMContentLoaded", () => {
   fixBackButtons();
 });
+// -----------------------------
+// STAGE 1 QUIZ LOGIC
+// -----------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const quizForm = document.getElementById("lesson1-quiz");
+  const quizMsg = document.getElementById("lesson1-quiz-message");
+
+  if (quizForm) {
+    quizForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const answers = {
+        q1: "b",
+        q2: "b",
+        q3: "c",
+      };
+
+      const userAnswers = {
+        q1: quizForm.q1.value,
+        q2: quizForm.q2.value,
+        q3: quizForm.q3.value,
+      };
+
+      let correctCount = 0;
+      let feedback = "";
+
+      Object.keys(answers).forEach((key) => {
+        if (userAnswers[key] === answers[key]) {
+          correctCount++;
+        } else {
+          feedback += `<p><strong>Question ${key.slice(1)}:</strong> Incorrect.<br>
+          Correct answer: <strong>${answers[key].toUpperCase()}</strong></p>`;
+        }
+      });
+
+      if (correctCount === 3) {
+        quizMsg.innerHTML = `<p class="success">Perfect — you understand the foundation.</p>`;
+      } else {
+        quizMsg.innerHTML = `
+          <p class="error">You got ${correctCount}/3 correct. Review the correct answers below:</p>
+          ${feedback}
+        `;
+      }
+    });
+  }
+
+  // -----------------------------
+  // STAGE 1 SIMULATION LOGIC
+  // -----------------------------
+  const simForm = document.getElementById("lesson1-sim");
+  const simMsg = document.getElementById("lesson1-sim-message");
+
+  if (simForm) {
+    simForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const direction = simForm.direction.value;
+      const mindset = simForm.mindset.value;
+
+      let correct = true;
+      let explanation = "";
+
+      if (mindset !== "b") {
+        correct = false;
+        explanation += `<p><strong>Mindset:</strong> Correct answer is <strong>B</strong> — stay calm and follow your rules.</p>`;
+      }
+
+      if (correct) {
+        simMsg.innerHTML = `<p class="success">Great job — you completed Stage 1 with the right mindset.</p>`;
+      } else {
+        simMsg.innerHTML = `
+          <p class="error">Not quite. Review the correct mindset below:</p>
+          ${explanation}
+        `;
+      }
+    });
+  }
+});
