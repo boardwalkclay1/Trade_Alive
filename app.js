@@ -903,3 +903,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+function fixBackButtons() {
+  const backButtons = document.querySelectorAll('a.icon-button');
+
+  backButtons.forEach(btn => {
+    // Only fix buttons that contain the arrow
+    if (btn.textContent.trim() === "←") {
+      btn.setAttribute("href", "lessons.html");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fixBackButtons();
+});
