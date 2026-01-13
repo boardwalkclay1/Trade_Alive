@@ -15,46 +15,92 @@
   </header>
 
   <main class="main-content">
+
+    <!-- NEW MARKET STRUCTURE DIAGRAM SECTION -->
     <section class="card">
-      <h2 class="section-title">Real People, Real Time</h2>
+      <h2 class="section-title">The Market Is a Living System</h2>
+
       <p>
-        The market is not a game running in isolation. Every contract, every order, and every
-        price movement is tied to real people and institutions making decisions in real time.
+        Before you learn how to choose contracts or read charts, you must understand what the
+        market actually <strong>is</strong>. It is not a video game, a simulation, or a random
+        number generator. It is a live environment filled with real people making real decisions
+        with real money.
       </p>
+
+      <pre class="diagram">
+                           ┌──────────────────────┐
+                           │      INSTITUTIONS     │
+                           │  (Funds, Banks, HFTs) │
+                           └───────────▲──────────┘
+                                       │
+                           ┌───────────┴──────────┐
+                           │     MARKET MAKERS     │
+                           │ (Provide Liquidity)   │
+                           └───────────▲──────────┘
+                                       │
+                     ┌─────────────────┴─────────────────┐
+                     │               YOU                  │
+                     │     (Retail Trader / Student)      │
+                     └─────────────────▲─────────────────┘
+                                       │
+                           ┌───────────┴──────────┐
+                           │     THE CONTRACT      │
+                           │ (Options You Trade)   │
+                           └──────────────────────┘
+      </pre>
+
       <p>
-        When you trade an options contract, you are interacting with someone on the other side of
-        that trade—a buyer, a seller, a market maker, or an institution. Your decisions affect
-        them, and their decisions affect you.
-      </p>
-      <p>
-        Never forget this. It keeps you grounded, respectful, and aware that this is not
-        play-money. Even in this simulation, you are training your mind for a real environment.
+        Every time you place a trade, you are stepping into this ecosystem. Someone is on the
+        other side. Someone reacts to your decision. You react to theirs. Understanding this
+        keeps you grounded and respectful of the environment you're entering.
       </p>
     </section>
 
+    <!-- ORIGINAL SECTION 1 (ENHANCED) -->
+    <section class="card">
+      <h2 class="section-title">Real People, Real Time</h2>
+      <p>
+        Every contract, every order, and every price movement is tied to real people and
+        institutions making decisions in real time. When you trade an options contract, you are
+        interacting with someone on the other side of that trade—a buyer, a seller, a market
+        maker, or an institution.
+      </p>
+      <p>
+        Your decisions affect them, and their decisions affect you. This is why discipline from
+        Stage 1 matters: emotional traders get punished in environments where others are calm,
+        prepared, and strategic.
+      </p>
+      <p>
+        Even in this simulation, you are training your mind for a real environment. Treat it with
+        seriousness now, and the real market will feel familiar later.
+      </p>
+    </section>
+
+    <!-- ORIGINAL SECTION 2 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">Tickers, Charts, and What You’re Really Trading</h2>
       <p>
-        A <strong>ticker</strong> is a short symbol that represents a specific company or fund in
-        the market. Examples: AAPL for Apple, MSFT for Microsoft, SPY for the S&amp;P 500 ETF.
+        A <strong>ticker</strong> is a short symbol that represents a specific company or fund.
+        Examples: AAPL for Apple, MSFT for Microsoft, SPY for the S&P 500 ETF.
       </p>
       <p>
         A <strong>chart</strong> is a visual history of how that ticker’s price has moved over
         time. Every candle or bar represents real buying and selling from real participants.
       </p>
       <p>
-        When you trade an <strong>options contract</strong>, you are not trading the chart itself.
-        You are trading a contract whose value is tied to how that ticker’s price moves. Your
-        options contract lives on top of that underlying ticker.
+        When you trade an <strong>options contract</strong>, you are not trading the chart. You
+        are trading a contract whose value is tied to how that ticker’s price moves. The chart is
+        your map. The ticker is your vehicle. The options contract is the way you choose to
+        participate.
       </p>
       <p>
-        So when you later choose a call or a put, you are effectively saying: “I expect this
-        ticker to move in a certain direction, within a certain time.” The chart is your map, the
-        ticker is your vehicle, and the options contract is the way you choose to participate.
+        Later, when you choose a call or a put, you are essentially saying: “I expect this ticker
+        to move in a certain direction, within a certain time.” Everything begins with the
+        underlying ticker.
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Market, People, and Tickers</h2>
       <form id="lesson2-quiz" class="form">
@@ -96,7 +142,7 @@
       </form>
     </section>
 
-    <!-- Simple simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Choosing a Ticker and Seeing the Contract</h2>
       <p>
@@ -110,7 +156,7 @@
             <option value="">Select one</option>
             <option value="AAPL">AAPL (Apple)</option>
             <option value="MSFT">MSFT (Microsoft)</option>
-            <option value="SPY">SPY (S&amp;P 500 ETF)</option>
+            <option value="SPY">SPY (S&P 500 ETF)</option>
           </select>
         </label>
 
@@ -131,6 +177,7 @@
         </div>
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
