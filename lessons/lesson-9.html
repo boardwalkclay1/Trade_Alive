@@ -5,6 +5,14 @@
   <title>Stage 9 – Chart Patterns Overview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .diagram { font-family: monospace; white-space: pre; }
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+  </style>
 </head>
 
 <body class="theme-dark">
@@ -15,63 +23,157 @@
   </header>
 
   <main class="main-content">
+
+    <!-- NEW PATTERN OVERVIEW DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Patterns as Repeated Behavior</h2>
+
       <p>
         Chart patterns are not magic shapes. They are visual representations of repeated behavior
         between buyers and sellers. When similar pressure shows up over and over, price often
         reacts in similar ways.
       </p>
+
+      <pre class="diagram">
+PATTERN OVERVIEW
+──────────────────────────────────────────────
+
+<span class="green">UPTREND → FLAG → CONTINUATION</span>
+        ▲
+        │ Strong push
+        │
+        │      <span class="green">/</span>
+        │     <span class="green">/</span>
+        │    <span class="green">/</span>
+        │   <span class="green">/</span>
+        ▼  <span class="yellow">──────</span>  ← Pause / Drift
+           <span class="yellow">──────</span>
+                <span class="green">↑</span> Breakout
+
+<span class="red">DOWNTREND → WEDGE → REVERSAL</span>
+        ▼
+        │
+        │   <span class="red">\</span>
+        │    <span class="red">\</span>
+        │     <span class="red">\</span>
+        │      <span class="red">\</span>
+        ▲  <span class="blue">/</span>
+           <span class="blue">/</span>  ← Squeeze
+              <span class="green">↑</span> Break upward
+
+<span class="yellow">DOUBLE TOP / DOUBLE BOTTOM</span>
+        HH rejection or LL support
+      </pre>
+
       <p>
-        Flags, wedges, double tops, and double bottoms are just ways to describe where price
-        pushed, paused, failed, or broke through. They give structure to the story the chart is
-        already telling.
-      </p>
-      <p>
-        In this stage, you will get a light overview. Later, individual patterns will earn their
-        own focused chapters. For now, you just need to understand what patterns are and why they
-        matter.
+        Patterns give structure to the story the chart is already telling.
       </p>
     </section>
 
+    <!-- FLAG DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Examples of Common Patterns</h2>
+
+      <p><strong>Flag Pattern</strong> — a strong move, then a tight drifting pause.</p>
+
+      <pre class="diagram">
+FLAG PATTERN
+──────────────────────────────────────────────
+
+Strong Move →
+<span class="green">│</span>
+<span class="green">│</span>
+<span class="green">│</span>
+<span class="green">│</span>
+<span class="green">└───────────</span>← Flag drift (slight downward or sideways)
+<span class="yellow">────────────</span>
+<span class="yellow">────────────</span>
+            <span class="green">↑</span> Breakout continuation
+      </pre>
+
       <p>
-        A <strong>flag</strong> often forms after a strong move, when price pauses and drifts in a
-        smaller range before potentially continuing in the same direction.
+        Flags often appear in strong trends. They do not guarantee continuation — they simply
+        show controlled, disciplined selling or buying pressure.
       </p>
+
+      <p><strong>Double Top</strong> — price hits the same high twice and rejects.</p>
+
+      <pre class="diagram">
+DOUBLE TOP
+──────────────────────────────────────────────
+
+        <span class="red">▲</span> High 1
+       <span class="red">/ \</span>
+      <span class="red">/   \</span>
+     <span class="yellow">/     \</span>
+    <span class="yellow">▼       ▼</span>
+     <span class="red">\     /</span>
+      <span class="red"> \   /</span>
+       <span class="red"> \ /</span>
+        <span class="red">▲</span> High 2 (rejection)
+      </pre>
+
+      <p><strong>Double Bottom</strong> — price finds support twice.</p>
+
+      <pre class="diagram">
+DOUBLE BOTTOM
+──────────────────────────────────────────────
+
+        <span class="green">▼</span> Low 1
+       <span class="green">/ \</span>
+      <span class="green">/   \</span>
+     <span class="yellow">/     \</span>
+    <span class="yellow">▲       ▲</span>
+     <span class="green">\     /</span>
+      <span class="green"> \   /</span>
+       <span class="green"> \ /</span>
+        <span class="green">▼</span> Low 2 (support)
+      </pre>
+
+      <p><strong>Wedge</strong> — price compresses into a narrowing structure.</p>
+
+      <pre class="diagram">
+WEDGE PATTERN
+──────────────────────────────────────────────
+
+<span class="red">\</span>
+ <span class="red">\</span>
+  <span class="red">\</span>
+   <span class="red">\</span>
+    <span class="blue">/</span>
+   <span class="blue">/</span>
+  <span class="blue">/</span>
+ <span class="blue">/</span>
+<span class="green">↑ Breakout</span>
+      </pre>
+
       <p>
-        A <strong>double top</strong> forms when price pushes into a similar high level twice but
-        fails to break through, suggesting sellers are defending that area.
-      </p>
-      <p>
-        A <strong>double bottom</strong> is the opposite idea: price finds support in a similar
-        low area twice, suggesting buyers are willing to step in there.
-      </p>
-      <p>
-        These patterns do not guarantee outcomes. They simply help you understand where buyers and
-        sellers have drawn lines in the sand.
+        These patterns do not guarantee outcomes. They simply help you understand where buyers
+        and sellers have drawn lines in the sand.
       </p>
     </section>
 
+    <!-- PATTERNS + OPTIONS -->
     <section class="card">
       <h2 class="section-title">Patterns and Options Trades</h2>
+
       <p>
-        When you think about taking a call or a put, patterns add another layer of information.
-        A bullish pattern near support might support a call idea. A bearish pattern near
-        resistance might support a put idea.
+        Patterns add context to your directional ideas. A bullish pattern near support may support
+        a call idea. A bearish pattern near resistance may support a put idea.
       </p>
+
       <p>
-        The key is that patterns are part of a larger process—not the entire process. You still
-        need discipline, direction, risk control, and an exit plan.
+        Patterns are part of a larger process — not the entire process. You still need discipline,
+        direction, risk control, and an exit plan.
       </p>
+
       <p>
         A disciplined trader sees a pattern, connects it to the broader story, and then decides
         whether a trade fits within their rules.
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Pattern Basics</h2>
       <form id="lesson9-quiz" class="form">
@@ -80,9 +182,7 @@
           <select name="q1" class="form-input" required>
             <option value="">Select an answer</option>
             <option value="a">Magic symbols that guarantee outcomes.</option>
-            <option value="b">
-              Visual representations of repeated buyer and seller behavior.
-            </option>
+            <option value="b">Visual representations of repeated buyer and seller behavior.</option>
             <option value="c">Random shapes people made up for fun.</option>
           </select>
         </label>
@@ -101,9 +201,7 @@
           How should patterns be used in your trading?
           <select name="q3" class="form-input" required>
             <option value="">Select an answer</option>
-            <option value="a">
-              As one part of a larger process that still requires discipline and risk control.
-            </option>
+            <option value="a">As one part of a larger process requiring discipline and risk control.</option>
             <option value="b">As the only thing that matters.</option>
             <option value="c">As permission to ignore your rules.</option>
           </select>
@@ -117,21 +215,20 @@
       </form>
     </section>
 
-    <!-- Mini simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Choosing a Pattern Context</h2>
       <p>
         Imagine price has moved up strongly, then drifts sideways in a tight range, making small
         overlapping candles that tilt slightly downward.
       </p>
+
       <form id="lesson9-sim" class="form">
         <label class="form-label">
           Which simple pattern description best fits this?
           <select name="patternType" class="form-input" required>
             <option value="">Select one</option>
-            <option value="flag">
-              A flag: strong move, then a small, drifting pause that may continue the trend.
-            </option>
+            <option value="flag">A flag: strong move, then a drifting pause that may continue the trend.</option>
             <option value="doubleTop">A double top at a clear resistance line.</option>
             <option value="none">A completely meaningless formation.</option>
           </select>
@@ -142,9 +239,7 @@
           <select name="reaction" class="form-input" required>
             <option value="">Select one</option>
             <option value="a">Enter immediately with no plan.</option>
-            <option value="b">
-              Check if the pattern, direction, risk, and exit plan all line up with your rules.
-            </option>
+            <option value="b">Check if the pattern, direction, risk, and exit plan all line up with your rules.</option>
             <option value="c">Double your risk because it “looks good.”</option>
           </select>
         </label>
@@ -156,6 +251,7 @@
         </div>
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
