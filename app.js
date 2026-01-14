@@ -38,7 +38,7 @@ function initFreeAccessGate() {
   const msg = document.getElementById("free-access-message");
   if (!form) return;
 
-  const allowed = "boardwalkclay1@gmail.com" "klevy0823@gmail.com"; // override email
+  const allowed = "boardwalkclay1@gmail.com"; // override email
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
