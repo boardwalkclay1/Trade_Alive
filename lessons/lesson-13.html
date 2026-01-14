@@ -2,147 +2,257 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Stage 13 – Combining Chart Elements into a Setup</title>
+  <title>Stage 12 – Timeframes, Noise, and Perspective</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .diagram { font-family: monospace; white-space: pre; }
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+    .purple { color:#c084fc; font-weight:bold; }
+  </style>
 </head>
 
 <body class="theme-dark">
   <header class="top-bar">
     <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
-    <h1 class="app-title">Stage 13 – Combining Chart Elements</h1>
+    <h1 class="app-title">Stage 12 – Timeframes & Noise</h1>
     <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
   </header>
 
   <main class="main-content">
+
+    <!-- MULTI-TIMEFRAME DIAGRAM -->
     <section class="card">
-      <h2 class="section-title">From Random Pieces to One Setup</h2>
+      <h2 class="section-title">Different Timeframes, Different Stories</h2>
+
       <p>
-        You’ve seen candles, patterns, moving averages, and timeframes. Each one is a piece of
-        information. The goal is not to collect pieces—it is to combine them into one clear
-        trading setup.
+        A one-minute chart, a five-minute chart, and a daily chart can all show the same ticker
+        very differently. Short timeframes show more detail and more noise. Higher timeframes show
+        bigger structure and trend.
       </p>
+
+      <pre class="diagram">
+MULTI‑TIMEFRAME VIEW
+──────────────────────────────────────────────
+
+<span class="blue">1‑Minute (Noise)</span>
+   <span class="green">││</span> <span class="red">││</span> <span class="green">││</span> <span class="red">││</span> <span class="green">││</span>
+   <span class="yellow">Tiny pullbacks, spikes, randomness</span>
+
+<span class="yellow">5‑Minute (Micro‑Structure)</span>
+   <span class="green">  ▲</span>
+   <span class="green"> / \</span> <span class="red">  ▼</span>
+   <span class="green">/   \</span> <span class="red"> / \</span>
+   <span class="yellow">Higher lows forming</span>
+
+<span class="purple">1‑Hour (Trend)</span>
+   <span class="green">      ↑</span>
+   <span class="green">   ↑</span>
+   <span class="green">↑</span>   <span class="green">Uptrend intact</span>
+
+<span class="green">Daily (Macro Story)</span>
+   <span class="green">───────────────▶</span>
+   <span class="green">Strong overall trend</span>
+
+Same ticker.  
+Four completely different perspectives.
+      </pre>
+
       <p>
-        A setup is a repeatable condition where multiple signals line up in a way that fits your
-        rules. For example: an uptrend, a pullback into a moving average, a small bullish pattern,
-        and a clear area for your stop.
+        Neither timeframe is “right.” They simply tell different versions of the same story.
+        A disciplined trader knows which one they are using and why.
       </p>
+
       <p>
-        The more your pieces agree, the more structured your idea becomes. This does not guarantee
-        success, but it gives you a logical story to trade from instead of emotion.
+        If you jump between timeframes emotionally, you can confuse yourself. A tiny pullback on
+        the 1‑minute chart may be meaningless inside a strong daily trend.
       </p>
     </section>
 
+    <!-- NOISE VS SIGNAL DIAGRAM -->
     <section class="card">
-      <h2 class="section-title">Example: A Simple Long Setup</h2>
-      <p>Imagine this sequence:</p>
-      <ul>
-        <li><strong>Trend:</strong> Price is above a rising moving average.</li>
-        <li><strong>Pattern:</strong> A small flag forms after an upward push.</li>
-        <li><strong>Candles:</strong> Recent candles show higher lows and controlled pullbacks.</li>
-        <li><strong>Timeframe:</strong> The pattern is visible on a timeframe you trust.</li>
-      </ul>
+      <h2 class="section-title">Noise vs. Signal</h2>
+
       <p>
-        This combination might support a call idea if it fits your risk and exit rules. You are
-        not trading just a flag or just a moving average—you are trading the alignment.
+        “Noise” is the small, random movement that happens constantly as buyers and sellers
+        negotiate. “Signal” is the clearer direction or structure that should matter more to your
+        decisions.
+      </p>
+
+      <pre class="diagram">
+NOISE VS SIGNAL
+──────────────────────────────────────────────
+
+<span class="blue">Noise (1m)</span>
+   <span class="green">││</span><span class="red">││</span><span class="green">││</span><span class="red">││</span><span class="green">││</span>
+   <span class="yellow">Random wiggles, emotional traps</span>
+
+<span class="purple">Signal (1h / Daily)</span>
+   <span class="green">↑</span>
+   <span class="green">  ↑</span>
+   <span class="green">    ↑</span>
+   <span class="green">Clear trend, meaningful structure</span>
+
+Interpretation:
+• Noise = short‑term randomness  
+• Signal = long‑term structure  
+• Your job is to know which one matters to your plan
+      </pre>
+
+      <p>
+        Emotional traders react to every tiny candle. Disciplined traders know what they are
+        looking for and ignore what does not matter.
+      </p>
+
+      <p>
+        Timeframe choice helps you separate noise from signal. Choose timeframes that match your
+        strategy — then stay consistent.
       </p>
     </section>
 
+    <!-- TIMEFRAMES + OPTIONS DIAGRAM -->
     <section class="card">
-      <h2 class="section-title">Your Edge Is Process, Not Prediction</h2>
+      <h2 class="section-title">Connecting Timeframes to Options</h2>
+
       <p>
-        Even a “perfect” setup can lose. Your edge is not in predicting the future; it is in
-        managing yourself across many trades where your process is consistent.
+        If you are trading short-term options, lower timeframes may matter more — but you still
+        need to respect the bigger trend. A strong daily trend can influence how you interpret a
+        small intraday move.
       </p>
+
+      <pre class="diagram">
+TIMEFRAME ALIGNMENT FOR OPTIONS
+──────────────────────────────────────────────
+
+<span class="green">Daily Trend → Up</span>
+        <span class="green">↑</span>
+
+<span class="yellow">1‑Hour Structure → Higher Lows</span>
+        <span class="green">↑</span>
+
+<span class="blue">1‑Minute Pullback → Noise</span>
+        <span class="red">↓</span>
+
+Correct interpretation:
+<span class="green">Bigger trend still up.</span>  
+<span class="yellow">Small pullback is normal.</span>  
+<span class="blue">Don’t panic over noise.</span>
+      </pre>
+
       <p>
-        This is why discipline is still the core. You could know every pattern in existence, but
-        if you abandon your rules in the moment, your knowledge cannot protect you.
+        Your contract, expiration, and timeframe should make sense together. A short-term contract
+        based on one random candle is gambling, not trading.
       </p>
+
       <p>
-        Over time, setups that are logically built, risk-managed, and executed with discipline
-        give you a real chance to grow, just like the best stretches of my own journey.
+        Not all candles carry the same weight. Timeframes give context.
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
-      <h2 class="section-title">Quick Check: Setup Thinking</h2>
-      <form id="lesson13-quiz" class="form">
+      <h2 class="section-title">Quick Check: Timeframes & Noise</h2>
+      <form id="lesson12-quiz" class="form">
+
         <label class="form-label">
-          What is a “setup” in this academy’s language?
+          What do different timeframes show you?
           <select name="q1" class="form-input" required>
             <option value="">Select an answer</option>
-            <option value="a">A random trade idea without structure.</option>
-            <option value="b">A repeatable combination of signals and context that fits your rules.</option>
-            <option value="c">Any trade you feel excited about.</option>
+            <option value="a">Different levels of detail and structure for the same market movement.</option>
+            <option value="b">Completely unrelated markets.</option>
+            <option value="c">Only random movement.</option>
           </select>
         </label>
 
         <label class="form-label">
-          In the simple long example, what elements are working together?
+          What is “noise” in this context?
           <select name="q2" class="form-input" required>
             <option value="">Select an answer</option>
-            <option value="a">Only one candle.</option>
-            <option value="b">Trend direction, a pattern (flag), candles, and timeframe alignment.</option>
-            <option value="c">News only.</option>
+            <option value="a">Every major trend over months.</option>
+            <option value="b">Small, often random movements that may not matter to your bigger plan.</option>
+            <option value="c">Only after-hours activity.</option>
           </select>
         </label>
 
         <label class="form-label">
-          Where does your real edge come from?
+          How should a disciplined trader treat timeframes?
           <select name="q3" class="form-input" required>
             <option value="">Select an answer</option>
-            <option value="a">Perfectly predicting every trade.</option>
-            <option value="b">Applying a structured process with discipline across many trades.</option>
-            <option value="c">Finding one pattern that never loses.</option>
+            <option value="a">Choose timeframes that match their strategy and use them consistently.</option>
+            <option value="b">Switch constantly based on emotion.</option>
+            <option value="c">Ignore timeframes completely.</option>
           </select>
         </label>
 
-        <div id="lesson13-quiz-message" class="feedback-text"></div>
+        <div id="lesson12-quiz-message" class="feedback-text"></div>
 
         <div class="button-row">
           <button type="submit" class="primary-button">Submit Quiz</button>
         </div>
+
       </form>
     </section>
 
-    <!-- Mini simulation -->
+    <!-- SIMULATION -->
     <section class="card">
-      <h2 class="section-title">Mini Simulation: Evaluating Setup Strength</h2>
+      <h2 class="section-title">Mini Simulation: Two Timeframe View</h2>
       <p>
-        Imagine two situations:
-        <br />A) You see a random single green candle and feel excited.
-        <br />B) You see an uptrend above a moving average, a pullback flag, and a clear area for a stop.
+        Imagine the daily chart shows a steady uptrend, but the one-minute chart shows a small,
+        sharp pullback.
       </p>
 
-      <form id="lesson13-sim" class="form">
+      <pre class="diagram">
+TWO‑TIMEFRAME SIMULATION
+──────────────────────────────────────────────
+
+<span class="green">Daily Trend</span>
+   <span class="green">↑</span>
+   <span class="green">  ↑</span>
+   <span class="green">    ↑</span>
+
+<span class="blue">1‑Minute Pullback</span>
+   <span class="red">↓</span>
+
+Correct reading:
+<span class="green">Bigger trend still up.</span>  
+<span class="yellow">Small pullback = noise unless it grows.</span>
+      </pre>
+
+      <form id="lesson12-sim" class="form">
+
         <label class="form-label">
-          Which one better fits the idea of a structured setup?
-          <select name="choice" class="form-input" required>
+          How should you read this in simple terms?
+          <select name="view" class="form-input" required>
             <option value="">Select one</option>
-            <option value="a">A: One candle plus excitement.</option>
-            <option value="b">B: Trend, pattern, candles, and a defined risk area working together.</option>
-            <option value="c">Neither; both are identical.</option>
+            <option value="a">The bigger trend is still up; the small pullback may be noise unless it grows.</option>
+            <option value="b">The market has completely reversed forever.</option>
+            <option value="c">Charts no longer matter.</option>
           </select>
         </label>
 
         <label class="form-label">
-          Before acting on B in real life, what is still required?
-          <select name="requirement" class="form-input" required>
+          If you feel panic when the one-minute candle pulls back, what aligns with this academy?
+          <select name="emotion" class="form-input" required>
             <option value="">Select one</option>
-            <option value="a">Nothing; you can skip risk and rules.</option>
-            <option value="b">A clear plan for position size, risk, and exit—and the discipline to follow it.</option>
-            <option value="c">Only confirmation from a stranger online.</option>
+            <option value="a">React instantly with no reference to your plan.</option>
+            <option value="b">Check your chosen timeframes, review your rules, and act based on your strategy.</option>
+            <option value="c">Double your risk to “fix it fast.”</option>
           </select>
         </label>
 
-        <div id="lesson13-sim-message" class="feedback-text"></div>
+        <div id="lesson12-sim-message" class="feedback-text"></div>
 
         <div class="button-row">
-          <button type="submit" class="primary-button">Complete Stage 13</button>
+          <button type="submit" class="primary-button">Complete Stage 12</button>
         </div>
+
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
