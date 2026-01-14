@@ -5,6 +5,15 @@
   <title>Stage 12 – Timeframes, Noise, and Perspective</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .diagram { font-family: monospace; white-space: pre; }
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+    .purple { color:#c084fc; font-weight:bold; }
+  </style>
 </head>
 
 <body class="theme-dark">
@@ -16,59 +25,135 @@
 
   <main class="main-content">
 
+    <!-- MULTI-TIMEFRAME DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Different Timeframes, Different Stories</h2>
+
       <p>
         A one-minute chart, a five-minute chart, and a daily chart can all show the same ticker
         very differently. Short timeframes show more detail and more noise. Higher timeframes show
         bigger structure and trend.
       </p>
+
+      <pre class="diagram">
+MULTI‑TIMEFRAME VIEW
+──────────────────────────────────────────────
+
+<span class="blue">1‑Minute (Noise)</span>
+   <span class="green">││</span> <span class="red">││</span> <span class="green">││</span> <span class="red">││</span> <span class="green">││</span>
+   <span class="yellow">Tiny pullbacks, spikes, randomness</span>
+
+<span class="yellow">5‑Minute (Micro‑Structure)</span>
+   <span class="green">  ▲</span>
+   <span class="green"> / \</span> <span class="red">  ▼</span>
+   <span class="green">/   \</span> <span class="red"> / \</span>
+   <span class="yellow">Higher lows forming</span>
+
+<span class="purple">1‑Hour (Trend)</span>
+   <span class="green">      ↑</span>
+   <span class="green">   ↑</span>
+   <span class="green">↑</span>   <span class="green">Uptrend intact</span>
+
+<span class="green">Daily (Macro Story)</span>
+   <span class="green">───────────────▶</span>
+   <span class="green">Strong overall trend</span>
+
+Same ticker.  
+Four completely different perspectives.
+      </pre>
+
       <p>
-        Neither is “right” or “wrong.” They just tell different versions of the same story. A
-        disciplined trader knows which timeframe they are using and why.
+        Neither timeframe is “right.” They simply tell different versions of the same story.
+        A disciplined trader knows which one they are using and why.
       </p>
+
       <p>
-        If you jump between timeframes emotionally, you can confuse yourself. You might see a tiny
-        pullback on a one-minute chart and forget that the daily chart is still in a strong trend.
+        If you jump between timeframes emotionally, you can confuse yourself. A tiny pullback on
+        the 1‑minute chart may be meaningless inside a strong daily trend.
       </p>
     </section>
 
+    <!-- NOISE VS SIGNAL DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Noise vs. Signal</h2>
+
       <p>
-        “Noise” is the small, random movement that happens all the time as buyers and sellers
+        “Noise” is the small, random movement that happens constantly as buyers and sellers
         negotiate. “Signal” is the clearer direction or structure that should matter more to your
         decisions.
       </p>
+
+      <pre class="diagram">
+NOISE VS SIGNAL
+──────────────────────────────────────────────
+
+<span class="blue">Noise (1m)</span>
+   <span class="green">││</span><span class="red">││</span><span class="green">││</span><span class="red">││</span><span class="green">││</span>
+   <span class="yellow">Random wiggles, emotional traps</span>
+
+<span class="purple">Signal (1h / Daily)</span>
+   <span class="green">↑</span>
+   <span class="green">  ↑</span>
+   <span class="green">    ↑</span>
+   <span class="green">Clear trend, meaningful structure</span>
+
+Interpretation:
+• Noise = short‑term randomness  
+• Signal = long‑term structure  
+• Your job is to know which one matters to your plan
+      </pre>
+
       <p>
         Emotional traders react to every tiny candle. Disciplined traders know what they are
-        looking for and ignore what does not matter to their plan.
+        looking for and ignore what does not matter.
       </p>
+
       <p>
-        Timeframe choice helps you separate noise from signal. Your goal is to choose timeframes
-        that match your strategy and then stay consistent.
+        Timeframe choice helps you separate noise from signal. Choose timeframes that match your
+        strategy — then stay consistent.
       </p>
     </section>
 
+    <!-- TIMEFRAMES + OPTIONS DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Connecting Timeframes to Options</h2>
+
       <p>
-        If you are trading short-term options, lower timeframes may matter more—but you still need
-        to respect the bigger trend. A strong daily trend can influence how you interpret a small
-        intraday move.
+        If you are trading short-term options, lower timeframes may matter more — but you still
+        need to respect the bigger trend. A strong daily trend can influence how you interpret a
+        small intraday move.
       </p>
+
+      <pre class="diagram">
+TIMEFRAME ALIGNMENT FOR OPTIONS
+──────────────────────────────────────────────
+
+<span class="green">Daily Trend → Up</span>
+        <span class="green">↑</span>
+
+<span class="yellow">1‑Hour Structure → Higher Lows</span>
+        <span class="green">↑</span>
+
+<span class="blue">1‑Minute Pullback → Noise</span>
+        <span class="red">↓</span>
+
+Correct interpretation:
+<span class="green">Bigger trend still up.</span>  
+<span class="yellow">Small pullback is normal.</span>  
+<span class="blue">Don’t panic over noise.</span>
+      </pre>
+
       <p>
-        Your contract, your expiration, and your timeframe should make sense together. A very
-        short-term contract with a huge bet based only on one candle is more gambling than
-        trading.
+        Your contract, expiration, and timeframe should make sense together. A short-term contract
+        based on one random candle is gambling, not trading.
       </p>
+
       <p>
-        You will build your own preferred timeframes over time. This stage is about recognizing
-        that not all candles carry the same weight in your decisions.
+        Not all candles carry the same weight. Timeframes give context.
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Timeframes & Noise</h2>
       <form id="lesson12-quiz" class="form">
@@ -112,13 +197,30 @@
       </form>
     </section>
 
-    <!-- Simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Two Timeframe View</h2>
       <p>
         Imagine the daily chart shows a steady uptrend, but the one-minute chart shows a small,
         sharp pullback.
       </p>
+
+      <pre class="diagram">
+TWO‑TIMEFRAME SIMULATION
+──────────────────────────────────────────────
+
+<span class="green">Daily Trend</span>
+   <span class="green">↑</span>
+   <span class="green">  ↑</span>
+   <span class="green">    ↑</span>
+
+<span class="blue">1‑Minute Pullback</span>
+   <span class="red">↓</span>
+
+Correct reading:
+<span class="green">Bigger trend still up.</span>  
+<span class="yellow">Small pullback = noise unless it grows.</span>
+      </pre>
 
       <form id="lesson12-sim" class="form">
 
