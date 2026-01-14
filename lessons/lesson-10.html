@@ -5,6 +5,15 @@
   <title>Stage 10 – Moving Averages & Putting It Together</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .diagram { font-family: monospace; white-space: pre; }
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+    .purple { color:#c084fc; font-weight:bold; }
+  </style>
 </head>
 
 <body class="theme-dark">
@@ -16,42 +25,125 @@
 
   <main class="main-content">
 
+    <!-- MOVING AVERAGE DIAGRAM -->
     <section class="card">
       <h2 class="section-title">What Moving Averages Show You</h2>
+
       <p>
         A moving average is a line on your chart that smooths out price over a chosen period
         (like 9, 20, or 50 candles). It helps you see the general direction and strength of a
         trend without getting lost in every tiny move.
       </p>
+
+      <pre class="diagram">
+MOVING AVERAGE VISUAL
+──────────────────────────────────────────────
+
+Price ▲
+      │        <span class="green">││</span>   <span class="green">││</span>     <span class="green">││</span>
+      │        <span class="green">││</span>   <span class="green">││</span>     <span class="green">││</span>
+      │   <span class="blue">~~~~~~ 9 MA (fast)</span>
+      │      <span class="yellow">──────── 20 MA (medium)</span>
+      │         <span class="purple">──────────── 50 MA (slow)</span>
+      │
+      ▼
+
+Interpretation:
+<span class="blue">9 MA</span> → reacts quickly to price  
+<span class="yellow">20 MA</span> → shows short‑term trend  
+<span class="purple">50 MA</span> → shows bigger picture trend
+      </pre>
+
       <p>
-        When price is generally above a rising moving average, buyers have often been in control
-        recently. When price is generally below a falling moving average, sellers have often been
-        in control.
+        When price is above a rising moving average, buyers have often been in control.  
+        When price is below a falling moving average, sellers have often been in control.
       </p>
+
       <p>
-        Moving averages are not magic buy and sell buttons. They are context tools that help you
+        Moving averages are not magic buy/sell buttons — they are context tools that help you
         answer: “Is this trend mostly up, mostly down, or undecided right now?”
       </p>
     </section>
 
+    <!-- TREND ALIGNMENT DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Tying It All Together</h2>
+
       <p>
         By this point you have seen: the market as an auction, charts and candles, basic patterns,
         and now moving averages. Alone, each piece is incomplete. Together, they can support one
         solid trade idea.
       </p>
+
+      <pre class="diagram">
+TREND ALIGNMENT MAP
+──────────────────────────────────────────────
+
+<span class="green">Price Above Rising MA → Buyers in Control</span>
+
+        <span class="green">││</span>
+        <span class="green">││</span>     <span class="blue">~~~~ 9 MA</span>
+        <span class="green">││</span>   <span class="yellow">──── 20 MA</span>
+        <span class="green">││</span> <span class="purple">──────── 50 MA</span>
+        <span class="green">▲</span>
+        Uptrend structure
+
+<span class="red">Price Below Falling MA → Sellers in Control</span>
+
+        <span class="red">││</span>
+        <span class="red">││</span>     <span class="blue">~~~~ 9 MA</span>
+        <span class="red">││</span>   <span class="yellow">──── 20 MA</span>
+        <span class="red">││</span> <span class="purple">──────── 50 MA</span>
+        <span class="red">▼</span>
+        Downtrend structure
+      </pre>
+
       <p>
-        A strong trade might include: a clear direction, supportive candles, a helpful pattern,
-        alignment with a moving average trend, and—most important—your discipline and risk plan.
+        A strong trade might include:  
+        • clear direction  
+        • supportive candles  
+        • a helpful pattern  
+        • alignment with a moving average trend  
+        • and most important — your discipline and risk plan  
       </p>
+
       <p>
-        Your goal is not to be perfect. Your goal is to build a repeatable process where all
-        these pieces work together, and where you control yourself more than you try to control
-        the market.
+        Your goal is not perfection. Your goal is a repeatable process where all these pieces
+        work together.
       </p>
     </section>
 
+    <!-- FULL TRADE FRAMEWORK MAP -->
+    <section class="card">
+      <h2 class="section-title">The Full Trade Framework</h2>
+
+      <pre class="diagram">
+FULL TRADE FRAMEWORK
+──────────────────────────────────────────────
+
+1. <span class="green">Direction</span>
+      ↑ Up or ↓ Down from your entry
+
+2. <span class="blue">Candles</span>
+      Strong green? Strong red? Higher lows? Lower highs?
+
+3. <span class="yellow">Pattern</span>
+      Flag? Wedge? Double bottom? Double top?
+
+4. <span class="purple">Moving Average Trend</span>
+      Price above rising MA? Below falling MA?
+
+5. <span class="red">Risk Plan</span>
+      Where do you exit if wrong?
+
+6. <span class="green">Execution</span>
+      Market or limit? Quantity? Discipline?
+
+<span class="yellow">When all pieces align → you have a structured trade idea.</span>
+      </pre>
+    </section>
+
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Moving Averages & Framework</h2>
       <form id="lesson10-quiz" class="form">
@@ -95,6 +187,7 @@
       </form>
     </section>
 
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Evaluating a Trade Idea</h2>
       <p>
