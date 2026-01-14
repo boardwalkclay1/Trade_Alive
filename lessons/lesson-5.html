@@ -15,11 +15,65 @@
   </header>
 
   <main class="main-content">
+
+    <!-- NEW ORDER TICKET DIAGRAM -->
+    <section class="card">
+      <h2 class="section-title">The Order Ticket: Your Execution Blueprint</h2>
+
+      <p>
+        Everything you’ve learned so far — direction, calls vs puts, reading the chain — now
+        comes together in the order ticket. This is where decisions become action. A disciplined
+        trader approaches this screen with clarity, not emotion.
+      </p>
+
+      <pre class="diagram">
+                     ORDER ENTRY FLOW
+                     ─────────────────
+
+                 ┌──────────────────────────┐
+                 │      ACTION TYPE         │
+                 │  Buy to Open / Sell Close│
+                 └──────────────▲───────────┘
+                                │
+                 ┌──────────────┴────────────┐
+                 │         QUANTITY           │
+                 │   (1, 5, 10 contracts)     │
+                 └──────────────▲────────────┘
+                                │
+                 ┌──────────────┴────────────┐
+                 │       ORDER TYPE           │
+                 │  Market / Limit (Your Price)│
+                 └──────────────▲────────────┘
+                                │
+                 ┌──────────────┴────────────┐
+                 │          PRICE             │
+                 │ (If limit: your chosen level)│
+                 └──────────────▲────────────┘
+                                │
+                 ┌──────────────┴────────────┐
+                 │       TIME IN FORCE        │
+                 │     (Day, GTC, etc.)       │
+                 └──────────────▲────────────┘
+                                │
+                 ┌──────────────┴────────────┐
+                 │          EXECUTE           │
+                 │   (Order goes to market)   │
+                 └────────────────────────────┘
+
+      </pre>
+
+      <p>
+        This flow is the backbone of every trade you will ever place. Master it now, in a calm
+        environment, and the real market will feel far less chaotic.
+      </p>
+    </section>
+
+    <!-- ORIGINAL SECTION 1 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">From Chain to Action</h2>
       <p>
         Up to now, you’ve focused on direction, calls vs puts, and reading the options chain.
-        Now you connect those ideas to actual order entry and exit—still in a simulated,
+        Now you connect those ideas to actual order entry and exit — still in a simulated,
         educational environment.
       </p>
       <p>
@@ -28,15 +82,15 @@
       </p>
       <p>
         This stage walks you through that process step by step so that later, when you see a real
-        order ticket, it feels familiar—not intimidating.
+        order ticket, it feels familiar — not intimidating.
       </p>
     </section>
 
+    <!-- ORIGINAL SECTION 2 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">Basic Order Ticket Elements</h2>
-      <p>
-        A simple options order ticket will usually ask you for:
-      </p>
+      <p>A simple options order ticket will usually ask you for:</p>
+
       <ul>
         <li><strong>Action:</strong> Buy to open, sell to close, etc.</li>
         <li><strong>Quantity:</strong> How many contracts you want.</li>
@@ -44,14 +98,14 @@
         <li><strong>Price:</strong> Your limit price if you choose a limit order.</li>
         <li><strong>Time in force:</strong> How long the order stays active (e.g., day only).</li>
       </ul>
+
       <p>
-        For this academy, we will focus on <strong>buy to open</strong> and
-        <strong>sell to close</strong>, and on the difference between blindly hitting the market
-        and using a thoughtful limit price.
+        For this academy, we focus on <strong>buy to open</strong> and <strong>sell to close</strong>,
+        and on the difference between blindly hitting the market and using a thoughtful limit price.
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Order Basics</h2>
       <form id="lesson5-quiz" class="form">
@@ -95,13 +149,14 @@
       </form>
     </section>
 
-    <!-- Stepwise order simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Enter & Exit a Practice Call</h2>
       <p>
-        In this simulation, you will choose a call contract (from a simplified choice), select
-        quantity, pick order type, and then “exit” the trade.
+        In this simulation, you will choose a call contract, select quantity, pick order type,
+        and then “exit” the trade.
       </p>
+
       <form id="lesson5-sim" class="form">
         <label class="form-label">
           Choose your contract type for an expected upward move:
@@ -150,6 +205,7 @@
         </div>
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
