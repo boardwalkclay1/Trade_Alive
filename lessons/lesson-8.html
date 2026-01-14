@@ -5,6 +5,14 @@
   <title>Stage 8 – Charts, Candles, and Price Story</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .diagram { font-family: monospace; white-space: pre; }
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+  </style>
 </head>
 
 <body class="theme-dark">
@@ -16,64 +24,133 @@
 
   <main class="main-content">
 
+    <!-- NEW CHART EXPLANATION DIAGRAM -->
     <section class="card">
       <h2 class="section-title">What a Chart Really Is</h2>
+
       <p>
         A chart is a visual record of how price has moved over time. It is not a prediction
         device; it is a history book written in real time. Every bar or candle is the result of
         buyers and sellers interacting in the market.
       </p>
+
+      <pre class="diagram">
+CHART OVERVIEW
+──────────────────────────────────────────────
+
+Time  ─────────────────────────────────────────▶
+
+Price ▲
+      │        <span class="green">││</span>   <span class="green">││</span>     <span class="red">││</span>      <span class="green">││</span>
+      │        <span class="green">││</span>   <span class="green">││</span>     <span class="red">││</span>      <span class="green">││</span>
+      │   <span class="green">▲</span>  <span class="green">││</span>   <span class="green">││</span>     <span class="red">││</span>      <span class="green">││</span>   <span class="green">▲</span>
+      │   <span class="green">│</span>  <span class="green">││</span>   <span class="green">││</span>     <span class="red">││</span>      <span class="green">││</span>   <span class="green">│</span>
+      │   <span class="green">│</span>  <span class="green">└┘</span>   <span class="green">└┘</span>     <span class="red">┌┐</span>      <span class="green">└┘</span>   <span class="green">│</span>
+      │   <span class="green">│</span>         <span class="green">▲</span>        <span class="red">│</span>         <span class="green">▲</span>    <span class="green">│</span>
+      │   <span class="green">└───────────────┴───────────────┴───────────────┘</span>
+      ▼
+</pre>
+
       <p>
-        When you look at a chart, you are seeing where buyers were willing to step in, where
-        sellers pushed back, and where the balance of power shifted. It is a map of the auction
-        you learned about in Stage 7.
-      </p>
-      <p>
-        Your job is not to worship the chart. Your job is to read it calmly and connect it back
-        to simple questions: “Who is winning right now? Up or down from here? Does it match my
-        plan?”
+        When you look at a chart, you are seeing where buyers stepped in, where sellers pushed
+        back, and where the balance of power shifted. It is a map of the auction you learned in
+        Stage 7.
       </p>
     </section>
 
+    <!-- NEW CANDLE ANATOMY DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Red and Green Candles</h2>
+
       <p>
         Most trading platforms show price using <strong>candlesticks</strong>. A green candle
         means price closed higher than it opened. A red candle means price closed lower than it
         opened.
       </p>
+
+      <pre class="diagram">
+CANDLE ANATOMY
+──────────────────────────────────────────────
+
+<span class="green">GREEN CANDLE (Buyers in control)</span>
+
+           High
+            │
+            │      <span class="green">│</span>
+            │      <span class="green">│</span>   ← Wick
+            │   <span class="green">┌───────┐</span>
+            │   <span class="green">│       │</span>  ← Body (Open → Close)
+            │   <span class="green">└───────┘</span>
+            │      <span class="green">│</span>
+            │      <span class="green">│</span>
+           Low
+
+<span class="red">RED CANDLE (Sellers in control)</span>
+
+           High
+            │
+            │      <span class="red">│</span>
+            │      <span class="red">│</span>
+            │   <span class="red">┌───────┐</span>
+            │   <span class="red">│       │</span>  ← Body (Close → Open)
+            │   <span class="red">└───────┘</span>
+            │      <span class="red">│</span>
+            │      <span class="red">│</span>
+           Low
+</pre>
+
       <p>
-        The “body” of the candle shows the open and close. The “wicks” show the highest and
-        lowest prices reached during that period. Together, they tell a story about pressure:
+        The body shows the open and close. The wicks show the highest and lowest prices reached.
+        Together, they tell a story about pressure.
       </p>
+
       <ul>
         <li><strong>Strong green candle:</strong> buyers were in control.</li>
         <li><strong>Strong red candle:</strong> sellers were in control.</li>
         <li><strong>Long wicks:</strong> rejection or hesitation.</li>
       </ul>
-      <p>
-        Candles are not predictions. They are footprints of what buyers and sellers already did.
-        Your job is to read them with discipline, not emotion.
-      </p>
     </section>
 
+    <!-- NEW CANDLE STORY DIAGRAM -->
     <section class="card">
       <h2 class="section-title">Candles Tell a Story</h2>
+
       <p>
         A single candle is one moment in the auction. A series of candles becomes a story:
         higher lows, lower highs, momentum, hesitation, pressure building, pressure releasing.
       </p>
+
+      <pre class="diagram">
+CANDLE STORY SEQUENCE
+──────────────────────────────────────────────
+
+<span class="green">Candle 1: Strong green, small top wick</span>
+        <span class="green">│</span>
+        <span class="green">│</span>
+     <span class="green">┌───────┐</span>
+     <span class="green">│       │</span>
+     <span class="green">└───────┘</span>
+
+<span class="green">Candle 2: Higher low, buyers stepping in earlier</span>
+          <span class="green">│</span>
+          <span class="green">│</span>
+       <span class="green">┌───────┐</span>
+       <span class="green">│       │</span>
+       <span class="green">└───────┘</span>
+
+Interpretation:
+<span class="green">→ Buyers showing strength</span>
+<span class="green">→ Momentum building</span>
+<span class="green">→ Pressure lifting price</span>
+</pre>
+
       <p>
         When you combine candles with the auction mindset, you begin to see the market as a
         living negotiation instead of random noise.
       </p>
-      <p>
-        This stage prepares you for patterns, moving averages, and full setups in the next
-        lessons.
-      </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Candles & Price Story</h2>
       <form id="lesson8-quiz" class="form">
@@ -117,7 +194,7 @@
       </form>
     </section>
 
-    <!-- Simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Candle Interpretation</h2>
       <p>
