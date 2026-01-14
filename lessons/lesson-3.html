@@ -15,6 +15,46 @@
   </header>
 
   <main class="main-content">
+
+    <!-- NEW CALL/PUT DIRECTION DIAGRAM -->
+    <section class="card">
+      <h2 class="section-title">The Direction Map: Calls vs Puts</h2>
+
+      <p>
+        Before you learn strike prices, expiration dates, or options chains, you must master the
+        simplest and most important mapping in options trading: <strong>calls = up</strong>,
+        <strong>puts = down</strong>. Everything else builds on this.
+      </p>
+
+      <pre class="diagram">
+                         PRICE DIRECTION MAP
+                         ───────────────────
+
+                           ENTRY PRICE
+                                │
+                ┌──────────────┼──────────────┐
+                │                              │
+                ▼                              ▼
+          ┌───────────┐                 ┌───────────┐
+          │   CALL     │                 │    PUT     │
+          │ Benefits   │                 │ Benefits   │
+          │   When     │                 │   When     │
+          │ Price Goes │                 │ Price Goes │
+          │     UP     │                 │    DOWN    │
+          └───────────┘                 └───────────┘
+
+                ▲                              ▲
+                │                              │
+         Expecting Up                    Expecting Down
+      </pre>
+
+      <p>
+        This diagram is your anchor. No matter how complex options seem later, the entire
+        language reduces to one question: <strong>“Do I expect up or down from my entry?”</strong>
+      </p>
+    </section>
+
+    <!-- ORIGINAL SECTION 1 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">Connecting Up/Down to Calls and Puts</h2>
       <p>
@@ -34,6 +74,7 @@
       </p>
     </section>
 
+    <!-- ORIGINAL SECTION 2 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">Why This Mapping Matters</h2>
       <p>
@@ -51,7 +92,7 @@
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Calls vs Puts</h2>
       <form id="lesson3-quiz" class="form">
@@ -97,7 +138,7 @@
       </form>
     </section>
 
-    <!-- Mini call/put simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Choosing Call or Put</h2>
       <p>
@@ -131,6 +172,7 @@
         </div>
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
