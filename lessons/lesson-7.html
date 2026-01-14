@@ -5,6 +5,13 @@
   <title>Stage 7 – What the Market Really Is (Chapter 2)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+    .diagram { font-family: monospace; white-space: pre; }
+  </style>
 </head>
 
 <body class="theme-dark">
@@ -15,25 +22,91 @@
   </header>
 
   <main class="main-content">
+
+    <!-- NEW CHART + CANDLESTICK DIAGRAM -->
     <section class="card">
-      <h2 class="section-title">The Market Behind the Contracts</h2>
+      <h2 class="section-title">Seeing the Market Through Candles</h2>
+
       <p>
-        In Chapter 1, you focused on direction, discipline, calls and puts, the options chain,
-        and a full mock trade. Now we zoom out. Every options contract you touched in Chapter 1
-        lives on top of something deeper: the stock market itself.
+        Every chart you will ever read is built from one simple building block: the candlestick.
+        Each candle shows a battle between buyers and sellers during a specific timeframe.
       </p>
+
+      <pre class="diagram">
+CANDLESTICK ANATOMY
+──────────────────────────────────────────────
+
+   <span class="green">GREEN CANDLE (Buyers winning)</span>
+
+           High
+            │
+            │      ┌───────┐
+            │      │       │  ← Body (Open → Close)
+            │      │       │
+            │      └───────┘
+            │         ▲
+            │         │ Close
+            │         │
+            │         │ Open
+            ▼
+           Low
+
+   <span class="red">RED CANDLE (Sellers winning)</span>
+
+           High
+            │
+            │      ┌───────┐
+            │      │       │
+            │      │       │  ← Body (Close → Open)
+            │      └───────┘
+            │         ▲
+            │         │ Open
+            │         │
+            │         │ Close
+            ▼
+           Low
+      </pre>
+
       <p>
-        The stock market is not just numbers on a screen. It is a live auction of real businesses,
-        funds, and indexes. Every tick is a negotiation between buyers and sellers, each with
-        their own reasons, fears, goals, and timeframes.
-      </p>
-      <p>
-        When you choose a direction, a call, or a put, you are stepping into that auction. You are
-        not playing a game alone. You are participating in a shared environment where capital
-        moves in real time.
+        Green means buyers pushed price upward. Red means sellers pushed price downward.  
+        These candles stack into trends, reversals, and structures you’ll learn next.
       </p>
     </section>
 
+    <!-- NEW MARKET AUCTION DIAGRAM -->
+    <section class="card">
+      <h2 class="section-title">The Market Behind the Contracts</h2>
+
+      <p>
+        Every options contract sits on top of a deeper system: the live auction of the stock
+        market. Every tick is a negotiation between buyers and sellers.
+      </p>
+
+      <pre class="diagram">
+LIVE AUCTION FLOW
+──────────────────────────────────────────────
+
+   <span class="green">BUYERS (Bids)</span>  ← competing to lift price
+        ▲
+        │
+        │     Price moves up when buyers outbid sellers
+        │
+        ▼
+   <span class="yellow">CURRENT PRICE</span>
+        ▲
+        │
+        │     Price moves down when sellers undercut buyers
+        │
+        ▼
+   <span class="red">SELLERS (Asks)</span>  ← competing to push price lower
+      </pre>
+
+      <p>
+        When you choose a direction, a call, or a put, you are stepping into this auction.
+      </p>
+    </section>
+
+    <!-- ORIGINAL SECTION 2 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">A Decade of Experience, Condensed for You</h2>
       <p>
@@ -48,31 +121,55 @@
         out of my plan.
       </p>
       <p>
-        Here is the truth I am passing to you: the most important part of trading is not the
-        knowledge, the patterns, or the indicators. It is your discipline and your control over
-        yourself while you use them.
+        The most important part of trading is not the knowledge, the patterns, or the indicators.
+        It is your discipline and your control over yourself while you use them.
       </p>
     </section>
 
+    <!-- NEW TREND STRUCTURE DIAGRAM -->
     <section class="card">
       <h2 class="section-title">How This Connects Back to Chapter 1</h2>
+
       <p>
-        In Chapter 1, you learned to think in simple terms: money in, up or down from entry,
-        money out. You mapped that to calls and puts, read a basic options chain, and practiced
-        order entry and exit.
+        In Chapter 1, you learned to think in simple terms: money in → direction → money out.
+        Now you’ll see how charts reveal that direction through structure.
       </p>
+
+      <pre class="diagram">
+TREND STRUCTURE (Higher Highs / Higher Lows)
+──────────────────────────────────────────────
+
+      <span class="green">↑</span>        <span class="green">↑</span>        <span class="green">↑</span>
+      HH       HH       HH
+       \        \        \
+        \        \        \
+         \        \        \
+          HL       HL       HL
+           <span class="green">↑</span>        <span class="green">↑</span>        <span class="green">↑</span>
+
+      Buyers are in control → Uptrend
+
+REVERSAL (Lower Highs / Lower Lows)
+──────────────────────────────────────────────
+
+      <span class="red">↓</span>        <span class="red">↓</span>        <span class="red">↓</span>
+      LH       LH       LH
+       /        /        /
+      /        /        /
+     /        /        /
+    LL       LL       LL
+     <span class="red">↓</span>        <span class="red">↓</span>        <span class="red">↓</span>
+
+      Sellers are in control → Downtrend
+      </pre>
+
       <p>
-        All of that still applies here. The stock market is the stage. Your contracts are how you
-        choose to participate. Your discipline is how you survive that stage long enough to grow.
-      </p>
-      <p>
-        In this chapter, you will start to see the bigger picture: what a chart is, what the red
-        and green bars mean, how patterns and moving averages help you read the flow of buyers
-        and sellers—and how they all come together to support one solid trade idea.
+        These structures are the foundation of reading charts, and they directly support your
+        directional decisions.
       </p>
     </section>
 
-    <!-- Quiz -->
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Market and Discipline</h2>
       <form id="lesson7-quiz" class="form">
@@ -116,13 +213,14 @@
       </form>
     </section>
 
-    <!-- Mini simulation -->
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Seeing the Market as an Auction</h2>
       <p>
         Imagine you are watching a ticker that has been moving slowly up all morning. Buyers have
         been stepping in higher and higher, and sellers have been willing to accept those prices.
       </p>
+
       <form id="lesson7-sim" class="form">
         <label class="form-label">
           How should you think about this move in auction terms?
@@ -137,7 +235,7 @@
         </label>
 
         <label class="form-label">
-          If you feel FOMO (fear of missing out) during this move, what aligns with this academy?
+          If you feel FOMO during this move, what aligns with this academy?
           <select name="response" class="form-input" required>
             <option value="">Select one</option>
             <option value="a">Chase the move with no plan.</option>
@@ -155,6 +253,7 @@
         </div>
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
