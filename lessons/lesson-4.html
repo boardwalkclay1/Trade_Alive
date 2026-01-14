@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body class="theme-dark">
   <header class="top-bar">
     <a href="../lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
@@ -14,56 +15,88 @@
   </header>
 
   <main class="main-content">
+
+    <!-- NEW OPTIONS CHAIN DIAGRAM -->
+    <section class="card">
+      <h2 class="section-title">The Options Chain: Your Contract Map</h2>
+
+      <p>
+        When you open an options page, you’re looking at a structured table called the
+        <strong>options chain</strong>. This is where you choose the exact contract you want to
+        trade. A disciplined trader reads this page slowly and intentionally — the same way a
+        pilot reads instruments.
+      </p>
+
+      <pre class="diagram">
+                         OPTIONS CHAIN STRUCTURE
+                         ───────────────────────
+
+                   ┌─────────────── CALLS ───────────────┐
+                   │                                       │
+   STRIKE  ───────▶│   BID     ASK     LAST     VOLUME     │
+                   │                                       │
+                   └────────────────────────────────────────┘
+
+                   ┌─────────────── PUTS ────────────────┐
+                   │                                       │
+                   │   BID     ASK     LAST     VOLUME     │
+                   │                                       │
+                   └────────────────────────────────────────┘
+
+   KEY:
+   • STRIKE = Price level of the contract
+   • BID = What buyers are willing to pay
+   • ASK = What sellers want to receive
+   • EXPIRATION = When the contract expires
+   • QUANTITY = How many contracts you choose (multiplies risk)
+      </pre>
+
+      <p>
+        Every row is a strike. Every column is a piece of information. Your job is to read this
+        calmly and choose the contract that matches your directional idea and your discipline.
+      </p>
+    </section>
+
+    <!-- ORIGINAL SECTION 1 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">Reading the Options Chain</h2>
       <p>
-        When you open an options page on a broker platform, you see an
-        <strong>options chain</strong>: a table of contracts with different
-        <strong>strike prices</strong> and <strong>expiration dates</strong>.
+        The options chain is a table of contracts with different <strong>strike prices</strong>
+        and <strong>expiration dates</strong>. Each row represents a strike. Each column shows
+        information like <strong>bid</strong>, <strong>ask</strong>, <strong>last price</strong>,
+        and sometimes volume or open interest.
       </p>
       <p>
-        Each row usually represents a strike price. Each column holds information like
-        <strong>bid</strong>, <strong>ask</strong>, <strong>last price</strong>, and sometimes
-        volume and open interest. You use this page to choose the exact contract you want to
-        trade.
-      </p>
-      <p>
-        You are not just clicking randomly. A disciplined trader reads this table like a pilot
-        reads instruments—slow, clear, and intentional.
+        You use this page to choose the exact contract you want to trade. You are not clicking
+        randomly — you are selecting a contract that matches your expectation and your rules.
       </p>
     </section>
 
+    <!-- ORIGINAL SECTION 2 (ENHANCED) -->
     <section class="card">
       <h2 class="section-title">Key Elements: Strike, Expiration, Quantity, Bid, Ask</h2>
-      <p>
-        <strong>Strike price:</strong> The price level associated with the contract. It is a
-        reference point for your call or put.  
+
+      <p><strong>Strike price:</strong> The price level associated with the contract. It anchors your call or put.</p>
+
+      <p><strong>Expiration date:</strong> The last date the contract is valid. Options lose value faster as expiration approaches.</p>
+
+      <p><strong>Quantity:</strong> How many contracts you trade. One contract typically controls 100 shares. Quantity multiplies both risk and reward.</p>
+
+      <p><strong>Bid:</strong> What buyers are willing to pay.<br>
+         <strong>Ask:</strong> What sellers want to receive.<br>
+         The difference is the <strong>spread</strong>.
       </p>
+
       <p>
-        <strong>Expiration date:</strong> The last date the contract is valid. Time matters. As
-        expiration approaches, options lose value faster.
-      </p>
-      <p>
-        <strong>Quantity:</strong> How many contracts you are trading. One options contract
-        typically controls 100 shares of the underlying ticker. Quantity multiplies both risk and
-        potential reward.
-      </p>
-      <p>
-        <strong>Bid:</strong> What buyers are currently willing to pay.  
-        <strong>Ask:</strong> What sellers are currently asking to receive. The difference is the
-        <strong>spread</strong>.
-      </p>
-      <p>
-        The bid and ask matter because impatience can make you overpay or accept a poor price,
-        while disciplined limit orders can help you enter and exit more efficiently.
+        Impatient traders overpay. Disciplined traders use limit orders and wait for good pricing.
       </p>
     </section>
 
+    <!-- INTERACTIVE CHAIN EXAMPLE -->
     <section class="card">
       <h2 class="section-title">Interactive Chain Example</h2>
       <p>
-        Below is a simplified options chain for a fictional ticker trading around $100. This is
-        only for training purposes.
+        Below is a simplified options chain for a fictional ticker trading around $100.
       </p>
 
       <div class="card" style="overflow-x:auto;">
@@ -104,11 +137,12 @@
       </div>
 
       <p style="margin-top:0.75rem;">
-        Notice how each row tells you: what price level (strike), what type (call or put), what
-        people are willing to pay (bid), what others are asking (ask), and when it expires.
+        Each row tells you: strike, type, bid, ask, and expiration. This is the core of contract
+        selection.
       </p>
     </section>
 
+    <!-- QUIZ -->
     <section class="card">
       <h2 class="section-title">Quick Check: Reading the Chain</h2>
       <form id="lesson4-quiz" class="form">
@@ -150,15 +184,17 @@
       </form>
     </section>
 
+    <!-- SIMULATION -->
     <section class="card">
       <h2 class="section-title">Mini Simulation: Selecting a Contract</h2>
       <p>
         You believe the ticker will move <strong>up</strong> from around $100 by this Friday.
-        You want a contract that matches that idea.
+        Choose the contract that matches that idea.
       </p>
+
       <form id="lesson4-sim" class="form">
         <label class="form-label">
-          Which contract from the simplified chain best matches “up by this Friday”?
+          Which contract best matches “up by this Friday”?
           <select name="contract" class="form-input" required>
             <option value="">Select one</option>
             <option value="95-call">95 Call (Bid 2.50 / Ask 2.70)</option>
@@ -183,14 +219,9 @@
         </div>
       </form>
     </section>
+
   </main>
 
   <script src="../app.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      initTheme();
-      initLesson4();
-    });
-  </script>
 </body>
 </html>
