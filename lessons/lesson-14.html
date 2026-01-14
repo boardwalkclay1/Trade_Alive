@@ -5,147 +5,214 @@
   <title>Stage 14 – Chapter 2 Mock Trade & Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .diagram { font-family: monospace; white-space: pre; }
+    .green { color:#4ade80; font-weight:bold; }
+    .red { color:#f87171; font-weight:bold; }
+    .yellow { color:#facc15; font-weight:bold; }
+    .blue { color:#60a5fa; font-weight:bold; }
+    .purple { color:#c084fc; font-weight:bold; }
+  </style>
 </head>
 
 <body class="theme-dark">
-  <header class="top-bar">
-    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
-    <h1 class="app-title">Stage 14 – Chapter 2 Mock Trade</h1>
-    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
-  </header>
+<header class="top-bar">
+  <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+  <h1 class="app-title">Stage 14 – Chapter 2 Mock Trade</h1>
+  <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+</header>
 
-  <main class="main-content">
+<main class="main-content">
 
-    <section class="card">
-      <h2 class="section-title">Bringing Chapter 2 Together</h2>
-      <p>
-        In Chapter 2, you studied the market as an auction, charts and candles, timeframes,
-        patterns, moving averages, and how these elements combine into one setup.
-      </p>
-      <p>
-        Now you will walk through a mock trade using this bigger picture. This is not about
-        guessing perfectly—it is about showing that you can think clearly and build a structured
-        idea from the tools you’ve learned.
-      </p>
-      <p>
-        Just like the final stage of Chapter 1, this is a mental rehearsal. You are training your
-        process and your discipline before any real money is at risk.
-      </p>
-    </section>
+  <!-- INTRO -->
+  <section class="card">
+    <h2 class="section-title">Bringing Chapter 2 Together</h2>
+    <p>
+      In Chapter 2, you studied the market as an auction, charts and candles, timeframes,
+      patterns, moving averages, and how these elements combine into one setup.
+    </p>
+    <p>
+      Now you will walk through a mock trade using this bigger picture. This is not about
+      guessing perfectly—it is about showing that you can think clearly and build a structured
+      idea from the tools you’ve learned.
+    </p>
+    <p>
+      Just like the final stage of Chapter 1, this is a mental rehearsal. You are training your
+      process and your discipline before any real money is at risk.
+    </p>
+  </section>
 
-    <!-- Quiz -->
-    <section class="card">
-      <h2 class="section-title">Quick Check: Chapter 2 Concepts</h2>
-      <form id="lesson14-quiz" class="form">
+  <!-- DIAGRAMS -->
+  <section class="card">
+    <h2 class="section-title">Visual Context: What You’re Seeing</h2>
 
-        <label class="form-label">
-          What does a moving average mainly help you see?
-          <select name="q1" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Exact turning points.</option>
-            <option value="b">General trend direction and context.</option>
-            <option value="c">Which stock to avoid forever.</option>
-          </select>
-        </label>
+    <pre class="diagram">
+DAILY TREND CONTEXT
+──────────────────────────────────────────────
+<span class="green">Price Above Rising MA</span>
+   <span class="green">↑</span>
+   <span class="green">  ↑</span>
+   <span class="green">    ↑</span>
+<span class="purple">50 / 20 MA trending upward</span>
 
-        <label class="form-label">
-          What makes a trade idea “structured” in this academy?
-          <select name="q2" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Having one strong feeling about it.</option>
-            <option value="b">Combining trend, candles, patterns, and risk into one planned setup.</option>
-            <option value="c">Only listening to social media.</option>
-          </select>
-        </label>
+Interpretation:
+• Buyers have been in control  
+• Trend supports bullish ideas
+    </pre>
 
-        <label class="form-label">
-          After ten years, what is still the most important factor?
-          <select name="q3" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Finding a new indicator every week.</option>
-            <option value="b">Discipline and control of yourself as you trade.</option>
-            <option value="c">Never taking a loss.</option>
-          </select>
-        </label>
+    <pre class="diagram">
+INTRADAY FLAG PATTERN
+──────────────────────────────────────────────
+<span class="green">Strong push →</span> <span class="green">▲</span>
+                     <span class="green">│</span>
+<span class="yellow">Small drifting pullback</span>
+<span class="yellow">██████████████████</span>
 
-        <div id="lesson14-quiz-message" class="feedback-text"></div>
+Interpretation:
+• Momentum → pause → potential continuation  
+• Pattern aligns with the daily trend
+    </pre>
 
-        <div class="button-row">
-          <button type="submit" class="primary-button">Submit Quiz</button>
-        </div>
+    <pre class="diagram">
+CANDLE STORY
+──────────────────────────────────────────────
+<span class="green">Higher Lows</span>
+   <span class="green">▲</span>      <span class="green">▲</span>      <span class="green">▲</span>
+   <span class="green">│</span>      <span class="green">│</span>      <span class="green">│</span>
+<span class="yellow">Controlled pullbacks</span>
 
-      </form>
-    </section>
+Interpretation:
+• Buyers defending dips  
+• Sellers failing to push lower
+    </pre>
 
-    <!-- Simulation -->
-    <section class="card">
-      <h2 class="section-title">Full Mock: Building a Trade Idea</h2>
-      <p>
-        Imagine a ticker where:
-        <br>• The daily chart shows an uptrend above a rising moving average.
-        <br>• The intraday chart shows a small flag after an upward push.
-        <br>• Recent candles have higher lows and controlled pullbacks.
-      </p>
+    <pre class="diagram">
+FULL TRADE IDEA BUILDER
+──────────────────────────────────────────────
+1. <span class="green">Trend</span> → Up  
+2. <span class="blue">Pattern</span> → Bullish flag  
+3. <span class="yellow">Candles</span> → Higher lows  
+4. <span class="purple">MA Context</span> → Above rising MA  
+5. <span class="red">Risk Plan</span> → Defined before entry  
 
-      <form id="lesson14-sim" class="form">
+<span class="green">When all align → structured trade idea</span>
+    </pre>
+  </section>
 
-        <label class="form-label">
-          Step 1 – Direction: Based on this context, what is your directional idea?
-          <select name="direction" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="up">Upward (bullish) bias.</option>
-            <option value="down">Downward (bearish) bias.</option>
-          </select>
-        </label>
+  <!-- QUIZ -->
+  <section class="card">
+    <h2 class="section-title">Quick Check: Chapter 2 Concepts</h2>
+    <form id="lesson14-quiz" class="form">
 
-        <label class="form-label">
-          Step 2 – Contract Type: Which options contract matches that directional idea?
-          <select name="contractType" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="call">Call option.</option>
-            <option value="put">Put option.</option>
-          </select>
-        </label>
+      <label class="form-label">
+        What does a moving average mainly help you see?
+        <select name="q1" class="form-input" required>
+          <option value="">Select an answer</option>
+          <option value="a">Exact turning points.</option>
+          <option value="b">General trend direction and context.</option>
+          <option value="c">Which stock to avoid forever.</option>
+        </select>
+      </label>
 
-        <label class="form-label">
-          Step 3 – Timeframe & Expiration: What kind of expiration fits this scenario best?
-          <select name="expirationChoice" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="veryShort">Very short expiration with no room for normal noise.</option>
-            <option value="reasonable">Reasonable short-term expiration allowing time to play out.</option>
-          </select>
-        </label>
+      <label class="form-label">
+        What makes a trade idea “structured” in this academy?
+        <select name="q2" class="form-input" required>
+          <option value="">Select an answer</option>
+          <option value="a">Having one strong feeling about it.</option>
+          <option value="b">Combining trend, candles, patterns, and risk into one planned setup.</option>
+          <option value="c">Only listening to social media.</option>
+        </select>
+      </label>
 
-        <label class="form-label">
-          Step 4 – Quantity: How many contracts do you choose for this mock?
-          <select name="quantity" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="small">Small size that matches controlled risk.</option>
-            <option value="oversized">Oversized position to “maximize” gains.</option>
-          </select>
-        </label>
+      <label class="form-label">
+        After ten years, what is still the most important factor?
+        <select name="q3" class="form-input" required>
+          <option value="">Select an answer</option>
+          <option value="a">Finding a new indicator every week.</option>
+          <option value="b">Discipline and control of yourself as you trade.</option>
+          <option value="c">Never taking a loss.</option>
+        </select>
+      </label>
 
-        <label class="form-label">
-          Step 5 – Exit Plan: What is your approach before pressing any buy button?
-          <select name="exitPlan" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="a">Define your stop, target, and rules—and commit to them.</option>
-            <option value="b">Enter first and figure out exits later.</option>
-            <option value="c">Rely on hope and emotion.</option>
-          </select>
-        </label>
+      <div id="lesson14-quiz-message" class="feedback-text"></div>
 
-        <div id="lesson14-sim-message" class="feedback-text"></div>
+      <div class="button-row">
+        <button type="submit" class="primary-button">Submit Quiz</button>
+      </div>
 
-        <div class="button-row">
-          <button type="submit" class="primary-button">Complete Stage 14 and Finish Chapter 2</button>
-        </div>
+    </form>
+  </section>
 
-      </form>
-    </section>
+  <!-- SIMULATION -->
+  <section class="card">
+    <h2 class="section-title">Full Mock: Building a Trade Idea</h2>
+    <p>
+      Imagine a ticker where:
+      <br>• The daily chart shows an uptrend above a rising moving average.
+      <br>• The intraday chart shows a small flag after an upward push.
+      <br>• Recent candles have higher lows and controlled pullbacks.
+    </p>
 
-  </main>
+    <form id="lesson14-sim" class="form">
 
-  <script src="../app.js"></script>
+      <label class="form-label">
+        Step 1 – Direction: Based on this context, what is your directional idea?
+        <select name="direction" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="up">Upward (bullish) bias.</option>
+          <option value="down">Downward (bearish) bias.</option>
+        </select>
+      </label>
+
+      <label class="form-label">
+        Step 2 – Contract Type: Which options contract matches that directional idea?
+        <select name="contractType" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="call">Call option.</option>
+          <option value="put">Put option.</option>
+        </select>
+      </label>
+
+      <label class="form-label">
+        Step 3 – Timeframe & Expiration: What kind of expiration fits this scenario best?
+        <select name="expirationChoice" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="veryShort">Very short expiration with no room for normal noise.</option>
+          <option value="reasonable">Reasonable short-term expiration allowing time to play out.</option>
+        </select>
+      </label>
+
+      <label class="form-label">
+        Step 4 – Quantity: How many contracts do you choose for this mock?
+        <select name="quantity" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="small">Small size that matches controlled risk.</option>
+          <option value="oversized">Oversized position to “maximize” gains.</option>
+        </select>
+      </label>
+
+      <label class="form-label">
+        Step 5 – Exit Plan: What is your approach before pressing any buy button?
+        <select name="exitPlan" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="a">Define your stop, target, and rules—and commit to them.</option>
+          <option value="b">Enter first and figure out exits later.</option>
+          <option value="c">Rely on hope and emotion.</option>
+        </select>
+      </label>
+
+      <div id="lesson14-sim-message" class="feedback-text"></div>
+
+      <div class="button-row">
+        <button type="submit" class="primary-button">Complete Stage 14 and Finish Chapter 2</button>
+      </div>
+
+    </form>
+  </section>
+
+</main>
+
+<script src="../app.js"></script>
 </body>
 </html>
