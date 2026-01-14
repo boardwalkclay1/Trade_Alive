@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Stage 12 – Timeframes, Noise, and Perspective</title>
+  <title>Stage 13 – Support, Resistance & Liquidity Zones</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../styles.css" />
 
@@ -17,244 +17,250 @@
 </head>
 
 <body class="theme-dark">
-  <header class="top-bar">
-    <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
-    <h1 class="app-title">Stage 12 – Timeframes & Noise</h1>
-    <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
-  </header>
+<header class="top-bar">
+  <a href="lessons.html" class="icon-button" aria-label="Back to lessons">←</a>
+  <h1 class="app-title">Stage 13 – Support, Resistance & Liquidity</h1>
+  <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">🌓</button>
+</header>
 
-  <main class="main-content">
+<main class="main-content">
 
-    <!-- MULTI-TIMEFRAME DIAGRAM -->
-    <section class="card">
-      <h2 class="section-title">Different Timeframes, Different Stories</h2>
+  <!-- SUPPORT & RESISTANCE -->
+  <section class="card">
+    <h2 class="section-title">Support & Resistance: The Market’s “Memory”</h2>
 
-      <p>
-        A one-minute chart, a five-minute chart, and a daily chart can all show the same ticker
-        very differently. Short timeframes show more detail and more noise. Higher timeframes show
-        bigger structure and trend.
-      </p>
+    <p>
+      Support and resistance are areas where buyers or sellers have repeatedly shown strength.
+      These levels form because the auction has a “memory” — traders remember where price
+      previously reacted.
+    </p>
 
-      <pre class="diagram">
-MULTI‑TIMEFRAME VIEW
+    <pre class="diagram">
+SUPPORT & RESISTANCE MAP
 ──────────────────────────────────────────────
 
-<span class="blue">1‑Minute (Noise)</span>
-   <span class="green">││</span> <span class="red">││</span> <span class="green">││</span> <span class="red">││</span> <span class="green">││</span>
-   <span class="yellow">Tiny pullbacks, spikes, randomness</span>
+<span class="red">Resistance (Sellers)</span>
+<span class="red">───────────────▼───────────────</span>
+                Price rejects here
 
-<span class="yellow">5‑Minute (Micro‑Structure)</span>
-   <span class="green">  ▲</span>
-   <span class="green"> / \</span> <span class="red">  ▼</span>
-   <span class="green">/   \</span> <span class="red"> / \</span>
-   <span class="yellow">Higher lows forming</span>
+<span class="yellow">   Consolidation / Balance</span>
+<span class="yellow">   ████████████████████████</span>
 
-<span class="purple">1‑Hour (Trend)</span>
-   <span class="green">      ↑</span>
-   <span class="green">   ↑</span>
-   <span class="green">↑</span>   <span class="green">Uptrend intact</span>
+<span class="green">Support (Buyers)</span>
+<span class="green">───────────────▲───────────────</span>
+                Price bounces here
+    </pre>
 
-<span class="green">Daily (Macro Story)</span>
-   <span class="green">───────────────▶</span>
-   <span class="green">Strong overall trend</span>
+    <p>
+      These levels don’t guarantee reversals — they simply show where the auction has reacted
+      before.
+    </p>
+  </section>
 
-Same ticker.  
-Four completely different perspectives.
-      </pre>
+  <!-- TRENDLINES -->
+  <section class="card">
+    <h2 class="section-title">Trendlines: Visualizing Pressure</h2>
 
-      <p>
-        Neither timeframe is “right.” They simply tell different versions of the same story.
-        A disciplined trader knows which one they are using and why.
-      </p>
+    <p>
+      Trendlines help you see the slope of buying or selling pressure. They connect higher lows
+      in an uptrend or lower highs in a downtrend.
+    </p>
 
-      <p>
-        If you jump between timeframes emotionally, you can confuse yourself. A tiny pullback on
-        the 1‑minute chart may be meaningless inside a strong daily trend.
-      </p>
-    </section>
-
-    <!-- NOISE VS SIGNAL DIAGRAM -->
-    <section class="card">
-      <h2 class="section-title">Noise vs. Signal</h2>
-
-      <p>
-        “Noise” is the small, random movement that happens constantly as buyers and sellers
-        negotiate. “Signal” is the clearer direction or structure that should matter more to your
-        decisions.
-      </p>
-
-      <pre class="diagram">
-NOISE VS SIGNAL
+    <pre class="diagram">
+UPTREND TRENDLINE
 ──────────────────────────────────────────────
 
-<span class="blue">Noise (1m)</span>
-   <span class="green">││</span><span class="red">││</span><span class="green">││</span><span class="red">││</span><span class="green">││</span>
-   <span class="yellow">Random wiggles, emotional traps</span>
+<span class="green">      ▲</span>
+<span class="green">     /</span>
+<span class="green">    /</span>   Price making higher lows
+<span class="green">   /</span>
+<span class="green">  /</span>
+<span class="green"> /</span>
+<span class="green">────────────────────────▶</span> Trendline
+    </pre>
 
-<span class="purple">Signal (1h / Daily)</span>
-   <span class="green">↑</span>
-   <span class="green">  ↑</span>
-   <span class="green">    ↑</span>
-   <span class="green">Clear trend, meaningful structure</span>
+    <pre class="diagram">
+DOWNTREND TRENDLINE
+──────────────────────────────────────────────
+
+<span class="red">▼</span>
+ <span class="red">\</span>
+  <span class="red">\</span>  Price making lower highs
+   <span class="red">\</span>
+    <span class="red">\</span>
+     <span class="red">\</span>
+<span class="red">────────────────────────▶</span> Trendline
+    </pre>
+
+    <p>
+      Trendlines are not rules — they are guides showing where pressure has been consistent.
+    </p>
+  </section>
+
+  <!-- BREAKOUT VS FAKEOUT -->
+  <section class="card">
+    <h2 class="section-title">Breakouts vs Fakeouts</h2>
+
+    <p>
+      A breakout happens when price moves through support or resistance with strength.  
+      A fakeout happens when price pokes through a level but quickly reverses.
+    </p>
+
+    <pre class="diagram">
+BREAKOUT
+──────────────────────────────────────────────
+
+<span class="red">Resistance</span>
+<span class="red">───────────────▼───────────────</span>
+                <span class="green">▲</span>
+                <span class="green">│</span> Strong breakout
+                <span class="green">│</span>
+                <span class="green">▲</span>
+
+FAKEOUT
+──────────────────────────────────────────────
+
+<span class="red">Resistance</span>
+<span class="red">───────────────▼───────────────</span>
+                <span class="green">▲</span>
+                <span class="green">│</span> Weak push
+                <span class="red">▼</span> Rejection back inside
+    </pre>
+
+    <p>
+      Fakeouts trap emotional traders. Breakouts reward disciplined ones.
+    </p>
+  </section>
+
+  <!-- LIQUIDITY -->
+  <section class="card">
+    <h2 class="section-title">Liquidity Zones: Where Stops Live</h2>
+
+    <p>
+      Liquidity zones are areas where many traders place stop losses.  
+      The market often “wicks” into these zones to fill orders before moving.
+    </p>
+
+    <pre class="diagram">
+LIQUIDITY SWEEP
+──────────────────────────────────────────────
+
+<span class="green">Support</span>
+<span class="green">───────────────▲───────────────</span>
+
+<span class="yellow">Stops Below Support</span>
+<span class="yellow">~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="red">▼ Liquidity Sweep</span>
+<span class="red">│</span>
+<span class="green">▲ Recovery</span>
 
 Interpretation:
-• Noise = short‑term randomness  
-• Signal = long‑term structure  
-• Your job is to know which one matters to your plan
-      </pre>
+• Price dips below support  
+• Stops get triggered  
+• Market snaps back up  
+    </pre>
 
-      <p>
-        Emotional traders react to every tiny candle. Disciplined traders know what they are
-        looking for and ignore what does not matter.
-      </p>
+    <p>
+      Understanding liquidity helps you avoid emotional reactions to normal market behavior.
+    </p>
+  </section>
 
-      <p>
-        Timeframe choice helps you separate noise from signal. Choose timeframes that match your
-        strategy — then stay consistent.
-      </p>
-    </section>
+  <!-- QUIZ -->
+  <section class="card">
+    <h2 class="section-title">Quick Check: S/R & Liquidity</h2>
+    <form id="lesson13-quiz" class="form">
 
-    <!-- TIMEFRAMES + OPTIONS DIAGRAM -->
-    <section class="card">
-      <h2 class="section-title">Connecting Timeframes to Options</h2>
+      <label class="form-label">
+        What is support?
+        <select name="q1" class="form-input" required>
+          <option value="">Select an answer</option>
+          <option value="a">An area where buyers have shown strength before.</option>
+          <option value="b">A random line with no meaning.</option>
+          <option value="c">A guarantee that price will never fall.</option>
+        </select>
+      </label>
 
-      <p>
-        If you are trading short-term options, lower timeframes may matter more — but you still
-        need to respect the bigger trend. A strong daily trend can influence how you interpret a
-        small intraday move.
-      </p>
+      <label class="form-label">
+        What is a fakeout?
+        <select name="q2" class="form-input" required>
+          <option value="">Select an answer</option>
+          <option value="a">A strong breakout with momentum.</option>
+          <option value="b">A brief move past a level that quickly reverses.</option>
+          <option value="c">A glitch in the chart.</option>
+        </select>
+      </label>
 
-      <pre class="diagram">
-TIMEFRAME ALIGNMENT FOR OPTIONS
+      <label class="form-label">
+        What is a liquidity sweep?
+        <select name="q3" class="form-input" required>
+          <option value="">Select an answer</option>
+          <option value="a">Price dipping into stop‑loss zones before reversing.</option>
+          <option value="b">A guaranteed reversal pattern.</option>
+          <option value="c">A sign the market is broken.</option>
+        </select>
+      </label>
+
+      <div id="lesson13-quiz-message" class="feedback-text"></div>
+
+      <div class="button-row">
+        <button type="submit" class="primary-button">Submit Quiz</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- SIMULATION -->
+  <section class="card">
+    <h2 class="section-title">Mini Simulation: Reading a Breakout Attempt</h2>
+    <p>
+      Imagine price pushes into resistance, pokes above it, then quickly drops back inside.
+    </p>
+
+    <pre class="diagram">
+SIMULATION VIEW
 ──────────────────────────────────────────────
 
-<span class="green">Daily Trend → Up</span>
-        <span class="green">↑</span>
+<span class="red">Resistance</span>
+<span class="red">───────────────▼───────────────</span>
+                <span class="green">▲</span>
+                <span class="green">│</span> Weak breakout
+                <span class="red">▼</span> Reversal back inside
+    </pre>
 
-<span class="yellow">1‑Hour Structure → Higher Lows</span>
-        <span class="green">↑</span>
+    <form id="lesson13-sim" class="form">
 
-<span class="blue">1‑Minute Pullback → Noise</span>
-        <span class="red">↓</span>
+      <label class="form-label">
+        What does this most likely represent?
+        <select name="pattern" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="fakeout">A fakeout: sellers defended the level.</option>
+          <option value="breakout">A strong breakout with momentum.</option>
+          <option value="random">Meaningless noise.</option>
+        </select>
+      </label>
 
-Correct interpretation:
-<span class="green">Bigger trend still up.</span>  
-<span class="yellow">Small pullback is normal.</span>  
-<span class="blue">Don’t panic over noise.</span>
-      </pre>
+      <label class="form-label">
+        What aligns with disciplined trading here?
+        <select name="discipline" class="form-input" required>
+          <option value="">Select one</option>
+          <option value="a">Wait for confirmation instead of chasing the first poke.</option>
+          <option value="b">Enter immediately because it moved.</option>
+          <option value="c">Double size to force a win.</option>
+        </select>
+      </label>
 
-      <p>
-        Your contract, expiration, and timeframe should make sense together. A short-term contract
-        based on one random candle is gambling, not trading.
-      </p>
+      <div id="lesson13-sim-message" class="feedback-text"></div>
 
-      <p>
-        Not all candles carry the same weight. Timeframes give context.
-      </p>
-    </section>
+      <div class="button-row">
+        <button type="submit" class="primary-button">Complete Stage 13</button>
+      </div>
 
-    <!-- QUIZ -->
-    <section class="card">
-      <h2 class="section-title">Quick Check: Timeframes & Noise</h2>
-      <form id="lesson12-quiz" class="form">
+    </form>
+  </section>
 
-        <label class="form-label">
-          What do different timeframes show you?
-          <select name="q1" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Different levels of detail and structure for the same market movement.</option>
-            <option value="b">Completely unrelated markets.</option>
-            <option value="c">Only random movement.</option>
-          </select>
-        </label>
+</main>
 
-        <label class="form-label">
-          What is “noise” in this context?
-          <select name="q2" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Every major trend over months.</option>
-            <option value="b">Small, often random movements that may not matter to your bigger plan.</option>
-            <option value="c">Only after-hours activity.</option>
-          </select>
-        </label>
-
-        <label class="form-label">
-          How should a disciplined trader treat timeframes?
-          <select name="q3" class="form-input" required>
-            <option value="">Select an answer</option>
-            <option value="a">Choose timeframes that match their strategy and use them consistently.</option>
-            <option value="b">Switch constantly based on emotion.</option>
-            <option value="c">Ignore timeframes completely.</option>
-          </select>
-        </label>
-
-        <div id="lesson12-quiz-message" class="feedback-text"></div>
-
-        <div class="button-row">
-          <button type="submit" class="primary-button">Submit Quiz</button>
-        </div>
-
-      </form>
-    </section>
-
-    <!-- SIMULATION -->
-    <section class="card">
-      <h2 class="section-title">Mini Simulation: Two Timeframe View</h2>
-      <p>
-        Imagine the daily chart shows a steady uptrend, but the one-minute chart shows a small,
-        sharp pullback.
-      </p>
-
-      <pre class="diagram">
-TWO‑TIMEFRAME SIMULATION
-──────────────────────────────────────────────
-
-<span class="green">Daily Trend</span>
-   <span class="green">↑</span>
-   <span class="green">  ↑</span>
-   <span class="green">    ↑</span>
-
-<span class="blue">1‑Minute Pullback</span>
-   <span class="red">↓</span>
-
-Correct reading:
-<span class="green">Bigger trend still up.</span>  
-<span class="yellow">Small pullback = noise unless it grows.</span>
-      </pre>
-
-      <form id="lesson12-sim" class="form">
-
-        <label class="form-label">
-          How should you read this in simple terms?
-          <select name="view" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="a">The bigger trend is still up; the small pullback may be noise unless it grows.</option>
-            <option value="b">The market has completely reversed forever.</option>
-            <option value="c">Charts no longer matter.</option>
-          </select>
-        </label>
-
-        <label class="form-label">
-          If you feel panic when the one-minute candle pulls back, what aligns with this academy?
-          <select name="emotion" class="form-input" required>
-            <option value="">Select one</option>
-            <option value="a">React instantly with no reference to your plan.</option>
-            <option value="b">Check your chosen timeframes, review your rules, and act based on your strategy.</option>
-            <option value="c">Double your risk to “fix it fast.”</option>
-          </select>
-        </label>
-
-        <div id="lesson12-sim-message" class="feedback-text"></div>
-
-        <div class="button-row">
-          <button type="submit" class="primary-button">Complete Stage 12</button>
-        </div>
-
-      </form>
-    </section>
-
-  </main>
-
-  <script src="../app.js"></script>
+<script src="../app.js"></script>
 </body>
 </html>
