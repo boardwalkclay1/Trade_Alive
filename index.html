@@ -1,124 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Discipline Academy – Transform Your Financial Life</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="da_global.css" />
+<meta charset="UTF-8">
+<title>Discipline Academy – The Financial Ledger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* ===========================
+   GLOBAL NEWSPAPER THEME
+=========================== */
+
+:root {
+  --paper-bg: #f4f1e8;
+  --paper-text: #1a1a1a;
+  --paper-accent: #b8b2a3;
+
+  --ink-bg: #0e0e0e;
+  --ink-text: #f4f1e8;
+  --ink-accent: #444;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: var(--paper-bg);
+  color: var(--paper-text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* DARK MODE */
+body.dark {
+  background: var(--ink-bg);
+  color: var(--ink-text);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 3px solid var(--paper-accent);
+}
+
+body.dark .header {
+  border-color: var(--ink-accent);
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.header-sub {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ARTICLE BLOCKS */
+.article {
+  border-bottom: 1px solid var(--paper-accent);
+  padding: 1.5rem 0;
+}
+
+body.dark .article {
+  border-color: var(--ink-accent);
+}
+
+.article h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.article p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* BUTTON */
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border: 1px solid var(--paper-accent);
+  background: none;
+  cursor: pointer;
+}
+
+body.dark .toggle-mode {
+  border-color: var(--ink-accent);
+}
+
+/* LINKS */
+a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+</style>
+
 </head>
+<body>
 
-<body class="theme-dark">
+<button class="toggle-mode" onclick="document.body.classList.toggle('dark')">
+  Toggle Light/Dark
+</button>
 
-<!-- Background Stars -->
-<div class="stars1"></div>
-<div class="stars2"></div>
-<div class="stars3"></div>
+<header class="header">
+  <div class="header-title">The Discipline Ledger</div>
+  <div class="header-sub">Financial Education • Options Trading • Real Stories</div>
+</header>
 
-<div class="da-app">
+<div class="container">
 
-  <!-- Sidebar Navigation -->
-  <aside class="da-sidebar glass-bar">
-    <div class="da-logo glow-text">Discipline Academy</div>
+  <section class="article">
+    <h2>From Rock Bottom to $43,000 in Five Days</h2>
+    <p>
+      After selling his chainsaw — his pride and joy as a tree guy — Clayvonte found himself at the lowest point of his life.
+      The very next day, a tree fell next door. With no chainsaw, he walked down the street to borrow one from a client he had worked for a year earlier.
+    </p>
+    <p>
+      He made $650 cutting that tree. He put $450 into options trading. Five days later, it became <strong>$43,000</strong>.
+    </p>
+    <p><a href="story.html">Read the full story →</a></p>
+  </section>
 
-    <nav class="da-nav">
-      <button onclick="location.href='index.html'" class="da-active">Home</button>
-      <button onclick="location.href='story.html'">My Story</button>
-      <button onclick="location.href='why-options.html'">Why Options</button>
-      <button onclick="location.href='what-you-get.html'">What You Get</button>
-      <button onclick="location.href='how-it-works.html'">How It Works</button>
-      <button onclick="location.href='contact.html'">Contact</button>
-      <button onclick="location.href='paywall.html'" class="da-paywall-button">Unlock Academy</button>
-    </nav>
-  </aside>
+  <section class="article">
+    <h2>Why Options Outperform Stocks</h2>
+    <p>
+      Stocks move slow. Options move with leverage, precision, and opportunity. But they require discipline — not gambling.
+      Most traders lose because they treat options like lotto tickets instead of a structured skill.
+    </p>
+    <p><a href="why-options.html">Learn the difference →</a></p>
+  </section>
 
-  <!-- Main Content -->
-  <main class="da-content">
+  <section class="article">
+    <h2>Inside the Academy: What You Receive</h2>
+    <p>
+      Members gain access to real-time trades five days a week, a complete options setup guide, chart pattern mastery,
+      and a structured path from beginner to advanced trader.
+    </p>
+    <p><a href="what-you-get.html">See everything included →</a></p>
+  </section>
 
-    <!-- HERO SECTION -->
-    <section class="da-section hero glass-card">
-      <h1 class="hero-title glow-text">Discipline Creates Freedom</h1>
-      <p class="hero-subtitle">
-        Learn the skill that rebuilt my life — from selling my chainsaw to turning $450 into $43,000 in 5 days.
-      </p>
-
-      <div class="button-row hero-actions">
-        <a href="why-options.html" class="primary-button primary-glow">Start Your Journey</a>
-        <a href="paywall.html" class="secondary-button">Unlock Academy</a>
-      </div>
-    </section>
-
-    <!-- WHY YOU NEED THIS -->
-    <section class="da-section glass-card">
-      <h2 class="section-title glow-text">Why You Need to Learn Options</h2>
-      <p>
-        Most people think trading stocks is the path to wealth. It’s not. Stocks move slow. Options move with
-        leverage, precision, and opportunity — but only if you understand discipline, timing, and structure.
-      </p>
-      <p>
-        Options trading is a different world. A different mindset. A different level of control. And once you
-        understand it, you’ll never look at the market the same again.
-      </p>
-
-      <div class="button-row">
-        <a href="why-options.html" class="primary-button">Learn the Difference</a>
-      </div>
-    </section>
-
-    <!-- YOUR STORY PREVIEW -->
-    <section class="da-section glass-card">
-      <h2 class="section-title glow-text">My Story: From Rock Bottom to $43,000 in 5 Days</h2>
-      <p>
-        I’ve been trading for years. I’ve won big. I’ve lost big. But nothing hit harder than the day I had to
-        sell my chainsaw — my pride and joy as a tree guy — just to survive.
-      </p>
-      <p>
-        The next day, a tree fell right next door. I had no chainsaw. I had to walk down the street and borrow
-        one from a client I worked for a year earlier. I made $650 cutting that tree.
-      </p>
-      <p>
-        I took $450 of it and put it into options trading. Five days later, it became <strong>$43,000</strong>.
-        One of those days, I turned $1,200 into $23,000.
-      </p>
-
-      <div class="button-row">
-        <a href="story.html" class="primary-button">Read the Full Story</a>
-      </div>
-    </section>
-
-    <!-- WHAT YOU GET -->
-    <section class="da-section glass-card">
-      <h2 class="section-title glow-text">What You Get Inside the Academy</h2>
-      <ul class="da-list">
-        <li>Real-time trades 5 days a week</li>
-        <li>The secret options setup guide</li>
-        <li>Full beginner-to-advanced options training</li>
-        <li>Chart pattern mastery</li>
-        <li>Discipline-based trading psychology</li>
-        <li>Lifetime skill that no one can take from you</li>
-      </ul>
-
-      <div class="button-row">
-        <a href="what-you-get.html" class="primary-button">See Everything Included</a>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="da-section glass-card">
-      <h2 class="section-title glow-text">How It Works</h2>
-      <p>
-        Unlock the academy, follow the stages, learn the system, and start trading with structure. Your access
-        is stored on your device, and you can move at your own pace.
-      </p>
-
-      <div class="button-row">
-        <a href="how-it-works.html" class="secondary-button">Learn More</a>
-      </div>
-    </section>
-
-  </main>
+  <section class="article">
+    <h2>How to Join the Academy</h2>
+    <p>
+      Access is simple. Unlock the academy, follow the stages, and learn the system that rebuilt Clayvonte’s life.
+    </p>
+    <p><a href="paywall.html">Unlock the Academy →</a></p>
+  </section>
 
 </div>
 
-<script src="da_app.js"></script>
 </body>
 </html>
