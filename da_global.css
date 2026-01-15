@@ -1,0 +1,119 @@
+/* ===========================
+   DISCIPLINE ACADEMY — NEWSPAPER THEME
+   FULL GLOBAL CSS
+=========================== */
+
+/* COLOR VARIABLES */
+:root {
+  --paper-bg: #f4f1e8;
+  --paper-text: #1a1a1a;
+  --paper-accent: #b8b2a3;
+
+  --ink-bg: #0e0e0e;
+  --ink-text: #f4f1e8;
+  --ink-accent: #444;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: var(--paper-bg);
+  color: var(--paper-text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* DARK MODE */
+body.dark {
+  background: var(--ink-bg);
+  color: var(--ink-text);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 3px solid var(--paper-accent);
+}
+
+body.dark .header {
+  border-color: var(--ink-accent);
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.header-sub {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ARTICLE BLOCKS */
+.article {
+  border-bottom: 1px solid var(--paper-accent);
+  padding: 1.5rem 0;
+}
+
+body.dark .article {
+  border-color: var(--ink-accent);
+}
+
+.article h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.article p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+/* BUTTON */
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border: 1px solid var(--paper-accent);
+  background: none;
+  cursor: pointer;
+}
+
+body.dark .toggle-mode {
+  border-color: var(--ink-accent);
+}
+
+/* LINKS */
+a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.7;
+}
