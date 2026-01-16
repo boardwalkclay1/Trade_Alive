@@ -1,0 +1,49 @@
+/* BURGER BUTTON */
+.burger-button {
+  font-size: 1.4rem;
+  padding: 0.4rem 0.6rem;
+}
+
+/* SIDEBAR SLIDE */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 50;
+}
+
+#sidebar.open {
+  transform: translateX(0);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* BETTER BUTTONS */
+.sidebar-link,
+.sidebar-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.4rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0a0f1f, #05070f);
+  border: 1px solid rgba(0,255,200,0.25);
+  color: #eaffff;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.sidebar-link:hover,
+.sidebar-button:hover {
+  background: linear-gradient(135deg, #0ff2c8, #0aa0ff);
+  color: #000;
+  transform: translateX(4px);
+}
